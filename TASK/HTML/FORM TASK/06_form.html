@@ -18,7 +18,7 @@
                     <label for="">Name*</label>
                 </td>
                 <td>
-                    <input type="text" name="" id="">
+                    <input type="text" name="" id="" pattern="[A-Za-z]{3,10}" required>
                 </td>
             </tr>
             <tr>
@@ -26,7 +26,7 @@
                     <label for="">Email* </label>
                 </td>
                 <td>
-                    <input type="email">
+                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                 </td>
             </tr>
             <tr>
@@ -34,7 +34,7 @@
                     <label for="">Investment </label>
                 </td>
                 <td>
-                    <select>
+                    <select required>
                         <option value=""></option>
                         <option value="">LIC</option>
                         <option value="">Car Insurance</option>
@@ -48,7 +48,7 @@
                     <label for="">Date joined* </label>
                 </td>
                 <td>
-                    <input type="date">
+                    <input type="date" required>
                 </td>
             </tr>
             <tr>
@@ -56,7 +56,7 @@
                     <label for="">Active</label>
                 </td>
                 <td>
-                    <input type="checkbox">
+                    <input type="checkbox" required>
                 </td>
             </tr>
             <tr>

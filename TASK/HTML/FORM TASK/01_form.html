@@ -21,31 +21,31 @@
         <tr>
             <td>
             <label for="name">Enter your name</label>
-            <input id="name" type="text" placeholder="your name" value="" title="Name data">
+            <input id="name" type="text" placeholder="your name" value="" title="Name data" pattern="[A-Za-z]{3,10}" required>
             </td>
         </tr>
         <tr>
             <td>
             <label for="">Enter your surname</label>
-            <input type="text" placeholder="your surname">
+            <input type="text" placeholder="your surname" pattern="[A-Za-z]{3,12}" required>
             </td>
         </tr>
         <tr>
             <td>
             <label for="">Enter your Email</label>
-            <input type="email" placeholder="your Email">
+            <input type="email" placeholder="your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
             </td>
         </tr>
         <tr>
             <td>
                 <label for="">Enter your Phone</label>
-            <input type="tel" placeholder="your Phone number">
+            <input type="tel" placeholder="your Phone number" pattern="[0-9]{10}" required>
             </td>
         </tr>
         <tr>
             <td>
             <label for="">Enter your Password</label>
-            <input type="password" placeholder="your Password">
+            <input type="password" placeholder="your Password" pattern="[A-Za-z0-9]{8,12}" required>
             </td>
         </tr>
         <tr>

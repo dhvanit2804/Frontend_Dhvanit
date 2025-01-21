@@ -20,11 +20,11 @@
                     <label for="">Name*</label>
                 </td>
                 <td>
-                    <input type="text"><br>
+                    <input type="text" pattern="[A-Za-z]{3,10}" required><br>
                     <span>First Name</span>
                 </td>
                 <td>
-                    <input type="text"><br>
+                    <input type="text" pattern="[A-Za-z]{3,10}" required><br>
                     <span>Last Name</span>
                 </td>
             </tr>
@@ -33,7 +33,7 @@
                     <label for="">Address</label>
                 </td>
                 <td colspan="2">
-                    <input type="text" size="50"><br>
+                    <input type="text" size="50" required><br>
                     <span>Street Address</span>
                 </td>
             </tr>
@@ -42,7 +42,7 @@
 
                 </td>
                 <td colspan="2">
-                    <input type="text" size="50"><br>
+                    <input type="text" size="50" required><br>
                     <span>Street Address Line 2</span>
                 </td>
             </tr>
@@ -51,11 +51,11 @@
 
                 </td>
                 <td>
-                    <input type="text"><br>
+                    <input type="text" pattern="[A-Za-z]{3,10}" required><br>
                     <span>City</span>
                 </td>
                 <td>
-                    <input type="text"><br>
+                    <input type="text" pattern="[A-Za-z]{3,10}" required><br>
                     <span>State/Provide</span>
                 </td>
             </tr>
@@ -64,11 +64,11 @@
 
                 </td>
                 <td>
-                    <input type="text"><br>
+                    <input type="text" pattern="[0-9]{6}" required><br>
                     <span>Postal/Zip Code</span>
                 </td>
                 <td>
-                    <select name="" id="">
+                    <select name="" id="" required>
                         <option value="">Please Select</option>
                         <option value="">India</option>
                         <option value="">USA</option>
@@ -83,7 +83,7 @@
                     <label for="">Email</label>
                 </td>
                 <td colspan="2">
-                    <input type="email" placeholder="Enter your email" size="50">
+                    <input type="email" placeholder="Enter your email" size="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                 </td>
             </tr>
             <tr>
@@ -91,11 +91,11 @@
                     <label for="">Home Number</label>
                 </td>
                 <td>
-                    <input type="tel"> - <br>
+                    <input type="tel" required> - <br>
                     <span>Area Code</span>
                 </td>
                 <td>
-                    <input type="tel"><br>
+                    <input type="tel" pattern="[0-9]{10}" required><br>
                     <span>Phone Number</span>
                 </td>
             </tr>
@@ -104,11 +104,11 @@
                     <label for="">Cellular Number</label>
                 </td>
                 <td>
-                    <input type="tel"> - <br>
+                    <input type="tel" required> - <br>
                     <span>Area Code</span>
                 </td>
                 <td>
-                    <input type="tel"><br>
+                    <input type="tel" pattern="[0-9]{10}" required><br>
                     <span>Phone Number</span>
                 </td>
             </tr>
@@ -117,11 +117,11 @@
                     <label for="">Work Number</label>
                 </td>
                 <td>
-                    <input type="tel"> - <br>
+                    <input type="tel" required> - <br>
                     <span>Area Code</span>
                 </td>
                 <td>
-                    <input type="tel"><br>
+                    <input type="tel" pattern="[0-9]{10}" required><br>
                     <span>Phone Number</span>
                 </td>
             </tr>
@@ -130,7 +130,7 @@
                     <label for="">Website</label>
                 </td>
                 <td colspan="2">
-                    <input type="url" size="50">
+                    <input type="url" size="50" pattern="https://.*" required>
                 </td>
             </tr>
         </form>

@@ -18,8 +18,8 @@
                     <label for="">First, Last Name :*</label>
                 </td>
                 <td>
-                    <input type="text">
-                    <input type="text">
+                    <input type="text" pattern="[A-Za-z]{3,10}" required>
+                    <input type="text" pattern="[A-Za-z]{3,10}" required>
                 </td>
             </tr>
             <tr>
@@ -27,7 +27,7 @@
                     <label for="">Organization :</label>
                 </td>
                 <td>
-                    <input type="text">
+                    <input type="text" pattern="[A-Za-z]{3,15}" required>
                 </td>
             </tr>
             <tr>
@@ -35,7 +35,7 @@
                     <label for="">Email Address :</label>
                 </td>
                 <td>
-                    <input type="email">
+                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                 </td>
             </tr>
             <tr>
@@ -43,7 +43,7 @@
                     <label for="">Work Phone :</label>
                 </td>
                 <td>
-                    <input type="tel">
+                    <input type="tel" pattern="[0-9]{10}" required>
                 </td>
             </tr>
             <tr>
@@ -51,7 +51,7 @@
                     <label for="">Home Phone :</label>
                 </td>
                 <td>
-                    <input type="tel">
+                    <input type="tel" pattern="[0-9]{10}" required>
                 </td>
             </tr>
             <tr>
@@ -59,7 +59,7 @@
                     <label for="">Cell Phone:</label>
                 </td>
                 <td>
-                    <input type="tel" name="" id="">
+                    <input type="tel" name="" id="" pattern="[0-9]{10}" required>
                 </td>
             </tr>
             <tr>
@@ -67,7 +67,7 @@
                 <label for="">Fax:</label>
             </td>
             <td>
-                <input type="text" name="" id="">
+                <input type="text" name="" id="" pattern="[0-9]{10}" required>
             </td>
             </tr>
             <tr>
@@ -91,7 +91,7 @@
                     <label for="">City:</label>
                 </td>
                 <td>
-                    <input type="text">
+                    <input type="text" pattern="[A-Za-z]{3,10}" required>
                 </td>
             </tr>
             <tr>
@@ -99,7 +99,7 @@
                     <label for="">State province:</label>
                 </td>
                 <td>
-                    <input type="text" name="" id="">
+                    <input type="text" name="" id="" pattern="[A-Za-z]{3,10}" required>
                 </td>
             </tr>
             <tr>
@@ -107,7 +107,7 @@
                     <label for="">Zip postal Code:</label>
                 </td>
                 <td>
-                    <input type="text">
+                    <input type="text" pattern="[0-9]{6}" required>
                 </td>
             </tr>
             <tr>
@@ -115,7 +115,7 @@
                     <label for="">Country:</label>
                 </td>
                 <td>
-                    <input type="text" name="" id="">
+                    <input type="text" name="" id="" pattern="[A-Za-z]{3,10}" required>
                 </td>
             </tr>
             <tr>

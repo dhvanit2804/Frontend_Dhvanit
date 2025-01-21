@@ -19,8 +19,8 @@
                     <label for="">Full Name*</label>
                 </td>
                 <td>
-                    <input type="text" placeholder="First"><br>
-                    <input type="text" placeholder="Last"><br>
+                    <input type="text" placeholder="First" pattern="[A-Za-z]{3,10}" required><br>
+                    <input type="text" placeholder="Last" pattern="[A-Za-z]{3,10}"><br>
                 </td>
             </tr>
             <tr>
@@ -28,7 +28,7 @@
                     <label for="">E-mail*</label>
                 </td>
                 <td>
-                    <input type="text" placeholder="">
+                    <input type="text" placeholder="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                 </td>
             </tr>
             <tr>
@@ -36,7 +36,7 @@
                     <label for="">Phone</label>
                 </td>
                 <td>
-                    <input type="tel" placeholder="">
+                    <input type="tel" placeholder="" pattern="[0-9]{10}" required>
                 </td>
             </tr>
             <tr>

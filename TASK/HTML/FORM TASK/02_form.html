@@ -11,19 +11,19 @@
             <tr>
                 <td>
                     <label for="">FIRST NAME : </label>
-                    <input type="text" placeholder="Your First Name">
+                    <input type="text" placeholder="Your First Name" pattern="[A-Za-z]{3,10}" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="">MIDDLE NAME</label>
-                    <input type="text" placeholder="Your Middle Name">
+                    <input type="text" placeholder="Your Middle Name" pattern="[A-Za-z]{3,10}" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="">LAST NAME</label>
-                    <input type="text" placeholder="Your Last Name">
+                    <input type="text" placeholder="Your Last Name" pattern="[A-Za-z]{3,10}" required>
                 </td>
             </tr>
             <tr>
@@ -61,8 +61,7 @@
             <tr>
                 <td>
                     <label for="">PHONE :</label>
-                    <input type="text" placeholder="" value="+91">
-                    <input type="number">
+                    <input type="text" placeholder="" pattern="[0-9]{10}" required>
                 </td>
             </tr>
             <tr>
@@ -78,19 +77,19 @@
             <tr>
                 <td>
                     <label for="">Email :</label>
-                    <input type="text" placeholder="Your Email">
+                    <input type="text" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="">Password :</label>
-                    <input type="password" placeholder="Your Password">
+                    <input type="password" placeholder="Your Password" pattern="[A-Za-z0-9]{8,12}" required>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="">Re-type Password :</label>
-                    <input type="password" placeholder="Re-type Password">
+                    <input type="password" placeholder="Re-type Password" pattern="[A-Za-z0-9]{8,12}" required>
                 </td>
             </tr>
             <tr>
