@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact Form</title> 
+</head> 
+<body> 
+ 
+<h1>Contact Us</h1> 
+ 
+<form action="#" method="post"> 
+    <table> 
+        <tr> 
+            <td> 
+                <label for="full-name">Full Name:</label> 
+            </td> 
+            <td> 
+                <input type="text" id="full-name" name="full-name" required minlength="2" 
+maxlength="50" pattern="[A-Za-z\s]+" title="Please enter a valid name (letters and spaces 
+only)"> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td> 
+                <label for="email">Email:</label> 
+            </td> 
+            <td> 
+                <input type="email" id="email" name="email" required> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td> 
+                <label for="phone">Phone Number:</label> 
+            </td> 
+            <td> 
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" 
+title="Please enter a valid 10-digit phone number"> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td> 
+                <label for="subject">Subject:</label> 
+            </td> 
+            <td> 
+                <select id="subject" name="subject" required> 
+                    <option value="">Select a subject</option> 
+                    <option value="inquiry">General Inquiry</option> 
+                    <option value="support">Support</option> 
+                    <option value="feedback">Feedback</option> 
+                    <option value="other">Other</option> 
+                </select> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td> 
+                <label for="message">Message:</label> 
+            </td> 
+            <td> 
+                <textarea id="message" name="message" required minlength="10" 
+maxlength="500"></textarea> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td colspan="2"> 
+                <button type="submit">Submit</button> 
+            </td> 
+        </tr> 
+</table> 
+</form> 
+</body> 
+</html> 
