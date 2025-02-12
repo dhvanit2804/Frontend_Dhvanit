@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .overflow{
+            height: 300px;
+            width: 480px;
+            border: 2px solid;
+            overflow: hidden;
+        }
+        .main{
+            height: 300px;
+            width: 500px;
+            border: 2px solid;
+            background-image: url(/TASK/bottom1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: translateX(-20px);
+            transition: 0.5s;
+        }
+        .border{
+            height: 200px;
+            width: 400px;
+            border: 5px solid white;
+            font-size: 20px;
+            color: white;
+            letter-spacing: 5px;
+            text-align: right;
+            line-height: 200px;
+            margin: 45px auto;
+            transform: translateX(-20px);
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .main:hover .border{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        .main:hover{
+            transform: translateX(0px);
+        }
+    </style>
+</head>
+<body>
+    <div class="overflow">
+        <div class="main">
+            <div class="border">
+                New Arrival
+            </div>
+    </div>
+    </div>
+</body>
+</html>

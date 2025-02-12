@@ -13,9 +13,14 @@
             width: 100px;
             height: 100px;
             background-color: black;
-            margin: 100px auto;
-            transition: 0.5s;
+            border: 2px solid;
 
+        }
+        .color{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            transform: scale(0);
         }
         i{
             padding-top: 40%;
@@ -23,15 +28,17 @@
             font-size: 20px;
             color: white;
         }
-        .main:hover{
-            background-color: aquamarine;
+        .main:hover .color{
+            transform: scale(1);
         }
     </style>
 </head>
 
 <body>
     <div class="main">
-        <i class="fa-solid fa-bag-shopping"></i>
+        <div class="color">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
     </div>
 </body>
 
