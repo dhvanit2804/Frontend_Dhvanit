@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar .list{
+            display: inline-block;
+            background-color: lightcoral;
+            padding: 10px;
+            position: relative;
+        }
+        .ullist{
+            position: absolute;
+            background-color: lightgreen;
+            top: 100%;
+            left: 0;
+            list-style: none;
+            padding: 0;
+            display: none;
+        }
+        .list .ullist li{
+            border: 2px solid;
+            padding: 5px;
+        }
+        .list:hover .ullist{
+            display: block;
+        }
+        .ullist li:hover{
+            background-color: lightblue;
+        }
+        .ullist2{
+            position: absolute;
+            background-color: lightgreen;
+            top: 50%;
+            left: 100%;
+            list-style: none;
+            padding: 0;
+            display: none;
+        }
+        .ullist li:hover .ullist2{
+            display: block;
+            padding-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li class="list">Home
+            <ul class="ullist">
+                <li>Home1</li>
+                <li>Home2
+                    <ul class="ullist2">
+                        <li>Home2.1</li>
+                        <li>Home2.2</li>
+                        <li>Home2.3</li>
+                    </ul>
+                </li>
+                <li>Home3</li>
+            </ul>
+        </li>
+        <li class="list">about
+            <ul class="ullist">
+                <li>about1</li>
+                <li>about2
+                    <ul class="ullist2">
+                        <li>about2.1</li>
+                        <li>about2.2</li>
+                        <li>about2.3</li>
+                    </ul>
+                </li>
+                <li>about3</li>
+            </ul>
+        </li>
+        <li class="list">contanct
+            <ul class="ullist">
+                <li>contanct1</li>
+                <li>contanct2</li>
+                <li>contanct3</li>
+            </ul>
+        </li>
+        <li class="list">help</li>
+    </ul>
+</body>
+</html>
