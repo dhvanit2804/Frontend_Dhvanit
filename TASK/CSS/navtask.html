@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 200px;
+            height: 380px;
+            border: 2px solid;
+            margin: 30px auto;
+            position: relative;
+            box-shadow: 0 0 20px 10px rgb(179, 168, 168);
+        }
+        .main .text{
+            font-size: 15px;
+            background-color: lightcoral;
+            position: absolute;
+            right: 0;
+            padding: 3px;
+        }
+        .main .main2{
+            width: 145px;
+            height: 180px;
+            background-image: url('https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m2.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 40px auto;
+            
+        }
+        .main .main3{
+            width: 200px;
+            height: 20px;
+            color: white;
+            position: absolute;
+            top: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0);
+            transition: .8s;
+            
+        }
+        .main:hover .main3{
+            background-color: rgba(0, 0, 0, 1);
+            top: 59%;
+        }
+        .main .main4{
+            width: 200px;
+            height: 20px;
+            text-align: center;
+            color: lightcoral;
+        }
+        .main .main5{
+            text-align: center;
+            letter-spacing: 2px;
+            
+        }
+        .main5 .cancel{
+            text-decoration: line-through;
+            opacity: 0.5;
+            margin-left: 5px;
+        }
+        .main .main6{
+            width: 150px;
+            left: 22px;
+            height: 40px;
+            background-color: aqua;
+            text-align: center;
+            position: absolute;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .main6:hover {
+            outline: 3px solid aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <span class="text">New</span>
+        <div class="main2"></div>
+        <div class="main3">Quick View</div>
+        <div class="main4">Gabi Full Sleeve Sweatshirt</div>
+        <div class="main5">$45.99<span class="cancel">$69.71</span></div>
+        <div class="main6">ADD TO CART</div>
+    </div>
+</body>
+</html>
