@@ -31,7 +31,18 @@ ul li i{
     grid-template-columns: 35% 35% 30%;
     grid-auto-rows: 100px;
 }
-.box form input{
-    margin: 10px;
+
+#search {
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 300px;
     padding: 12px 10px;
+}
+#submit{
+    background: url('https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/search.png') no-repeat 4px 0px #2fdab8;
+    width: 11%;
+    padding: 0;
+    height: 42px;
+    outline: none;
+    border: none;
 }
