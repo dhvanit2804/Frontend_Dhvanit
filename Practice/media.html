@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA</title>
+    <style>
+        .main{
+            height: 400px;
+            background: lightcoral;
+        }
+        @media only screen and (max-width:1160px) {
+            .main{
+                background: pink;
+            }
+        }
+        @media only screen and (max-width:992px) {
+            .main{
+                background: linear-gradient(red,green);
+            }
+        }
+        @media only screen and (max-width:768px) {
+            .main{
+                background: lightgreen;
+            }
+        }
+        @media only screen and (max-width:576px) {
+            .main{
+                background: red;
+                height: 200px;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+    </div>
+</body>
+</html>
