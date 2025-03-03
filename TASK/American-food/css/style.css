@@ -191,5 +191,62 @@
     color: red;
     z-index: 2;
 }
+.about-main .abouts1{
+    background: linear-gradient(rgba(143,146,59,0.5),rgba(143,146,59,0.5)),url("/images/about.png");
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    z-index: 1;
+    margin-left: 10px;
+    height: 400px;
+}
+.abouts1 .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: red;
+    z-index: 2;
+}
 
 /* About us end */
+
+/* service start */
+
+.services{
+    font-family: "Roboto";
+    text-align: center;
+    color: #3d5f00;
+    margin: 30px auto;
+    margin-bottom: 40px;
+}
+
+.services .h2-service{
+    font-size: 50px;
+    color: #3d5f00;
+    font-weight: 700;
+}
+
+.services .p-service{
+    width: 50%;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 20px auto;
+}
+
+.service-main .row{
+    display: flex;
+}
+.service-main .row .col1{
+    
+    width: 60%;
+}
+
+
+.col1 .title{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* service end */
