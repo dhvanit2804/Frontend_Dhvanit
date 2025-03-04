@@ -4,16 +4,18 @@
     box-sizing: border-box;
 }
 
+/* utlites class */
 .container {
     width: 90%;
     margin: 0 auto;
 }
 
+/* header start */
 .header {
     background-color: #3d5f00;
 }
 
-.navbar {
+.navabar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,21 +31,27 @@
     margin: 0 5px;
 }
 
-.list a {
+.list .nav-a {
     text-decoration: none;
-    color: white;
     font-size: 24px;
     font-weight: 500;
     font-family: "Roboto";
-}
-
-.icon i {
-    font-size: 24px;
     color: white;
 }
 
+.icon .search {
+    color: white;
+    font-size: 24px;
+}
+
+.icon .bar {
+    color: white;
+    font-size: 24px;
+    display: none;
+}
+
 .main-content {
-    background-image: url(/images/Image.png);
+    background-image: url("/Images/main.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -56,25 +64,26 @@
 }
 
 .data .h1-header {
-    font-size: 67px;
+    /* min and (vw) max */
+    font-size: clamp(24px, 7vw, 67px);
     text-transform: uppercase;
     font-weight: 800;
-
-}
-
-.data hr {
-    width: 300px;
-    margin: 10px 0;
 }
 
 .data .h3-header {
-    font-size: 54px;
+    font-size: clamp(20px, 7vw, 54px);
     font-weight: 500;
+}
+
+.data .hr {
+    width: 300px;
+    margin: 10px 0;
 }
 
 .data .p-header {
     width: 40%;
     font-size: 21px;
+    font-size: clamp(18px, 3.2vw, 21px);
     font-weight: 400;
     font-family: "Roboto";
     margin: 20px 0;
@@ -82,53 +91,56 @@
 
 .data .btn-header {
     background-color: #3d5f00;
-    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 20px 0 20px 0;
+    color: white;
 }
 
 .data .btn-icon {
-    background-color: #3d5f00;
-    color: white;
-    padding: 10px;
     border: none;
+    padding: 10px;
+    background-color: #3d5f00;
     border-radius: 10px 0 10px 0;
     margin-left: 10px;
+    color: white;
 }
 
-/* About us start */
+/* header end */
 
-#About{
+/* About start */
+#About {
     padding: 30px 0;
 }
 
 .aboutus {
-    font-family: "Roboto";
     text-align: center;
     color: #3d5f00;
-    margin: 30px auto;
+    font-family: "Roboto";
+    margin: 30px 0;
 }
 
 .aboutus .h2-about {
-    font-size: 50px;
-    color: #3d5f00;
+    /* font-size: 50px; */
+    font-size: clamp(20px, 7vw, 50px);
     font-weight: 700;
 }
 
 .aboutus .p-about {
-    width: 50%;
     font-size: 25px;
+    font-size: clamp(18px, 3vw, 25px);
+    width: 60%;
     font-weight: 400;
     margin: 20px auto;
 }
 
 .about-main .row {
     display: flex;
+    /* flex-wrap: wrap; */
 }
 
 .about-main .row .col {
-    
+    /* border: 2px solid; */
     width: 50%;
 }
 
@@ -138,69 +150,53 @@
 }
 
 .about-content .h3-about {
-    font-size: 54px;
+
+    font-size: clamp(20px, 7vw, 54px);
     font-weight: 500;
 }
 
 .about-content .para {
-    font-size: 25px;
+    font-size: clamp(18px, 3vw, 25px);
     font-weight: 400;
     width: 80%;
     margin: 20px 0;
 }
 
 .about-content .para1 {
-    font-size: 25px;
-    width: 80%;
+    font-size: clamp(18px, 3vw, 25px);
     font-weight: 400;
     margin-bottom: 20px;
 }
 
 .about-content .btn-header {
     background-color: #3d5f00;
-    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 20px 0 20px 0;
+    color: white;
 }
 
 .about-content .btn-icon {
-    background-color: #3d5f00;
-    color: white;
-    padding: 10px;
     border: none;
+    padding: 10px;
+    background-color: #3d5f00;
     border-radius: 10px 0 10px 0;
     margin-left: 10px;
+    color: white;
 }
 
-.about-main .abouts{
-    background: linear-gradient(rgba(143,146,59,0.5),rgba(143,146,59,0.5)),url("/images/about.png");
-    position: relative;
-    margin: 0 auto;
+.about-main .abouts {
+    /* background: url("/Images/about.png"); */
+    background: linear-gradient(rgba(143, 146, 59, 0.5), rgba(143, 146, 59, 0.5)), url("/Images/about.png");
+    background-size: 100% 100%;
     width: 70%;
+    margin: 0 auto;
+    position: relative;
     z-index: 1;
     height: 400px;
 }
 
-.abouts .icon i{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    color: red;
-    z-index: 2;
-}
-.about-main .abouts1{
-    background: linear-gradient(rgba(143,146,59,0.5),rgba(143,146,59,0.5)),url("/images/about.png");
-    position: relative;
-    margin: 0 auto;
-    width: 70%;
-    z-index: 1;
-    margin-left: 10px;
-    height: 400px;
-}
-.abouts1 .icon i{
+.abouts .icon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -210,43 +206,158 @@
     z-index: 2;
 }
 
-/* About us end */
+.abou1 {
+    margin-top: 100px;
+}
+
+/* About end */
+
 
 /* service start */
-
-.services{
-    font-family: "Roboto";
+.service {
     text-align: center;
     color: #3d5f00;
-    margin: 30px auto;
-    margin-bottom: 40px;
+    font-family: "Roboto";
+    margin: 30px 0;
 }
 
-.services .h2-service{
-    font-size: 50px;
-    color: #3d5f00;
+.service .h2-service {
+    /* font-size: 50px; */
+    font-size: clamp(20px, 7vw, 50px);
     font-weight: 700;
 }
 
-.services .p-service{
-    width: 50%;
+.service .p-service {
     font-size: 25px;
+    font-size: clamp(18px, 3vw, 25px);
+    width: 60%;
     font-weight: 400;
     margin: 20px auto;
 }
 
-.service-main .row{
-    display: flex;
-}
-.service-main .row .col1{
-    
-    width: 60%;
+.service-main {
+    margin: 20px 0;
 }
 
-
-.col1 .title{
+.service-main .row {
     display: flex;
-    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.service-main .row .col-7 {
+    width: 70%;
+    /* border: 2px solid; */
+}
+
+.service-main .row .col-3 {
+    width: 30%;
+    /* border: 2px solid; */
+}
+
+.service-card .service-data {
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(20px, 6.7vw, 50px);
+    color: #3d5f00;
+    font-weight: 500;
+    font-family: "Roboto";
+}
+
+.service-card .p-card {
+    font-size: clamp(18px, 3vw, 25px);
+    color: #3d5f00;
+    font-weight: 400;
+    font-family: "Roboto";
+    width: 90%;
+    margin: 20px 0;
+}
+
+.service-card .btn-service {
+    background-color: #3d5f00;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px 0 20px 0;
+    color: white;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
 }
 
 /* service end */
+
+/* price start */
+.price {
+    text-align: center;
+    color: #3d5f00;
+    font-family: "Roboto";
+    margin: 30px 0;
+}
+
+.price .h2-price {
+    /* font-size: 50px; */
+    font-size: clamp(20px, 7vw, 50px);
+    font-weight: 700;
+}
+
+.price .p-price {
+    font-size: 25px;
+    font-size: clamp(18px, 3vw, 25px);
+    width: 60%;
+    font-weight: 400;
+    margin: 20px auto;
+}
+
+.price-main .row {
+    display: flex;
+    gap: 40px;
+}
+
+.price-main .row .col {
+    width: 33.33%;
+    /* border: 2px solid; */
+
+}
+
+.price-card {
+    background-color: #608b14;
+    text-align: center;
+    font-family: "Roboto";
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.price-card .h3-price {
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.price-card .h2-card-price {
+    font-size: 58px;
+    font-weight: 700;
+}
+
+.price-content {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.price-content .h4-price {
+    font-size: 29px;
+    color: #3d5f00;
+    font-weight: 400;
+    font-family: "Roboto";
+    margin: 10px 0;
+}
+.price-content .btn-price{
+    background-color: #3d5f00;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px 0 20px 0;
+    color: white;
+    margin-top: 20px;
+}
+
+/* price end */
