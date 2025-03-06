@@ -220,38 +220,40 @@ section .row .col {
 
 /* Dance start */
 
-#dance .row1{
+#dance .row1 {
     display: flex;
 }
-#dance .row1 .col1{
+
+#dance .row1 .col1 {
     width: 50%;
-    border: 2px solid;
+    /* border: 2px solid; */
 }
-#dance .row1 .col2{
+
+#dance .row1 .col2 {
     width: 50%;
-    border: 2px solid;
+    /* border: 2px solid; */
     background-color: #e8631c;
     text-align: center;
 }
 
-.col2 .h1-dance{
+.col2 .h1-dance {
     font-size: 75px;
-text-transform: uppercase;
-color: #ffffff;
-font-weight: 700;
-font-family: "Oswald";
-margin-top: 40%;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Oswald";
+    margin-top: 40%;
 }
 
-.col2 .p-dance{
+.col2 .p-dance {
     font-size: 30px;
-color: #ffffff;
-font-weight: 400;
-font-family: "Montserrat";
-margin-top: 25px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    margin-top: 25px;
 }
 
-.col2 .btn-dance{
+.col2 .btn-dance {
     font-size: 25px;
     color: #ffffff;
     margin-top: 40px;
@@ -266,3 +268,208 @@ margin-top: 25px;
 }
 
 /* Dance end */
+
+/* stats start */
+
+#stats {
+    background-color: #303030;
+}
+
+.stats {
+    padding: 70px 0;
+}
+
+.stats .h1-stats {
+    font-size: 75px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Oswald";
+    text-align: center;
+}
+
+.stats .p-stats {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+#stats .row2 {
+    display: flex;
+    padding: 100px 0;
+}
+
+#stats .row2 .col {
+    width: 33.33%;
+}
+
+.col .h1-col-stats {
+    font-size: 67px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Oswald";
+    text-align: center;
+}
+
+.col .p-col-stats {
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+
+/* stats end */
+
+/* info start */
+
+#info {
+    padding: 290px 100px;
+    text-align: center;
+    background: url("/images/info.png");
+    background-size: 100% 100%;
+}
+
+.info .p-info {
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Nunito";
+    text-align: center;
+}
+
+.info .h1-info {
+    font-size: 58px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Oswald";
+    text-align: center;
+}
+
+/* info end */
+
+/* sub start */
+
+#sub {
+    background-color: #e8631c;
+    padding: 150px;
+}
+
+.sub .h1-sub {
+    text-align: center;
+    font-size: 75px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Oswald";
+}
+
+.sub .p-sub {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+.sub .input-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.input-box .input-sub {
+    width: 400px;
+    padding: 12px;
+    border-radius: 2px;
+    border: none;
+    font-family: "Montserrat";
+    outline: none;
+    font-size: 16px;
+}
+
+.input-box .btn-sub{
+    font-size: 25px;
+    background-color: #303030;
+    border: none;
+    padding: 0 25px;
+    border-radius: 2px;
+text-transform: uppercase;
+color: #ffffff;
+font-weight: 600;
+font-family: "Oswald";
+text-align: center;
+}
+
+
+/* sub end */
+
+/* footer start */
+
+#Footer {
+    padding: 50px 0;
+    background-color:#303030;
+}
+
+#Footer .row {
+    display: flex;
+}
+
+#Footer .row .col-4 {
+    width: 40%;
+    margin-left: 20px;
+}
+
+#Footer .row .col-6 {
+    width: 60%;
+}
+
+.col-6 .row .col {
+    width: 33.33%;
+}
+
+.footer .h2-footer {
+    font-size: clamp(18px, 3vw, 31px);
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Oswald";
+}
+
+.footer .ul-footer {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.ul-footer .li-footer {
+    margin: 10px 0;
+}
+
+.ul-footer .li-footer .a-footer {
+    text-decoration: none;
+    color: white;
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+
+.footer .p-footer {
+
+    font-size: clamp(18px, 3vw, 24px);
+    color: #ffffff;
+    width: 80%;
+    margin:  20px 0;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+.footer-icon i{
+    font-size: clamp(18px, 3vw, 24px);
+    color: white;
+    margin: 0 5px;
+}
+
+
+/* footer end */
