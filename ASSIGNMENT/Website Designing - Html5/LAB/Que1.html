@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Media and Shapes</title>
+</head>
+<body>
+
+    <h2>Audio Tag</h2>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <h2>Video Tag with Properties</h2>
+    <video width="400" height="300" controls muted loop autoplay>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>Canvas Shape</h2>
+    <canvas id="myCanvas" width="200" height="200" style="border:1px solid black; background: radial-gradient(circle, red, yellow);"></canvas>
+
+    <h2>SVG Shape</h2>
+    <svg width="200" height="200">
+        <!-- Rectangle -->
+        <rect width="100" height="100" x="50" y="50" fill="blue" stroke="black" stroke-width="3"/>
+    </svg>
+
+</body>
+</html>
