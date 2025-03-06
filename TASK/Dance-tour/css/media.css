@@ -1,0 +1,163 @@
+@media only screen and (max-width:1160px) {
+    
+}
+
+@media only screen and (max-width:992px) {
+    
+}
+
+@media only screen and (max-width:768px) {
+    .navbar {
+        padding: 15px;
+    }
+    
+    .lists {
+        display: none;
+    }
+    .icon .search{
+        display: none;
+    }
+    
+    .icon .menu {
+        display: block; 
+        cursor: pointer;
+    }
+    
+    .data {
+        padding: 80px 20px;
+    }
+    
+    .data .p-header {
+        width: 100%;
+    }
+    
+    section .row {
+        flex-direction: column;
+    }
+    
+    section .row .col {
+        width: auto;
+        margin: 15px;
+    }
+    
+    #dance .row1 {
+        flex-direction: column;
+    }
+    
+    #dance .row1 .col1,
+    #dance .row1 .col2 {
+        width: 100%;
+    }
+    
+    .col2 .h1-dance {
+        margin-top: 30px;
+        font-size: 45px;
+    }
+    
+    .col2 .p-dance {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    
+    .col2 .btn-dance {
+        margin-bottom: 30px;
+        font-size: 20px;
+        padding: 5px 40px;
+    }
+    
+    .stats .h1-stats {
+        font-size: 45px;
+    }
+    
+    .stats .p-stats {
+        font-size: 20px;
+    }
+    
+    #stats .row2 {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    
+    #stats .row2 .col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .col .h1-col-stats {
+        font-size: 45px;
+    }
+    
+    .col .p-col-stats {
+        font-size: 28px;
+    }
+    
+    /* Info Section */
+    #info {
+        padding: 100px 20px;
+    }
+    
+    .info .p-info {
+        font-size: 24px;
+    }
+    
+    .info .h1-info {
+        font-size: 32px;
+    }
+    
+    #sub {
+        padding: 60px 20px;
+    }
+    
+    .sub .h1-sub {
+        font-size: 45px;
+    }
+    
+    .sub .p-sub {
+        font-size: 20px;
+    }
+    
+    .sub .input-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-box .input-sub {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 15px;
+    }
+    
+    .input-box .btn-sub {
+        width: 100%;
+        max-width: 350px;
+        padding: 10px;
+    }
+    
+    #Footer .row {
+        flex-direction: column;
+    }
+    
+    #Footer .row .col-4,
+    #Footer .row .col-6 {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .col-6 .row {
+        flex-direction: column;
+    }
+    
+    .col-6 .row .col {
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    .footer .p-footer {
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width:576px) {
+    
+}

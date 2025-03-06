@@ -39,6 +39,11 @@
     color: #ffffff;
 
 }
+.icon .menu{
+    font-size: 25px;
+    color: #ffffff;
+    display: none;
+}
 
 .main-content {
     background: url("/images/main.png");
@@ -51,14 +56,14 @@
 }
 
 .data .h1-header {
-    font-size: 125px;
+    font-size: clamp(40px, 7vw, 125px);
     color: #ffffff;
     font-weight: 400;
     font-family: "Oswald";
 }
 
 .data .p-header {
-    font-size: 30px;
+    font-size: clamp(18px, 3.2vw, 30px);
     color: #ffffff;
     font-weight: 400;
     width: 50%;
@@ -67,7 +72,7 @@
 }
 
 .data .btn-header {
-    font-size: 29px;
+    font-size: clamp(18px, 3.2vw, 29px);
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 400;
@@ -94,7 +99,7 @@
 }
 
 .tour .h1-tour {
-    font-size: 75px;
+    font-size: clamp(24px, 7vw, 75px);
     text-transform: uppercase;
     font-weight: 700;
     font-family: "Oswald";
@@ -102,7 +107,7 @@
 }
 
 .tour .p-tour {
-    font-size: 30px;
+    font-size: clamp(18px, 3.2vw, 30px);
     font-weight: 400;
     font-family: "Montserrat";
 }
@@ -128,7 +133,7 @@ section .row .col {
 }
 
 .tour-content .h1-tour-content {
-    font-size: 37px;
+    font-size: clamp(15px, 3.2vw, 37px);
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 400;
@@ -137,7 +142,7 @@ section .row .col {
 }
 
 .tour-content .p-tour-content {
-    font-size: 22px;
+    font-size: clamp(12px, 2.2vw, 22px);
     color: #ffffff;
     font-weight: 400;
     font-family: "Montserrat";
