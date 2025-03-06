@@ -1,0 +1,79 @@
+<!-- Lab Assignment 
+ 
+ Task: Build a responsive webpage that includes: 
+o A navigation bar. 
+o A content section with two columns. 
+o A footer. 
+ 
+Additional Requirements: 
+ 
+o Use media queries to make the webpage responsive for mobile devices. 
+o On smaller screens (below 768px), stack the columns vertically. 
+o Adjust the font sizes and padding to improve readability on mobile. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .column {
+            width: 48%;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        @media only screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .column {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .navbar, .footer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">Navigation Bar</div>
+    <div class="container">
+        <div class="column">Column 1: Content goes here...</div>
+        <div class="column">Column 2: More content here...</div>
+    </div>
+    <div class="footer">Footer Section</div>
+</body>
+</html>

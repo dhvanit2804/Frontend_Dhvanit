@@ -1,0 +1,76 @@
+<!--  
+ Task: Create a blog post layout with the following: 
+o A title, subtitle, and body content. 
+o Use at least two different fonts (one for headings, one for body content). 
+o Style the text to be responsive and easy to read. 
+ 
+Additional Requirements: 
+ 
+o Use a custom font from Google Fonts. 
+o Adjust line-height, font-size, and spacing for improved readability.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-family: 'Lora', serif;
+            font-size: 1.5em;
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Blog</h1>
+        <h2>A Journey into Web Development</h2>
+        <p>Web development is an ever-evolving field that combines creativity and logic. Whether you're a beginner or an experienced developer, staying updated with the latest trends is crucial.</p>
+        <p>In this blog, we will explore various web technologies, best practices, and useful tips to enhance your skills.</p>
+    </div>
+</body>
+</html>
