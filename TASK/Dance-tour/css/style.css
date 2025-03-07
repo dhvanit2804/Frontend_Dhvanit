@@ -39,7 +39,8 @@
     color: #ffffff;
 
 }
-.icon .menu{
+
+.icon .menu {
     font-size: 25px;
     color: #ffffff;
     display: none;
@@ -157,6 +158,17 @@ section .row .col {
     background-color: #303030;
 }
 
+section .row {
+    display: flex;
+}
+
+section .row .col {
+    width: 33.33%;
+    margin: 30px;
+    /* border: 2px solid; */
+}
+
+
 .col .card-price {
     background-color: #e8631c;
     padding: 40px;
@@ -164,13 +176,13 @@ section .row .col {
 }
 
 .card-price .p-icon {
-    font-size: 90px;
+    font-size: clamp(24px, 7vw, 90px);
     text-align: center;
     color: white;
 }
 
 .card-price .h1-card-price {
-    font-size: 37px;
+    font-size: clamp(15px, 3.2vw, 37px);
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 600;
@@ -179,7 +191,7 @@ section .row .col {
 }
 
 .card-price .p-card-price {
-    font-size: 22px;
+    font-size: clamp(12px, 2.2vw, 22px);
     color: #ffffff;
     margin-top: 20px;
     font-weight: 400;
@@ -208,7 +220,7 @@ section .row .col {
 }
 
 .price .h1-price {
-    font-size: 75px;
+    font-size: clamp(24px, 7vw, 75px);
     text-transform: uppercase;
     font-weight: 700;
     font-family: "Oswald";
@@ -216,7 +228,7 @@ section .row .col {
 }
 
 .price .p-price {
-    font-size: 30px;
+    font-size: clamp(18px, 3.2vw, 30px);
     font-weight: 400;
     font-family: "Montserrat";
 }
@@ -242,7 +254,7 @@ section .row .col {
 }
 
 .col2 .h1-dance {
-    font-size: 75px;
+    font-size: clamp(24px, 7vw, 75px);
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
@@ -251,7 +263,7 @@ section .row .col {
 }
 
 .col2 .p-dance {
-    font-size: 30px;
+    font-size: clamp(18px, 3.2vw, 30px);
     color: #ffffff;
     font-weight: 400;
     font-family: "Montserrat";
@@ -259,7 +271,7 @@ section .row .col {
 }
 
 .col2 .btn-dance {
-    font-size: 25px;
+    font-size: clamp(15px, 2.2vw, 25px);
     color: #ffffff;
     margin-top: 40px;
     font-weight: 400;
@@ -285,7 +297,7 @@ section .row .col {
 }
 
 .stats .h1-stats {
-    font-size: 75px;
+    font-size: clamp(24px, 7vw, 75px);
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
@@ -294,7 +306,7 @@ section .row .col {
 }
 
 .stats .p-stats {
-    font-size: 30px;
+    font-size: clamp(18px, 3.2vw, 30px);
     color: #ffffff;
     font-weight: 400;
     font-family: "Montserrat";
@@ -311,7 +323,7 @@ section .row .col {
 }
 
 .col .h1-col-stats {
-    font-size: 67px;
+    font-size: clamp(24px, 7vw, 67px);
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
@@ -320,7 +332,7 @@ section .row .col {
 }
 
 .col .p-col-stats {
-    font-size: 42px;
+    font-size: clamp(24px, 3.2vw, 42px);
     color: #ffffff;
     font-weight: 400;
     font-family: "Montserrat";
@@ -340,7 +352,7 @@ section .row .col {
 }
 
 .info .p-info {
-    font-size: 50px;
+    font-size: clamp(22px, 3.2vw, 50px);
     color: #ffffff;
     font-weight: 400;
     font-family: "Nunito";
@@ -348,7 +360,7 @@ section .row .col {
 }
 
 .info .h1-info {
-    font-size: 58px;
+    font-size: clamp(24px, 7vw, 58px);
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
@@ -367,14 +379,14 @@ section .row .col {
 
 .sub .h1-sub {
     text-align: center;
-    font-size: 75px;
+    font-size: clamp(24px, 7vw, 75px);
     color: #ffffff;
     font-weight: 700;
     font-family: "Oswald";
 }
 
 .sub .p-sub {
-    font-size: 30px;
+    font-size: clamp(18px, 3.2vw, 30px);
     color: #ffffff;
     font-weight: 400;
     font-family: "Montserrat";
@@ -397,17 +409,17 @@ section .row .col {
     font-size: 16px;
 }
 
-.input-box .btn-sub{
-    font-size: 25px;
+.input-box .btn-sub {
+    font-size: clamp(14px, 3.2vw, 25px);
     background-color: #303030;
     border: none;
     padding: 0 25px;
     border-radius: 2px;
-text-transform: uppercase;
-color: #ffffff;
-font-weight: 600;
-font-family: "Oswald";
-text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Oswald";
+    text-align: center;
 }
 
 
@@ -417,7 +429,7 @@ text-align: center;
 
 #Footer {
     padding: 50px 0;
-    background-color:#303030;
+    background-color: #303030;
 }
 
 #Footer .row {
@@ -466,11 +478,12 @@ text-align: center;
     font-size: clamp(18px, 3vw, 24px);
     color: #ffffff;
     width: 80%;
-    margin:  20px 0;
+    margin: 20px 0;
     font-weight: 400;
     font-family: "Montserrat";
 }
-.footer-icon i{
+
+.footer-icon i {
     font-size: clamp(18px, 3vw, 24px);
     color: white;
     margin: 0 5px;
