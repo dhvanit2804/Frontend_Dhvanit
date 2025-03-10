@@ -9,3 +9,4 @@ document.write("<h2>Hello World</h2>");
 document.getElementById("h1").innerHTML = "Hello this is javascript";
 
 document.getElementById("h2").innerText = "Hello this is javascript";
+  
