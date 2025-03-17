@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter your number 1" id="input1">
+    <input type="text" placeholder="Enter your number 2" id="input2">
+    <br>
+    <br>
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+    <h1 id="h1"></h1>
+
+    <script>
+        let num1 = document.getElementById("input1");
+        let num2 = document.getElementById("input2");
+
+        function add(){
+            let sum = parseInt(num1.value) + parseInt(num2.value)
+            console.log("sum =", sum);
+            document.getElementById("h1").innerHTML = `sum = ${sum}`
+        }
+
+        function sub(){
+            let sub = parseInt(num1.value) - parseInt(num2.value)
+            console.log("sub =", sub);
+            document.getElementById("h1").innerHTML = `sub = ${sub}`
+        }
+
+        function mul(){
+            let mul = parseInt(num1.value) * parseInt(num2.value)
+            console.log("mul =", mul);
+            document.getElementById("h1").innerHTML = `mul = ${mul}`
+        }
+
+        function div(){
+            const div = parseInt(num1.value) / parseInt(num2.value)
+            console.log("div =", div);
+            document.getElementById("h1").innerHTML = `div = ${div}`
+        }
+    </script>
+</body>
+</html>
