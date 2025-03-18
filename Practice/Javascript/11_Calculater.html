@@ -8,25 +8,25 @@
 </head>
 <body>
     <div id="calculater">
-        <input type="text" readonly>
+        <input id="display" type="text" readonly>
         <div id="keys">
-            <button onclick="ToDisplay('+')">+</button>
+            <button onclick="ToDisplay('+')" class="btn">+</button>
             <button onclick="ToDisplay('7')">7</button>
             <button onclick="ToDisplay('8')">8</button>
             <button onclick="ToDisplay('9')">9</button>
-            <button onclick="ToDisplay('-')">-</button>
+            <button onclick="ToDisplay('-')" class="btn">-</button>
             <button onclick="ToDisplay('4')">4</button>
             <button onclick="ToDisplay('5')">5</button>
             <button onclick="ToDisplay('6')">6</button>
-            <button onclick="ToDisplay('*')">*</button>
+            <button onclick="ToDisplay('*')" class="btn">*</button>
             <button onclick="ToDisplay('1')">1</button>
             <button onclick="ToDisplay('2')">2</button>
             <button onclick="ToDisplay('3')">3</button>
-            <button onclick="ToDisplay('/')">/</button>
+            <button onclick="ToDisplay('/')" class="btn">/</button>
             <button onclick="ToDisplay('0')">0</button>
             <button onclick="ToDisplay('.')">.</button>
             <button onclick="calculate()">=</button>
-            <button onclick="cleardisplay()">C</button>
+            <button onclick="clearDisplay()" class="btn">C</button>
         </div>
     </div>
     <script src="Calculater.js"></script>
