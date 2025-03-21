@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .main{
+        .main {
             height: 400px;
             width: 100%;
         }
-        button{
+
+        button {
             background-color: red;
             border: none;
             margin-top: 20px;
@@ -18,6 +20,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="main">
         <img src="/img/1.jpeg" height="100%" width="100%" id="img" alt="">
@@ -30,17 +33,18 @@
             let img_tag = document.getElementById("img");
             console.log(img_tag.src);
 
-            if(img_tag.src.match("/img/1.jpeg")){
+            if (img_tag.src.match("/img/1.jpeg")) {
                 img_tag.src = "/img/2.jpeg";
-            }else if(img_tag.src.match("/img/2.jpeg")){
+            } else if (img_tag.src.match("/img/2.jpeg")) {
                 img_tag.src = "/img/3.jpeg";
-            }else if(img_tag.src.match("/img/3.jpeg")){
+            } else if (img_tag.src.match("/img/3.jpeg")) {
                 img_tag.src = "/img/4.jpeg";
-            }else{
+            } else {
                 img_tag.src = "/img/1.jpeg";
             }
         }
-        
+
     </script>
 </body>
+
 </html>
