@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1" onmouseenter="data()" onmouseleave="changedata()">Hello This is H5 tag</h1>
+
+    <button onclick="data()">Click me</button>
+
+    <script>
+        function data() {
+            document.getElementById("h1").innerText = "Hello JAVASCRIPT";
+            document.getElementById("h1").style.background = "green";
+        }
+        function changedata(){
+            console.log("change data")
+
+            document.getElementById("h1").innerText = "Change data";
+            document.getElementById("h1").style.background = "blue";
+        }
+    </script>
+</body>
+</html>
