@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .data{
+            background-color: red;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 100px;
+            color: white;
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        button{
+            color: white;
+            background: black;
+            border: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="addcss()">Add Css</button>
+
+    <button onclick="removecss()">Remove Css</button>
+
+    <button onclick="toggle()">Toggle</button>
+
+    <h3 id="h3">Parate Dhvanit</h3>
+
+    <script>
+
+        let h3_tag = document.getElementById("h3");
+
+        function addcss() {
+            h3_tag.classList.add("data");
+            console.log("add css")
+        }
+
+        function removecss(){
+            h3_tag.classList.remove("data");
+            console.log("remove css");
+        }
+
+        function toggle(){
+            h3_tag.classList.toggle("data")
+            console.log("toggle data");
+        }
+    </script>
+</body>
+</html>
