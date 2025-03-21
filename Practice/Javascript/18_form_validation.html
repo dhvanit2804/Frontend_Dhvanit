@@ -4,6 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 <body>
     <div class="container">
@@ -11,19 +49,21 @@
         <form action="">
             <label>Name:</label>
             <input type="text" id="name">
-            <div id="nameError"></div>
+            <div class="error" id="nameError"></div>
 
             <label>Number:</label>
             <input type="tel" id="number">
-            <div id="numberError"></div>
+            <div class="error" id="numberError"></div>
 
             <label>Email:</label>
             <input type="email" id="email">
-            <div id="emailError"></div>
+            <div class="error" id="emailError"></div>
 
             <label>Password</label>
             <input type="password" id="password">
-            <div id="passError"></div>
+            <div class="error" id="passError"></div>
+
+            <button type="submit">Submit</button>
         </form>
     </div>
 </body>
