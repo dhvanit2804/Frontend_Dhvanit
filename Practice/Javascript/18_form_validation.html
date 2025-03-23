@@ -41,30 +41,56 @@
             cursor: pointer;
         }
     </style>
-
 </head>
 <body>
+
     <div class="container">
         <h2>Register</h2>
-        <form action="">
+        <form id="myForm">
             <label>Name:</label>
             <input type="text" id="name">
             <div class="error" id="nameError"></div>
 
             <label>Number:</label>
-            <input type="tel" id="number">
+            <input type="text" id="number">
             <div class="error" id="numberError"></div>
 
             <label>Email:</label>
             <input type="email" id="email">
             <div class="error" id="emailError"></div>
 
-            <label>Password</label>
+            <label>Password:</label>
             <input type="password" id="password">
-            <div class="error" id="passError"></div>
+            <div class="error" id="passwordError"></div>
 
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <script>
+        function validateForm(){
+            let isValid = true;
+
+            let name = document.getElementById("name").value.trim();
+            let nameError = document.getElementById("nameError");
+            if(!/^[a-zA-Z\s]{6,}$/.test(name)){
+                nameError.textContent = "Name must be at least 6 letter";
+                isValid = false;
+            }else{
+                nameError.textContent = "";
+            }
+
+            // Number
+            let number = document.getElementById("number").value.trim();
+            let numberError = document.getElementById("numberError");
+            if(!/^\d{10}$/.test(number)){
+                numberError.textContent = "Number must be 10 digits";
+                isValid = false;
+            }else{
+                numberError.textContent = "";
+            }
+        }
+    </script>
+
 </body>
 </html>
