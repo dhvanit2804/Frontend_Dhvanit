@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name : "Dhvanit",
+            surname : "Parate",
+            age: 20,
+            course: {
+                C1 : "HTML",
+                C2 : "CSS",
+                C3 : "JAVASCRIPT",
+                C4 : "REACT",
+                C5 : "JAVA",
+                C6 : "SPRING BOOT",
+                C7 : "DATABASE"
+            }  
+        }
+
+        // console.log(person.course.C1);
+        // console.log(person.course);
+        // document.writeln(person.course.C1)
+
+        for(let key in person.course){
+            console.log(person.course[key]);
+            document.write(person.course[key] + "<br>");
+        }
+        
+    </script>
+</body>
+</html>
