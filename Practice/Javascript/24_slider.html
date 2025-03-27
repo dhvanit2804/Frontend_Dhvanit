@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        .main {
+            height: 500px;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="/img/1.jpeg" height="100%" width="100%" class="img" alt="">
+        <img src="/img/2.jpeg" height="100%" width="100%" class="img" alt="">
+        <img src="/img/3.jpeg" height="100%" width="100%" class="img" alt="">
+        <img src="/img/4.jpeg" height="100%" width="100%" class="img" alt="">
+    </div>
+    <button onclick="Slider()">Next Img</button>
+
+    <script>
+        let index = 0;
+        let img_tag = document.getElementsByClassName("img")
+        // console.log(img_tag)
+
+        function Slider() {
+            
+            for (let i = 0; i < img_tag.length; i++) {
+                // console.log(img_tag[i]);
+                img_tag[i].style.display = "none";
+            }
+            img_tag[index].style.display = "block";
+            index++;
+            
+            if(index == 4){
+                index = 0
+            }
+            if(index < 0){
+                index = img_tag.length -1;
+            }
+            // setTimeout(Slider,2000)
+        }
+    </script>
+</body>
+
+</html>
