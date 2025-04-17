@@ -7,321 +7,7 @@
     <title>BookMyShow - Movie Tickets, Events, Plays, Sports</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-red: #e91e63;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--light-text);
-        }
-
-        .bms-navbar {
-            padding: 8px 0;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-brand img {
-            height: 35px;
-        }
-
-        .search-container {
-            flex-grow: 1;
-            max-width: 650px;
-            margin: 0 24px;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 8px 15px;
-            border-radius: 4px;
-            border: 1px solid #cccccc;
-            background-color: #f5f5f5;
-            color: #666;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: #f84464;
-        }
-
-        .location-selector {
-            color: #333;
-            font-size: 14px;
-            font-weight: 400;
-            margin-right: 16px;
-            cursor: pointer;
-        }
-
-        .location-selector i {
-            margin-left: 5px;
-            font-size: 12px;
-        }
-
-        .sign-in-btn {
-            background-color: #f84464;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .sign-in-btn:hover {
-            background-color: #e53f5d;
-            color: white;
-        }
-
-        .nav-menu {
-            display: flex;
-            border-top: 1px solid #f0f0f0;
-            padding: 8px 0;
-        }
-
-        .primary-nav {
-            margin-right: auto;
-        }
-
-        .secondary-nav {
-            margin-left: auto;
-        }
-
-        .nav-menu .nav-item {
-            list-style: none;
-            display: inline-block;
-            margin: 0 16px 0 0;
-        }
-
-        .secondary-nav .nav-item {
-            margin: 0 0 0 16px;
-        }
-
-        .nav-menu .nav-link {
-            color: #333;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .nav-menu .nav-link:hover {
-            color: #f84464;
-        }
-
-        .menu-btn {
-            background: none;
-            border: none;
-            color: #333;
-            font-size: 20px;
-        }
-
-        .category-slider {
-            padding: 20px 0;
-        }
-
-        .category-item {
-            text-align: center;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        .category-item img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .category-item p {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        .section-title {
-            margin: 20px 0;
-            font-weight: 600;
-        }
-
-        .movie-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            transition: transform 0.3s;
-            height: 100%;
-        }
-
-        .movie-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .movie-poster {
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .movie-info {
-            padding: 15px;
-        }
-
-        .movie-title {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .movie-genre {
-            color: #aaa;
-            font-size: 14px;
-        }
-
-        .rating {
-            color: #3cca64;
-            font-weight: 600;
-        }
-
-        .banner {
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 20px 0;
-        }
-
-        .banner img {
-            width: 100%;
-            height: auto;
-        }
-
-        .language-selector {
-            background-color: #333;
-            color: white;
-            border: 1px solid #444;
-            padding: 8px;
-            margin-top: 15px;
-        }
-
-        .carousel-indicators [data-bs-target] {
-            background-color: var(--primary-red);
-        }
-
-        .city-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .city-badge {
-            background-color: #333;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 12px;
-        }
-
-        .modal-fullscreen {
-            width: 100%;
-            max-width: none;
-            height: 100%;
-            margin: 0;
-        }
-
-        .search-input {
-            border-radius: 20px;
-            padding-left: 15px;
-        }
-
-        .movie-list {
-            padding: 20px 0;
-        }
-
-        .movie-item {
-            font-size: 15px;
-            margin-bottom: 15px;
-        }
-
-        .nav-tabs .nav-link.active {
-            font-weight: bold;
-            border-bottom: 2px solid #dc3545;
-            color: #000;
-            background-color: transparent;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-        }
-
-        .nav-tabs .nav-link {
-            color: #6c757d;
-            border: none;
-        }
-
-        .movie-rating {
-            font-size: 12px;
-            color: #6c757d;
-        }
-
-        .heart-icon {
-            color: #ff4d6d;
-        }
-
-        .badge-new {
-            color: #ffc107;
-            font-size: 10px;
-            padding: 2px 5px;
-            border-radius: 3px;
-            margin-left: 5px;
-        }
-
-        .language-filter {
-            display: inline-block;
-            margin-right: 5px;
-            margin-bottom: 5px;
-            padding: 3px 12px;
-            border-radius: 20px;
-            background-color: #f8f9fa;
-            font-size: 14px;
-        }
-
-        .format-badge {
-            display: inline-block;
-            margin-right: 5px;
-            padding: 1px 8px;
-            border-radius: 3px;
-            background-color: #f1f1f1;
-            font-size: 12px;
-            color: #333;
-        }
-
-        .cinema-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .cinema-list li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 12px;
-            line-height: 1.4;
-        }
-
-        .cinema-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #333;
-            font-size: 18px;
-        }
-
-        .badge-new-cinema {
-            background-color: #ffc107;
-            color: #000;
-            font-size: 10px;
-            padding: 2px 5px;
-            border-radius: 3px;
-            margin-left: 5px;
-            vertical-align: text-top;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -577,6 +263,47 @@
                                                             <div>Odela 2 (A) <span class="badge-new">NEW</span></div>
                                                         </div>
                                                     </div>
+
+                                                    <div class="movie-list">
+                                                        <h6 class="text-danger">MALAYALAM</h6>
+    
+                                                        <div class="movie-item">
+                                                            <div>Alappuzha Gymkhana (UA 7)<span class="badge-new">NEW</span><span class="heart-icon">❤</span> <span
+                                                                class="movie-rating">84%</span></div>
+                                                        </div>
+                                                        <div class="movie-item">
+                                                            <div>Bazooka (UA 16)<span class="badge-new">NEW</span><span class="heart-icon">❤</span> <span
+                                                                class="movie-rating">73%</span></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="movie-list">
+                                                        <h6 class="text-danger">PUNJABI</h6>
+    
+                                                        <div class="movie-item">
+                                                            <div>Akaal (UA 16) <span class="badge-new">NEW</span><span class="heart-icon">❤</span> <span
+                                                                class="movie-rating">73%</span></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="movie-list">
+                                                        <h6 class="text-danger">BENGALI</h6>
+    
+                                                        <div class="movie-item">
+                                                            <div>Killbill Society (UA 16) <span class="badge-new">NEW</span><span class="heart-icon">❤</span> <span
+                                                                class="movie-rating">74%</span></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="movie-list">
+                                                        <h6 class="text-danger">SINDHI</h6>
+    
+                                                        <div class="movie-item">
+                                                            <div>Vardan 3 (UA)<span class="heart-icon">❤</span> <span
+                                                                class="movie-rating">100%</span></div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
     
                                                
@@ -687,13 +414,133 @@
 
             <!-- Location Selector -->
             <div class="location-selector d-none d-lg-block">
-                <h6 class="mt-2">Ahemedabad</h6>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Ahmedabad
+                  </button>
+                  
+                  <!-- The Modal -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                  
+                        <!-- Modal Header -->
+                        <div class="modal-header"><input type="text" class="search-input"
+                            placeholder="Search for Movies, Events, Plays, Sports and Activities">
+                        </div>
+                  
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            
+                            <h6 class="text-danger"><i style="font-size: 15px; margin-right: 5px;" class="fa-solid fa-location-crosshairs"></i>Detect My Location</h6>
+                            <hr>
+                            <div style="text-align: center; margin-bottom: 15px;">Popular Cities</div>
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <div class="city ms-4">
+                                        <img src="https://in.bmscdn.com/m6/images/common-modules/regions/mumbai.png" alt="">
+                                        <h6 class="ms-2">mumbai</h6>
+                                    </div>
+                                    <div class="city ms-4">
+                                        <img src="https://in.bmscdn.com/m6/images/common-modules/regions/ncr.png" alt="">
+                                        <h6 style="margin-left: 20px;" >Delhi</h6>
+                                    </div>
+                                    <div class="city ms-4">
+                                        <img src="https://in.bmscdn.com/m6/images/common-modules/regions/bang.png" alt="">
+                                        <h6 style="margin-left: 2px;">Bengaluru</h6>
+                                    </div>
+                                    <div class="city ms-4">
+                                        <img src="https://in.bmscdn.com/m6/images/common-modules/regions/hyd.png" alt="">
+                                        <h6 style="margin-left: 4px;">Hydrabad</h6>
+                                    </div>
+                                    <div class="city ms-4">
+                                        <img src="https://in.bmscdn.com/m6/images/common-modules/regions/ahd-selected.png" alt="">
+                                        <h6 style="margin-left: 1px;">Ahmedabad</h6>
+                                    </div>
+                                    <div class="city ms-4">
+                                        <img src="https://in.bmscdn.com/m6/images/common-modules/regions/chd.png" alt="">
+                                        <h6 style="margin-left: 1px;">Chandigarh</h6>
+                                    </div>
+                                    <div class="city ms-4">
+                                        <img src="https://in.bmscdn.com/m6/images/common-modules/regions/pune.png" alt="">
+                                        <h6 style="margin-left: 20px;">Pune</h6>
+                                    </div>
+                                    <div class="city ms-4">
+                                        <img src="https://in.bmscdn.com/m6/images/common-modules/regions/chen.png" alt="">
+                                        <h6 style="margin-left: 10px;">Chennai</h6>
+                                    </div>
+                                    <div class="city ms-4">
+                                        <img src="https://in.bmscdn.com/m6/images/common-modules/regions/kolk.png" alt="">
+                                        <h6 style="margin-left: 15px;">Kolkata</h6>
+                                    </div>
+                                    <div class="city ms-4">
+                                        <img src="https://in.bmscdn.com/m6/images/common-modules/regions/koch.png" alt="">
+                                        <h6 style="margin-left: 20px;">Kochi</h6>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-link mb-3 text-danger">View All Cities</button>
+                            </div>
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div>
             </div>
 
            
 
             <!-- Sign In Button -->
-            <button class="sign-in-btn">Sign in</button>
+            <button class="sign-in-btn" data-bs-toggle="modal" data-bs-target="#signInModal">Sign in</button>
+            <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signInModalLabel">Get Started</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-grid gap-3">
+                                <!-- Google Sign In -->
+                                <button class="btn btn-outline-secondary position-relative text-start p-3">
+                                    <img src="//in.bmscdn.com/webin/common/icons/googlelogo.svg" alt="Google logo" class="position-absolute start-3 top-50 translate-middle-y">
+                                    <span class="text-center d-block">Continue with Google</span>
+                                </button>
+                                
+                                <!-- Email Sign In -->
+                                <button class="btn btn-outline-secondary position-relative text-start p-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope position-absolute start-3 top-50 translate-middle-y" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                    </svg>
+                                    <span class="text-center d-block">Continue with Email</span>
+                                </button>
+                                
+                                <!-- Apple Sign In -->
+                                <button class="btn btn-outline-secondary position-relative text-start p-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-apple position-absolute start-3 top-50 translate-middle-y" viewBox="0 0 16 16">
+                                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/>
+                                    </svg>
+                                    <span class="text-center d-block">Continue with Apple</span>
+                                </button>
+        
+                                <div class="text-center py-2">OR</div>
+                                
+                                <!-- Mobile Number Sign In -->
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <img src="/api/placeholder/20/15" alt="India flag" class="me-1">
+                                        +91
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Continue with mobile number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <p class="small mb-0">I agree to the <a href="#">Terms & Conditions</a> & <a href="#">Privacy Policy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
 
             <!-- Menu Button (Mobile) -->
             <button class="menu-btn ms-2">
