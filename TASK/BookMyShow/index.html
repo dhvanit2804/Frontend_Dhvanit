@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,28 +11,28 @@
         :root {
             --primary-red: #e91e63;
         }
-        
+
         body {
             font-family: 'Roboto', sans-serif;
             background-color: var(--dark-bg);
             color: var(--light-text);
         }
-        
+
         .bms-navbar {
             padding: 8px 0;
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
         }
-        
+
         .navbar-brand img {
             height: 35px;
         }
-        
+
         .search-container {
             flex-grow: 1;
             max-width: 650px;
             margin: 0 24px;
         }
-        
+
         .search-input {
             width: 100%;
             padding: 8px 15px;
@@ -40,12 +41,12 @@
             background-color: #f5f5f5;
             color: #666;
         }
-        
+
         .search-input:focus {
             outline: none;
             border-color: #f84464;
         }
-        
+
         .location-selector {
             color: #333;
             font-size: 14px;
@@ -53,12 +54,12 @@
             margin-right: 16px;
             cursor: pointer;
         }
-        
+
         .location-selector i {
             margin-left: 5px;
             font-size: 12px;
         }
-        
+
         .sign-in-btn {
             background-color: #f84464;
             color: white;
@@ -68,81 +69,81 @@
             font-size: 14px;
             font-weight: 500;
         }
-        
+
         .sign-in-btn:hover {
             background-color: #e53f5d;
             color: white;
         }
-        
+
         .nav-menu {
             display: flex;
             border-top: 1px solid #f0f0f0;
             padding: 8px 0;
         }
-        
+
         .primary-nav {
             margin-right: auto;
         }
-        
+
         .secondary-nav {
             margin-left: auto;
         }
-        
+
         .nav-menu .nav-item {
             list-style: none;
             display: inline-block;
             margin: 0 16px 0 0;
         }
-        
+
         .secondary-nav .nav-item {
             margin: 0 0 0 16px;
         }
-        
+
         .nav-menu .nav-link {
             color: #333;
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
         }
-        
+
         .nav-menu .nav-link:hover {
             color: #f84464;
         }
-        
+
         .menu-btn {
             background: none;
             border: none;
             color: #333;
             font-size: 20px;
         }
-        
+
         .category-slider {
             padding: 20px 0;
         }
-        
+
         .category-item {
             text-align: center;
             padding: 10px;
             cursor: pointer;
         }
-        
+
         .category-item img {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             object-fit: cover;
         }
-        
+
         .category-item p {
             margin-top: 10px;
             font-size: 14px;
         }
-        
+
         .section-title {
             margin: 20px 0;
             font-weight: 600;
         }
-        
+
         .movie-card {
             background-color: var(--card-bg);
             border-radius: 8px;
@@ -151,46 +152,46 @@
             transition: transform 0.3s;
             height: 100%;
         }
-        
+
         .movie-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .movie-poster {
             height: 300px;
             object-fit: cover;
         }
-        
+
         .movie-info {
             padding: 15px;
         }
-        
+
         .movie-title {
             font-weight: 600;
             margin-bottom: 5px;
         }
-        
+
         .movie-genre {
             color: #aaa;
             font-size: 14px;
         }
-        
+
         .rating {
             color: #3cca64;
             font-weight: 600;
         }
-        
+
         .banner {
             border-radius: 10px;
             overflow: hidden;
             margin: 20px 0;
         }
-        
+
         .banner img {
             width: 100%;
             height: auto;
         }
-        
+
         .language-selector {
             background-color: #333;
             color: white;
@@ -198,18 +199,18 @@
             padding: 8px;
             margin-top: 15px;
         }
-        
+
         .carousel-indicators [data-bs-target] {
             background-color: var(--primary-red);
         }
-        
+
         .city-list {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 10px;
         }
-        
+
         .city-badge {
             background-color: #333;
             color: white;
@@ -217,38 +218,490 @@
             border-radius: 4px;
             font-size: 12px;
         }
+
+        .modal-fullscreen {
+            width: 100%;
+            max-width: none;
+            height: 100%;
+            margin: 0;
+        }
+
+        .search-input {
+            border-radius: 20px;
+            padding-left: 15px;
+        }
+
+        .movie-list {
+            padding: 20px 0;
+        }
+
+        .movie-item {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .nav-tabs .nav-link.active {
+            font-weight: bold;
+            border-bottom: 2px solid #dc3545;
+            color: #000;
+            background-color: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .nav-tabs .nav-link {
+            color: #6c757d;
+            border: none;
+        }
+
+        .movie-rating {
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        .heart-icon {
+            color: #ff4d6d;
+        }
+
+        .badge-new {
+            color: #ffc107;
+            font-size: 10px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+
+        .language-filter {
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            padding: 3px 12px;
+            border-radius: 20px;
+            background-color: #f8f9fa;
+            font-size: 14px;
+        }
+
+        .format-badge {
+            display: inline-block;
+            margin-right: 5px;
+            padding: 1px 8px;
+            border-radius: 3px;
+            background-color: #f1f1f1;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .cinema-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .cinema-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .cinema-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .badge-new-cinema {
+            background-color: #ffc107;
+            color: #000;
+            font-size: 10px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 5px;
+            vertical-align: text-top;
+        }
     </style>
 </head>
+
 <body>
-     <!-- Main Navbar -->
-     <nav class="navbar navbar-expand bms-navbar">
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand bms-navbar">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="#">
                 <img src="/Images/Logo-BookMyShow.png" alt="BookMyShow">
             </a>
-            
+
             <!-- Search Bar -->
             <div class="search-container">
-                <input type="text" class="search-input" placeholder="Search for Movies, Events, Plays, Sports and Activities">
+                <input type="text" class="search-input"
+                    placeholder="Search for Movies, Events, Plays, Sports and Activities" data-bs-toggle="modal"
+                    data-bs-target="#searchModal">
+                    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header border-0 pb-0">
+                                <button type="button" class="btn btn-link text-dark" data-bs-dismiss="modal">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                                <div class="flex-grow-1 mx-3">
+                                    <input type="text" class="form-control search-input"
+                                        placeholder="Search for Movies, Events, Plays, Sports and Activities">
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+    
+                            <div class="modal-body pt-0 mt-3" >
+                                <div class="container ">
+                                    <!-- Tabs -->
+                                    <ul class="nav nav-tabs border-0 mt-3" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="movies-tab" data-bs-toggle="tab"
+                                                data-bs-target="#movies" type="button" role="tab">MOVIES</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="cinemas-tab" data-bs-toggle="tab"
+                                                data-bs-target="#cinemas" type="button" role="tab">CINEMAS</button>
+                                        </li>
+                                        <li class="ms-auto d-flex align-items-center">
+                                            <span class="me-2">Filter</span>
+    
+                                            <div class="language-filter border">HINDI</div>
+                                            <div class="language-filter border">GUJARATI</div>
+                                            <div class="language-filter border">ENGLISH</div>
+                                            <div class="language-filter border">TAMIL</div>
+                                            <div class="language-filter border">TELUGU</div>
+                                            <div class="language-filter border">MALAYALAM</div>
+                                            <div class="language-filter border border-danger text-danger">+ 4 MORE</div>
+                                        </li>
+                                    </ul>
+    
+                                    <!-- Tab content -->
+                                    <div class="tab-content" id="myTabContent">
+                                        <!-- Movies Tab -->
+                                        <div class="tab-pane fade show active" id="movies" role="tabpanel"
+                                            aria-labelledby="movies-tab">
+                                            <div class="row">
+                                                <!-- Hindi Movies -->
+                                                <div class="col-md-3">
+                                                    <div class="movie-list">
+                                                        <h6 class="text-danger">HINDI</h6>
+    
+                                                        <div class="movie-item">
+                                                            <div>A Minecraft Movie <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">82%</span></div>
+                                                            <div>
+                                                                <span class="format-badge">3D</span>
+                                                                <span class="format-badge">4DX 3D</span>
+                                                                <span class="format-badge">2D</span>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="movie-item">
+                                                            <div>Chhaava (UA16) <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">92%</span></div>
+                                                        </div>
+    
+                                                        <div class="movie-item">
+                                                            <div>IPL T20 2025 Live Screening-(GT VS DC) (Hindi) (U) <span
+                                                                    class="badge-new">NEW</span></div>
+                                                        </div>
+    
+                                                        <div class="movie-item">
+                                                            <div>IPL T20 2025 Live Screening-(KKR VS GT) (Hindi) (U) <span
+                                                                    class="badge-new">NEW</span></div>
+                                                        </div>
+    
+                                                        <div class="movie-item">
+                                                            <div>Jaat (UA16) <span class="badge-new">NEW</span> <span
+                                                                    class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">90%</span></div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>Kesari-chapter-2 <span class="badge-new">New</span> </div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>L2: Empuraan (Hindi) (UA16) <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">80%</span></div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>Love Aaj Kal (2009) (UA) <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">89%</span></div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>Odela (Hindi) (A) <span class="badge-new">New</span></div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>Paddington in Peru <span class="badge-new">New</span></div>
+                                                            <div>
+                                                                <span class="format-badge">2D</span>
+                                                                <span class="format-badge">4DX</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>Padmavaat (2D Hindi) (UA) <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">86%</span></div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>Sikandar (UA13) <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">86%</span></div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>Superboy of Malegoan (UA) <span class="heart-icon">❤</span> <span
+                                                                class="movie-rating">86%</span></div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>The Diplomat (UA) <span class="heart-icon">❤</span> <span
+                                                                class="movie-rating">86%</span></div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+    
+                                                 <!-- Gujarati Movies -->
+                                                 <div class="col-md-3">
+                                                    <div class="movie-list">
+                                                        <div class="movie-item">
+                                                            <div>The Secret Of Devkaali (UA) <span class="badge-new">New</span></div>
+                                                        </div>
+                                                        <div class="movie-item">
+                                                            <div>Vicky Donar (UA) <span class="heart-icon">❤</span> <span
+                                                                class="movie-rating">79%</span></div>
+                                                        </div>
+                                                        <div class="movie-item">
+                                                            <div>Window's Shadow (A) <span class="badge-new">New</span></div>
+                                                        </div>
+                                                        <h6 class="text-danger">GUJARATI</h6>
+    
+                                                        <div class="movie-item">
+                                                            <div>All The Best Pandya (UA13) <span
+                                                                    class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">91%</span></div>
+                                                        </div>
+    
+                                                        <div class="movie-item">
+                                                            <div>Faati Ne? (UA16) <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">92%</span></div>
+                                                        </div>
+    
+                                                        <div class="movie-item">
+                                                            <div>Jija Sala Jija (UA13) <span class="heart-icon">❤</span>
+                                                                <span class="movie-rating">86%</span></div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>Mithada Mehmaan (UA13) <span class="badge-new">New</span></div>
+                                                        </div>
+
+                                                        <div class="movie-item">
+                                                            <div>Umbaro (UA13) <span class="heart-icon">❤</span>
+                                                                <span class="movie-rating">86%</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <!-- English Movies -->
+                                                <div class="col-md-3">
+                                                    <div class="movie-list">
+                                                        <h6 class="text-danger">ENGLISH</h6>
+    
+                                                        <div class="movie-item">
+                                                            <div>Warfare <span class="badge-new">NEW</span> <span
+                                                                    class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">84%</span></div>
+                                                            <div>
+                                                                <span class="format-badge">IMAX 2D</span>
+                                                                <span class="format-badge">2D</span>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="movie-item">
+                                                            <div>A Minecraft Movie <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">82%</span></div>
+                                                            <div>
+                                                                <span class="format-badge">3D</span>
+                                                                <span class="format-badge">IMAX 3D</span>
+                                                                <span class="format-badge">2D</span>
+                                                                <span class="format-badge">4DX 3D</span>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="movie-item">
+                                                            <div>Black Bag (A) <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">74%</span></div>
+                                                        </div>
+    
+                                                        <div class="movie-item">
+                                                            <div>Dog Man <span class="badge-new">NEW</span> <span
+                                                                    class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">88%</span></div>
+                                                            <div>
+                                                                <span class="format-badge">2D</span>
+                                                                <span class="format-badge">4DX</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <!-- Tamil and Telugu Movies -->
+                                                <div class="col-md-3">
+                                                    <div class="movie-list">
+                                                        <h6 class="text-danger">TAMIL</h6>
+    
+                                                        <div class="movie-item">
+                                                            <div>Good Bad Ugly (UA16) <span class="badge-new">NEW</span>
+                                                                <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">86%</span></div>
+                                                        </div>
+    
+                                                        <div class="movie-item">
+                                                            <div>Sachein (UA) <span class="heart-icon">❤</span> <span
+                                                                    class="movie-rating">80%</span></div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="movie-list">
+                                                        <h6 class="text-danger">TELUGU</h6>
+    
+                                                        <div class="movie-item">
+                                                            <div>Odela 2 (A) <span class="badge-new">NEW</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                               
+                                            </div>
+                                        </div>
+    
+                                        <!-- Cinemas Tab -->
+                                        <div class="tab-pane fade" id="cinemas" role="tabpanel"
+                                            aria-labelledby="cinemas-tab">
+                                            <div class="row mt-4">
+                                                <div class="col-md-3">
+                                                    <ul class="cinema-list">
+                                                        <li>1.Newfangled Miniplex (Twin Seat): Mondeal Park</li>
+                                                        <li>2.Newfangled Miniplex (Twin Seat): Motera</li>
+                                                        <li>AB Miniplex: Shivranjini Cross Road, Satellite</li>
+                                                        <li>Apple Cinema: Bapunagar</li>
+                                                        <li>Apple Multiplex: Gota, Ahmedabad</li>
+                                                        <li>Apple Multiplex: Maninagar, Ahmedabad</li>
+                                                        <li>Banana Smartplex: SBR, Thaltej</li>
+                                                        <li>Cinepolis: Kankubag, Vastral, Ahmedabad</li>
+                                                        <li>Cinepolis: Nexus Ahmedabad One</li>
+                                                        <li>Cineprime Cinema: Nikol</li>
+                                                        <li>Cineworld Cinema: Naroda, Ahmedabad <span
+                                                                class="badge-new-cinema">NEW</span></li>
+                                                        <li>City Gold Satellite: Ahmedabad</li>
+                                                        <li>City Gold: Ashram Road</li>
+                                                        <li>City Gold: Bopal</li>
+                                                        <li>City Gold: Jivraj Park <span class="badge-new-cinema">NEW</span>
+                                                        </li>
+                                                        <li>City Gold: Motera</li>
+                                                        <li>City Gold: Vastral, Ahmedabad</li>
+                                                    </ul>
+                                                </div>
+    
+                                                <div class="col-md-3">
+                                                    <ul class="cinema-list">
+                                                        <li>City Pulse: Orient Miniplex, Ellisbridge</li>
+                                                        <li>Classic Cinema, Kudasan: Gandhinagar</li>
+                                                        <li>Connplex Cinemas (Luxuriance): SBR</li>
+                                                        <li>Connplex Cinemas (Luxuriance): Vaishnodevі</li>
+                                                        <li>Connplex Cinemas (Signature): Gandhinagar</li>
+                                                        <li>Connplex Cinemas (Signature): Gota</li>
+                                                        <li>Connplex Cinemas: Parimal</li>
+                                                        <li>Connplex Cinemas: Prahladnagar</li>
+                                                        <li>Connplex Cinemas: South Bopal</li>
+                                                        <li>Devi Multiplex: Naroda</li>
+                                                        <li>Drive In Cinema: Ahmedabad</li>
+                                                        <li>Havelock Cineflix Cinemas: Maninagar, Ahmedabad</li>
+                                                        <li>INOX: Himalaya Mall, Drive In Road, Ahmedabad</li>
+                                                        <li>K Sera Sera: Iskon Circle, SG Highway</li>
+                                                        <li>LHD Cinemas: Chandkheda</li>
+                                                        <li>Magic Cinema: YMCA Club</li>
+                                                        <li>Mango Plus Cinemas: Nikol</li>
+                                                    </ul>
+                                                </div>
+    
+                                                <div class="col-md-3">
+                                                    <ul class="cinema-list">
+                                                        <li>Miraj Cinemas Cine Pride: Krishna Nagar</li>
+                                                        <li>Miraj Cinemas: Shalin Square, Hathjian, Ahmedabad</li>
+                                                        <li>Miraj Cinemas: Vardhman Square, Sanand, Ahmedabad</li>
+                                                        <li>Miraj Cinemas: Vitthal Plaza, New Naroda</li>
+                                                        <li>Miraj City Pulse: Ahmedabad</li>
+                                                        <li>Mukta A2 Cinemas: Chandkheda</li>
+                                                        <li>Mukta A2 Cinemas: Rajyash, South Vasna, Ahmedabad</li>
+                                                        <li>Mukta A2 Cinemas: Ratnanjali Square Satellite</li>
+                                                        <li>Mukta A2 Cinemas: The Retail Park (TRP) Bopal</li>
+                                                        <li>Mukta A2 Shiv Cinema: Ahmedabad</li>
+                                                        <li>NY Cinemas: Chandkheda</li>
+                                                        <li>NY Cinemas: Swagat Mall</li>
+                                                        <li>Orange Cinemas: Bapunagar</li>
+                                                        <li>P Square Movieplex, Gota: Ahmedabad</li>
+                                                        <li>PVR: Acropolis, Ahmedabad</li>
+                                                        <li>PVR: Arved Transcube, Ahmedabad</li>
+                                                        <li>PVR: Motera, Ahmedabad</li>
+                                                    </ul>
+                                                </div>
+    
+                                                <div class="col-md-3">
+                                                    <ul class="cinema-list">
+                                                        <li>PVR: Palladium Mall, Ahmedabad</li>
+                                                        <li>PVR: Satyamev Emporio Odhav, Ahmedabad</li>
+                                                        <li>Rajhans Cinemas: Nikol</li>
+                                                        <li>Rajhans Cinemas: Satadhar</li>
+                                                        <li>Rajhans Cinemas: The CBD Mall, Zundal Circle</li>
+                                                        <li>Rajhans Cinemas: Vastral</li>
+                                                        <li>Revolution Multiplex, CTM: Ahmedabad</li>
+                                                        <li>Rupam Arth Cineplex: Sanand</li>
+                                                        <li>Rupam Multiplex: Ahmedabad</li>
+                                                        <li>SB Multiplex: Agora Mall</li>
+                                                        <li>SK Cinemas: Hathijan</li>
+                                                        <li>Sanelite Cinemas: Science City</li>
+                                                        <li>Savvy Swaraaj Miniplex: Gota, Ahmedabad</li>
+                                                        <li>The Cinestar Miniplex: Bhat Circle, SP Ring Road</li>
+                                                        <li>White Screen Cinema (Five 11): Gandhinagar</li>
+                                                        <li>Wide Angle: Ahmedabad</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+
             <!-- Location Selector -->
             <div class="location-selector d-none d-lg-block">
-                Ahmedabad
-                <i class="fas fa-chevron-down"></i>
+                <h6 class="mt-2">Ahemedabad</h6>
             </div>
-            
+
+           
+
             <!-- Sign In Button -->
             <button class="sign-in-btn">Sign in</button>
-            
+
             <!-- Menu Button (Mobile) -->
             <button class="menu-btn ms-2">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
-    
+
     <!-- Secondary Navigation -->
     <div class="container">
         <div class="nav-menu">
@@ -273,7 +726,7 @@
                     <a href="#" class="nav-link">Activities</a>
                 </li>
             </ul>
-            
+
             <!-- Secondary Navigation -->
             <ul class="secondary-nav">
                 <li class="nav-item">
@@ -326,236 +779,242 @@
 
         <!-- Recommended Movies -->
         <h2 class="section-title">Recommended Movies</h2>
-        
+
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row">
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/interstellar.avif" class="movie-poster w-100 h-75" alt="Movie 1">
-                            <div class="movie-info">
-                                <h5 class="movie-title">Interstellar</h5>
-                                <p class="movie-genre">Sci-Fi/Adventure</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 94%</span>
-                                    <span class="votes">47.5K votes</span>
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/interstellar.avif" class="movie-poster w-100 h-75" alt="Movie 1">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">Interstellar</h5>
+                                    <p class="movie-genre">Sci-Fi/Adventure</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 94%</span>
+                                        <span class="votes">47.5K votes</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/the-dark-knight-rises.avif" class="movie-poster w-100 h-75" alt="Movie 2">
-                            <div class="movie-info">
-                                <h5 class="movie-title">The Dark Knight Rises</h5>
-                                <p class="movie-genre">Action/Thriller</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 92%</span>
-                                    <span class="votes">38.2K votes</span>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/the-dark-knight-rises.avif" class="movie-poster w-100 h-75"
+                                    alt="Movie 2">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">The Dark Knight Rises</h5>
+                                    <p class="movie-genre">Action/Thriller</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 92%</span>
+                                        <span class="votes">38.2K votes</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/eternal-sunshine.avif" class="movie-poster w-100 h-75" alt="Movie 3">
-                            <div class="movie-info">
-                                <h5 class="movie-title">Eternal Sunshine</h5>
-                                <p class="movie-genre">Romance/Drama</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 88%</span>
-                                    <span class="votes">29.1K votes</span>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/eternal-sunshine.avif" class="movie-poster w-100 h-75" alt="Movie 3">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">Eternal Sunshine</h5>
+                                    <p class="movie-genre">Romance/Drama</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 88%</span>
+                                        <span class="votes">29.1K votes</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/the-matrix-resurrections.avif" class="movie-poster w-100 h-75" alt="Movie 4">
-                            <div class="movie-info">
-                                <h5 class="movie-title">The Matrix Resurrections</h5>
-                                <p class="movie-genre">Sci-Fi/Action</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 90%</span>
-                                    <span class="votes">33.7K votes</span>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/the-matrix-resurrections.avif" class="movie-poster w-100 h-75"
+                                    alt="Movie 4">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">The Matrix Resurrections</h5>
+                                    <p class="movie-genre">Sci-Fi/Action</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 90%</span>
+                                        <span class="votes">33.7K votes</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/avatar.avif" class="movie-poster w-100 h-75" alt="Movie 5">
-                            <div class="movie-info">
-                                <h5 class="movie-title">Avatar 3D</h5>
-                                <p class="movie-genre">Sci-Fi/Action</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 95%</span>
-                                    <span class="votes">58.1K votes</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/Jaat.avif" class="movie-poster w-100 h-75" alt="Movie 1">
-                            <div class="movie-info">
-                                <h5 class="movie-title">Jaat</h5>
-                                <p class="movie-genre">Action/Drama</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 85%</span>
-                                    <span class="votes">20.7K votes</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/Kesari-chapter-2.avif" class="movie-poster w-100 h-75" alt="Movie 2">
-                            <div class="movie-info">
-                                <h5 class="movie-title">Kesari Chapter 2</h5>
-                                <p class="movie-genre">Drama/Historical</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 89%</span>
-                                    <span class="votes">59.4K votes</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/Sikandar.avif" class="movie-poster w-100 h-75" alt="Movie 3">
-                            <div class="movie-info">
-                                <h5 class="movie-title">Sikandar</h5>
-                                <p class="movie-genre">Action/Drama</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 58%</span>
-                                    <span class="votes">33K votes</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/All-the-Best-Pandya.avif" class="movie-poster w-100 h-75" alt="Movie 4">
-                            <div class="movie-info">
-                                <h5 class="movie-title">All The Best Pandya</h5>
-                                <p class="movie-genre">Comedy/Drama</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 70%</span>
-                                    <span class="votes">1.2K votes</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/avatar.avif" class="movie-poster w-100 h-75" alt="Movie 5">
-                            <div class="movie-info">
-                                <h5 class="movie-title">Avatar 3D</h5>
-                                <p class="movie-genre">Sci-Fi/Action</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 95%</span>
-                                    <span class="votes">58.1K votes</span>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/avatar.avif" class="movie-poster w-100 h-75" alt="Movie 5">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">Avatar 3D</h5>
+                                    <p class="movie-genre">Sci-Fi/Action</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 95%</span>
+                                        <span class="votes">58.1K votes</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/Jija-Sala-Jija.avif" class="movie-poster w-100 h-75" alt="Movie 1">
-                            <div class="movie-info">
-                                <h5 class="movie-title">Jija Sala Jija</h5>
-                                <p class="movie-genre">Comedy/Drama</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 86%</span>
-                                    <span class="votes">1.2K votes</span>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/Jaat.avif" class="movie-poster w-100 h-75" alt="Movie 1">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">Jaat</h5>
+                                    <p class="movie-genre">Action/Drama</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 85%</span>
+                                        <span class="votes">20.7K votes</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/The-Diplomat.avif" class="movie-poster w-100 h-75" alt="Movie 2">
-                            <div class="movie-info">
-                                <h5 class="movie-title">The Diplomat</h5>
-                                <p class="movie-genre">Action/Thriller</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 88%</span>
-                                    <span class="votes">28K votes</span>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/Kesari-chapter-2.avif" class="movie-poster w-100 h-75" alt="Movie 2">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">Kesari Chapter 2</h5>
+                                    <p class="movie-genre">Drama/Historical</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 89%</span>
+                                        <span class="votes">59.4K votes</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/A-Minecraft-Movie.avif" class="movie-poster w-100 h-75" alt="Movie 3">
-                            <div class="movie-info">
-                                <h5 class="movie-title">A Minecraft Movie</h5>
-                                <p class="movie-genre">Action/Animation/Comedy</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 82%</span>
-                                    <span class="votes">4.3K votes</span>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/Sikandar.avif" class="movie-poster w-100 h-75" alt="Movie 3">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">Sikandar</h5>
+                                    <p class="movie-genre">Action/Drama</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 58%</span>
+                                        <span class="votes">33K votes</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/Chhaava.avif" class="movie-poster w-100 h-75" alt="Movie 4">
-                            <div class="movie-info">
-                                <h5 class="movie-title">Chhaava</h5>
-                                <p class="movie-genre">Action/Drama/Historical</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 92%</span>
-                                    <span class="votes">341.8K votes</span>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/All-the-Best-Pandya.avif" class="movie-poster w-100 h-75"
+                                    alt="Movie 4">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">All The Best Pandya</h5>
+                                    <p class="movie-genre">Comedy/Drama</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 70%</span>
+                                        <span class="votes">1.2K votes</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="movie-card">
-                            <img src="/Images/avatar.avif" class="movie-poster w-100 h-75" alt="Movie 5">
-                            <div class="movie-info">
-                                <h5 class="movie-title">Avatar 3D</h5>
-                                <p class="movie-genre">Sci-Fi/Action</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="rating"><i class="fas fa-heart"></i> 95%</span>
-                                    <span class="votes">58.1K votes</span>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/avatar.avif" class="movie-poster w-100 h-75" alt="Movie 5">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">Avatar 3D</h5>
+                                    <p class="movie-genre">Sci-Fi/Action</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 95%</span>
+                                        <span class="votes">58.1K votes</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-              </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/Jija-Sala-Jija.avif" class="movie-poster w-100 h-75" alt="Movie 1">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">Jija Sala Jija</h5>
+                                    <p class="movie-genre">Comedy/Drama</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 86%</span>
+                                        <span class="votes">1.2K votes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/The-Diplomat.avif" class="movie-poster w-100 h-75" alt="Movie 2">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">The Diplomat</h5>
+                                    <p class="movie-genre">Action/Thriller</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 88%</span>
+                                        <span class="votes">28K votes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/A-Minecraft-Movie.avif" class="movie-poster w-100 h-75" alt="Movie 3">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">A Minecraft Movie</h5>
+                                    <p class="movie-genre">Action/Animation/Comedy</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 82%</span>
+                                        <span class="votes">4.3K votes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/Chhaava.avif" class="movie-poster w-100 h-75" alt="Movie 4">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">Chhaava</h5>
+                                    <p class="movie-genre">Action/Drama/Historical</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 92%</span>
+                                        <span class="votes">341.8K votes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="movie-card">
+                                <img src="/Images/avatar.avif" class="movie-poster w-100 h-75" alt="Movie 5">
+                                <div class="movie-info">
+                                    <h5 class="movie-title">Avatar 3D</h5>
+                                    <p class="movie-genre">Sci-Fi/Action</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="rating"><i class="fas fa-heart"></i> 95%</span>
+                                        <span class="votes">58.1K votes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
-          </div>
+        </div>
 
-          <!-- Banner -->
-           <div class="container">
+        <!-- Banner -->
+        <div class="container">
             <img src="/Images/2nd-Container.avif" width="100%" alt="">
-           </div>
+        </div>
 
-        
 
-        
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
