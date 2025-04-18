@@ -310,3 +310,53 @@ body {
     margin-left: 5px;
     vertical-align: text-top;
 }
+/* Add these styles to your style.css file */
+.offcanvas {
+    width: 300px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dc3545;
+}
+
+.menu-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-item i {
+    margin-right: 15px;
+    color: #666;
+    width: 20px;
+    text-align: center;
+}
+
+.arrow {
+    color: #666;
+}
+.premiere-label {
+    background-color: #e63946;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+  .movie-card img {
+    border-radius: 5px;
+  }
+  .carousel-inner {
+    padding: 2rem 0;
+  }
+  .movie-card {
+    padding: 1rem;
+    text-align: left;
+  }
