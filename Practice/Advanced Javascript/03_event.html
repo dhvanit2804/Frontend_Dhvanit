@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">Button</button>
+    <h1 id="h1"></h1>
+
+    <script>
+        const btn = document.getElementById("btn");
+        const h1 = document.getElementById("h1");
+
+        btn.addEventListener("click", () => {
+            h1.innerHTML = "<i>Hello this is javascript event</i>";
+            h1.style.color = "red";
+        })
+    </script>
+</body>
+</html>
