@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        let name = ["Dhvanit", "Meet", "Karan", "Jainish", "Rahul", "Sahil"];
+        // console.log(name);
+        // console.log(name[0]);
+        // document.write(name[0]);
+
+        // // 1 Simple for loop
+        // for (let i = 0; i <name.length; i++) {
+        //     console.log(name[i]);
+        //     document.write(name[i] , "<br>");
+        // }
+
+        // // 2 for of loop
+        // for (let data of name) {
+        //     console.log(data);
+        //     document.write(data , "<br>");
+        // }
+
+        // // 3 for in loop
+        // for (let index in name) {
+        //     console.log(name[index]);
+        //     document.write(name[index], "<br>");
+        // }
+
+        // 4 forEach Loop
+        name.forEach((value, index) => {
+            console.log(value);
+            console.log(index);
+            document.write(index, "=>", value, "<br>");
+        });
+    </script>
 </body>
+
 </html>
