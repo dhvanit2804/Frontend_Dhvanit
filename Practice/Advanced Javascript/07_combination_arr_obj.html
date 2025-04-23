@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1) arr in arr -->
+    <!-- 2) arr in obj -->
+    <!-- 3) obj in obj -->
+    <!-- 4) obj in arr -->
+
+    <script>
+        // 1) arr in arr
+        let arr = [1, 2, 3, 4, [5, 6, 7, [8, 9, 10]]];
+        // console.log(arr);
+        // console.log(arr[4][3][1]);
+        // document.write(arr[4][3][1]);
+
+        // 2) obj in obj
+        let person = {
+            name: "Dhvanit",
+            age: 20,
+            city: "Ahmedabad",
+            country: "India",
+            course: "JAVA FULL STACK",
+            address: {
+                street: "737 Main St",
+                city: "Ahmedabad",
+                state: "Gujarat"
+            }
+        }
+        // console.log(person.address.state);
+
+        // 3) arr in obj
+        let data = [1, 2, 3, 4, {
+            name: "Dhvanit",
+            age: 20,
+            course: "MERN_STACK"
+        }]
+        // console.log(data)
+        // console.log(data[4].name);
+        // document.writeln(data[4].course);
+
+        // 4) obj in arr
+        let employee = {
+            name: "Dhvanit",
+            id: 1,
+            work: ["Frontend", "Backend", "MERN_STACK"],
+            surname: "Parate"
+        }
+        console.log(employee);
+        console.log(employee.work[2]);
+        document.writeln(employee.work[2]);
+    </script>
+</body>
+
+</html>
