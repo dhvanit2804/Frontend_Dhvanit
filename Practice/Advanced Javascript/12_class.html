@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- class :- blue print of object  -->
+    <!-- class :- collection of data member(varibales) and membar function(function) in class. -->
+
+    <!-- syntax :- 
+    class class-name{
+        memebr function
+        function(){
+            data memebr 
+            let var = value
+        }
+        function(){
+            data memebr 
+            let var = value
+        }
+    }
+-->
+    <script>
+
+        class bank {
+            x = function details(pin, balance) {
+
+                let bankname = "IDFC";
+                let bankIFSC = "IDFC0001";
+                let Atmpin = pin;
+                let bankbalance = balance;
+
+                console.log("BankName = ", bankname);
+                console.log("BankIFSC = ", bankIFSC);
+                console.log("AtmPin = ", Atmpin);
+                console.log("BankBalance = ", bankbalance);
+
+            }
+
+            y = function deposite() {
+                console.log("deposite function")
+            }
+
+        }
+
+        let dhvanit = new bank;
+        console.log(dhvanit)
+        dhvanit.x(2815, 10000)
+        dhvanit.y()
+
+        let Meet = new bank;
+        console.log(Meet);
+        Meet.x(1205, 4000);
+
+
+    </script>
+
+</body>
+
+</html>
