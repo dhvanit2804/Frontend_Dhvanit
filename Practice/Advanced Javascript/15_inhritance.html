@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class A{
+            x = () => {
+                console.log("A class function")
+            }
+            data1() {
+                console.log("This is data1 function")
+            }
+        }
+        class B extends A{
+            y = function data2() {
+                console.log("This is data2 function")
+            }
+        }
+
+        let obj = new B()
+        console.log(obj.x())
+    </script>
+</body>
+</html>
