@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Arith {
+            x = function sum() {
+                let a = 20, b = 30;
+                console.log("sum => ", a + b)
+                document.write("sum => ", a + b)
+            }
+            y = (a, b) => {
+                console.log("sub => ", a - b)
+                document.write("sub => ", a - b)
+            }
+            mul = () => {
+                let a = 20, b = 30;
+                console.log("mul => ", a * b)
+                document.write("mul => ", a * b)
+            }
+            div = (a, b) => {
+                console.log("div => ", a / b)
+                document.write("div => ", a / b)
+            }
+        }
+
+        let obj = new Arith();
+        console.log(obj)
+        obj.x()
+        obj.y(20, 10)
+        obj.mul()
+        obj.div(20, 5)
+    </script>
+</body>
+
+</html>
