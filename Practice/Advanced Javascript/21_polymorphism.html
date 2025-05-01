@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Polymorphism is one of the 4 pillars of object-oriented programming languages where poly means many and morphism means transforming one form into another.
+      Polymorphism means the same function with different signatures is called many times. 
+      It allows methods to do different things based on the object it is acting upon. -->
+
+    <!-- method overloading(compile) :- same class inner same function name and deffent is deffent parameter.  -->
+    <!-- method overrriding(runtime) :- function name will same but deffent class overrriding .  -->
+
+    <script>
+
+        // method overloading
+        class calculator {
+            add(a, b) {
+                if (b == undefined) {
+                    return a + a;
+                }
+                return a + b;
+            }
+            mul(a, b) {
+                if (b == undefined) {
+                    console.log("Please provide two numbers to multiply.");
+                }
+                return a * b;
+            }
+        }
+
+        const data = new calculator();
+        console.log(data.add(2))
+        console.log(data.add(2, 3))
+
+        console.log(data.mul(2, 3))
+
+    </script>
+</body>
+
+</html>
