@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function Person(name, age) {
+
+            // Private variables
+            let _name = name;
+            let _age = age;
+
+            // how to access 
+            this.getName = () => {
+                return _name;
+            }
+
+            this.getAge = () => {
+                return _age;
+            }
+
+            this.setage = (newAge) => {
+                return _age = newAge;
+            }
+
+        }
+
+        const data = new Person("Dhvanit", 20)
+        console.log(data.getName())
+        console.log(data.getAge())
+        console.log(`hello my name is ${data.getName()} and my age is ${data.getAge()}`)
+
+        console.log(data.setage(25));
+
+    </script>
+</body>
+
+</html>
