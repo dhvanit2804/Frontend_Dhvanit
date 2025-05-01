@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Encapsulation is a fundamental concept in object-oriented programming that refers to the practice of hiding the internal details of an object and exposing only the necessary information to the outside world. -->
+    <script>
+        function BankAccount(accountnum, accountname, balance) {
+            let _accountnum = accountnum;
+            let _accountname = accountname;
+            let _balance = balance;
+
+            function Showaccountdetails() {
+                console.log(`Account Number: ${_accountnum}`);
+                console.log(`Account Name: ${_accountname}`);
+                console.log(`Account Balance: ${_balance}`);
+            }
+
+            function deposit(amount) {
+                _balance += amount;
+                Showaccountdetails();
+            }
+            function withdraw(amount) {
+                if (_balance >= amount) {
+                    _balance -= amount;
+                    Showaccountdetails();
+                } else {
+                    console.log("Insufficient balance for withdrawal.");
+                }
+            }
+            return {
+                deposit: deposit,
+                withdraw: withdraw
+            }
+        }
+
+        let myaccount = new BankAccount("123456789", "John Doe", 1000);
+        myaccount.deposit(500);
+        myaccount.withdraw(200);
+
+    </script>
+</body>
+
+</html>
