@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Rest : store data
+
+        function test(...score){
+            let sum = 0;
+            for (let data in score){
+                sum = sum + score[data]
+            }
+            return sum;
+        }
+        console.log(test(1,2,3,4,5))
+    </script>
+</body>
+</html>
