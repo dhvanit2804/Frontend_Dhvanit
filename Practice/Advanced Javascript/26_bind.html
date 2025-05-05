@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- call:- method function outer fucntion call -->
+     <!-- call :- as spreate agument -->
+
+    <script>
+
+        let obj = {
+            fullname : function (){
+                return this.name + " " +this.surname + " "
+            }
+        }
+
+
+        let person ={
+            name : "Ansh",
+            surname : "patel"
+        }
+
+        // bind method as object
+
+       let data =  obj.fullname.bind(person)
+
+       console.log(data())
+   
+    </script>
+</body>
+</html>
