@@ -1,0 +1,41 @@
+{
+    "user":[
+        {
+            "id":1,
+            "name":"Brijesh",
+            "course":"Front-end"
+        },
+        {
+            "id":2,
+            "name":"Shubham ",
+            "course":"back-end"
+        },
+        {
+            "id":3,
+            "name":"harsh",
+            "course":"Full-stack"
+        },
+        {
+            "id":4,
+            "name":"raj",
+            "course":"mern"
+        }
+    ],
+    "admin":[
+        {
+            "id":1,
+            "name":"admin",
+            "course":"add data"
+        },
+        {
+            "id":2,
+            "name":"admin2",
+            "course":"remove data"
+        },
+        {
+            "id":3,
+            "name":"admin3",
+            "course":"update data"
+        }
+    ]
+}
