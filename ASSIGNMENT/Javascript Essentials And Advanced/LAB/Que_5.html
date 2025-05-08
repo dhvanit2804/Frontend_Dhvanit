@@ -1,0 +1,48 @@
+<!-- 4. Control Flow (If-Else, Switch)
+Task 2: 
+o Create a JavaScript program using a switch statement to display the day of the week 
+based on the user input (e.g., 1 for Monday, 2 for Tuesday, etc.). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let dayNumber = prompt("Enter a number (1-7) for the day of the week: ");
+        let dayname;
+
+        switch (dayNumber) {
+            case '1':
+                dayname = "Monday";
+                break;
+            case '2':
+                dayname = "Tuesday";
+                break;
+            case '3':
+                dayname = "Wednesday";
+                break;
+            case '4':
+                dayname = "Thursday";
+                break;
+            case '5':
+                dayname = "Friday";
+                break;
+            case '6':
+                dayname = "Saturday";
+                break;
+            case '7':
+                dayname = "Sunday";
+                break;
+            default:
+                dayname = "Invalid input! Please enter a number between 1 and 7.";
+        }
+
+        console.log("The day of the week is: " + dayname);
+    </script>
+</body>
+</html>
