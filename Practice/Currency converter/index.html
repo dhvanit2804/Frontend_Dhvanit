@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="converter-card">
+        <h2 class="title">Currency Converter</h2>
+        
+        <div class="input-group">
+          <label for="amount">Amount</label>
+          <input
+            id="amount"
+            type="number"
+            value="1"
+            min="0"
+            step="0.01"
+            placeholder="Enter amount"
+          />
+        </div>
+
+        <div class="currency-row">
+          <div class="currency-select">
+            <label for="fromCurrency">From</label>
+            <select id="fromCurrency"></select>
+          </div>
+          
+          <button id="swapBtn" class="swap-btn">
+            <span class="swap-icon">⇄</span>
+            <span class="swap-text">Swap</span>
+          </button>
+          
+          <div class="currency-select">
+            <label for="toCurrency">To</label>
+            <select id="toCurrency"></select>
+          </div>
+        </div>
+
+        <div class="result-container" id="resultBox">
+          <div class="result-amount" id="convertedAmount">0.00 EUR</div>
+          <div class="result-rate" id="exchangeRate">1 USD = 0.92 EUR</div>
+          <div class="result-calculation" id="calculation">1.00 USD = 0.92 EUR</div>
+        </div>
+      </div>
+      
+      <footer class="footer">
+        <p>Exchange rates are for demonstration purposes only</p>
+        <p>© <span id="currentYear"></span> Currency Converter</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
