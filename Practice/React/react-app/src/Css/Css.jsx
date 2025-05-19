@@ -20,6 +20,8 @@ function Css() {
 
         <h2 className='htag'>This is h2 tag</h2>
 
+        <h1>Parate Dhvanit</h1>
+
         {data}
     </div>
   )

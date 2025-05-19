@@ -8,9 +8,8 @@ function App() {
   return (
     <>
       <div>
-        <h1>This is </h1>
         <Hello />
-        <Css />
+        
       </div>
     
     </>
