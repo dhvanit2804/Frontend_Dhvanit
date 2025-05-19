@@ -5,8 +5,8 @@ import Slider from './components/Slider'
 function Hello() {
   return (
     <div>
-        <Navtab />
-        <Slider />
+        {/* <Navtab /> */}
+        {/* <Slider /> */}
 
     </div>
   )
