@@ -13,8 +13,8 @@ function App() {
       <div>
         {/* <Hello /> */}
         {/* <Mainprops /> */}
-        {/* <Mainstate /> */}
-        <FuncState />
+        <Mainstate />
+        {/* <FuncState /> */}
         
       </div>
     
