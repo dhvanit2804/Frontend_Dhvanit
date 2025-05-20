@@ -1,3 +1,9 @@
+// props :- props stand for proprtitys
+// props :- one compoenet to antoher compoent data pass
+// props :- props read data :- we can not change data
+// porps class :- constructor super :- this.data = props
+// props :- same file not useS
+
 import React, { Component } from "react";
 
 class Classprops extends Component {
