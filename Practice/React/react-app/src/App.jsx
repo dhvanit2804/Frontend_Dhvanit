@@ -4,6 +4,7 @@ import Css from './Css/Css';
 import Mainprops from './props/Mainprops';
 import Mainstate from './States/Mainstate';
 import FuncState from './States/FuncState';
+import Form from './Form/Form';
 
 
 function App() {
@@ -13,8 +14,10 @@ function App() {
       <div>
         {/* <Hello /> */}
         {/* <Mainprops /> */}
-        <Mainstate />
+        {/* <Mainstate /> */}
         {/* <FuncState /> */}
+
+        <Form />
         
       </div>
     
