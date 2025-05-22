@@ -28,7 +28,6 @@ function Usetable() {
         <tbody>
           {data &&
             data.map((user, index) => {
-              // console.log(user)
               return (
                 <tr>
                   <td>{user.id}</td>
