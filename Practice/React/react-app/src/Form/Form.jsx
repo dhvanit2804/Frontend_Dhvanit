@@ -1,82 +1,88 @@
 import React, { useState } from "react";
 
 function Form() {
-  const [data, setData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    password: "",
-  });
 
-  const getchange = (e) => {
-    setData({
-      ...data,
-      [e.target.name]: e.target.value,
-    });
-    console.log(data);
-  };
+    const [name, setname] = useState("");
+    const [email, setemail] = useState("")
+    const [num, setnum] = useState("")
+    const [pass, setpass] = useState("");
+
   return (
     <div className="container">
-      <h1>This is Form</h1>
-      <div>
-        <div className="mb-3">
-          <label htmlFor="exampleFormControlInput1" className="form-label">
-            Enter your name
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleFormControlInput1"
-            placeholder="Enter your name"
-            name="name"
-            value={data.name}
-            onChange={getchange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleFormControlInput2" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleFormControlInput2"
-            name="email"
-            placeholder="name@example.com"
-            value={data.email}
-            onChange={getchange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleFormControlInput3" className="form-label">
-            Enter your Phone
-          </label>
-          <input
-            type="tel"
-            className="form-control"
-            id="exampleFormControlInput3"
-            name="phone"
-            placeholder="Enter your Phone"
-            value={data.phone}
-            onChange={getchange}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleFormControlInput4" className="form-label">
-            Enter your password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleFormControlInput4"
-            name="password"
-            placeholder="Enter your password"
-            value={data.password}
-            onChange={getchange}
-          />
-        </div>
-        <div>
-          <input type="submit" />
+      <div className="row">
+        <div className="col-md-6">
+          <form action="">
+            <div>
+              <h1>This is form </h1>
+              <div className="mb-3 mt-3">
+                <label
+                  htmlFor="exampleFormControlInput1"
+                  className="form-label"
+                >
+                  Enter your name
+                </label>
+                <input
+                  type="name"
+                  value={name}
+                  onChange={(e)=>setname(e.target.value)}
+                  className="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="Enter Your name"
+                />
+              </div>
+              <div className="mb-3">
+                <label
+                  htmlFor="exampleFormControlInput2"
+                  className="form-label"
+                >
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e)=>setemail(e.target.value)}
+                  className="form-control"
+                  id="exampleFormControlInput2"
+                  placeholder="Enter Your email"
+                />
+              </div>
+              <div className="mb-3">
+                <label
+                  htmlFor="exampleFormControlInput3"
+                  className="form-label"
+                >
+                  Enter your number
+                </label>
+                <input
+                  type="tel"
+                  value={num}
+                  onChange={(e)=>setnum(e.target.value)}
+                  className="form-control"
+                  id="exampleFormControlInput3"
+                  placeholder="Enter Your number"
+                />
+              </div>
+              <div className="mb-3">
+                <label
+                  htmlFor="exampleFormControlInput4"
+                  className="form-label"
+                >
+                  Enter your password
+                </label>
+                <input
+                  type="password"
+                  value={pass}
+                  onChange={(e)=>setpass(e.target.value)}
+                  className="form-control"
+                  id="exampleFormControlInput4"
+                  placeholder="Enter Your password"
+                />
+              </div>
+              <div>
+                <input type="submit" />
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

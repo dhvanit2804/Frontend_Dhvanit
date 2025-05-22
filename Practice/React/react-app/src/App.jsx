@@ -4,6 +4,8 @@ import Css from './Css/Css';
 import Mainprops from './props/Mainprops';
 import Mainstate from './States/Mainstate';
 import FuncState from './States/FuncState';
+// import Form from './Form/Formobj';
+import Formobj from './Form/Formobj';
 import Form from './Form/Form';
 
 
@@ -17,6 +19,7 @@ function App() {
         {/* <Mainstate /> */}
         {/* <FuncState /> */}
 
+        {/* <Formobj /> */}
         <Form />
         
       </div>
