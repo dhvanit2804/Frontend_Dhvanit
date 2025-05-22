@@ -7,6 +7,10 @@ import FuncState from './States/FuncState';
 // import Form from './Form/Formobj';
 import Formobj from './Form/Formobj';
 import Form from './Form/Form';
+import Usedata from './UseEffect/Usedata';
+import Usetable from './UseEffect/Usetable';
+import Useaxios from './UseEffect/Useaxios';
+import Fakestore from './UseEffect/Fakestore';
 
 
 function App() {
@@ -20,7 +24,11 @@ function App() {
         {/* <FuncState /> */}
 
         {/* <Formobj /> */}
-        <Form />
+        {/* <Form /> */}
+        {/* <Usedata /> */}
+        {/* <Usetable /> */}
+        {/* <Useaxios /> */}
+        <Fakestore />
         
       </div>
     
