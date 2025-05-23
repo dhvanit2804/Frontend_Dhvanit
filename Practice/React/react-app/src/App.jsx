@@ -12,6 +12,7 @@ import Usetable from './UseEffect/Usetable';
 import Useaxios from './UseEffect/Useaxios';
 import Fakestore from './UseEffect/Fakestore';
 import Mockapi from './UseEffect/Mockapi';
+import DummyUser from './DummyJson/DummyUser';
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
         {/* <Usetable /> */}
         {/* <Useaxios /> */}
         {/* <Fakestore /> */}
-        <Mockapi />
+        {/* <Mockapi /> */}
+        <DummyUser />
         
       </div>
     
