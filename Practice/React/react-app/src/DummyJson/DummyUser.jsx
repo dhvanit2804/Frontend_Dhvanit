@@ -34,7 +34,7 @@ function DummyUser() {
                 user;
 
               return (
-                <tr>
+                <tr key={index}>
                   <th>{id}</th>
                   <th>{firstName}</th>
                   <th>{company.title}</th>

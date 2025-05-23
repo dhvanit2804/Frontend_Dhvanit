@@ -13,6 +13,8 @@ import Useaxios from './UseEffect/Useaxios';
 import Fakestore from './UseEffect/Fakestore';
 import Mockapi from './UseEffect/Mockapi';
 import DummyUser from './DummyJson/DummyUser';
+import DummyProduct from './DummyJson/DummyProduct';
+import DummyCart from './DummyJson/DummyCart';
 
 
 function App() {
@@ -32,7 +34,9 @@ function App() {
         {/* <Useaxios /> */}
         {/* <Fakestore /> */}
         {/* <Mockapi /> */}
-        <DummyUser />
+        {/* <DummyUser /> */}
+        {/* <DummyProduct /> */}
+        <DummyCart />
         
       </div>
     
