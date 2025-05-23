@@ -11,6 +11,7 @@ import Usedata from './UseEffect/Usedata';
 import Usetable from './UseEffect/Usetable';
 import Useaxios from './UseEffect/Useaxios';
 import Fakestore from './UseEffect/Fakestore';
+import Mockapi from './UseEffect/Mockapi';
 
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
         {/* <Usedata /> */}
         {/* <Usetable /> */}
         {/* <Useaxios /> */}
-        <Fakestore />
+        {/* <Fakestore /> */}
+        <Mockapi />
         
       </div>
     
