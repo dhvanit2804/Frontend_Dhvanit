@@ -34,9 +34,9 @@ function App() {
         {/* <Useaxios /> */}
         {/* <Fakestore /> */}
         {/* <Mockapi /> */}
-        {/* <DummyUser /> */}
+        <DummyUser />
         <DummyProduct />
-        {/* <DummyCart /> */}
+        <DummyCart />
         
       </div>
     
