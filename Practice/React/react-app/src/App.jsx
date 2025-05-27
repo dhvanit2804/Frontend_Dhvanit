@@ -15,6 +15,8 @@ import Mockapi from './UseEffect/Mockapi';
 import DummyUser from './DummyJson/DummyUser';
 import DummyProduct from './DummyJson/DummyProduct';
 import DummyCart from './DummyJson/DummyCart';
+import Reactboot from './Bootstrap/Reactboot';
+import Footer from './Bootstrap/Footer';
 
 
 function App() {
@@ -34,9 +36,11 @@ function App() {
         {/* <Useaxios /> */}
         {/* <Fakestore /> */}
         {/* <Mockapi /> */}
-        <DummyUser />
+        {/* <DummyUser /> */}
         {/* <DummyProduct /> */}
-        <DummyCart />
+        {/* <DummyCart /> */}
+        {/* <Reactboot /> */}
+        <Footer />
         
       </div>
     
