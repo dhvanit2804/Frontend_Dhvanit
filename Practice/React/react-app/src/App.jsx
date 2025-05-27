@@ -18,6 +18,7 @@ import DummyCart from './DummyJson/DummyCart';
 import Reactboot from './Bootstrap/Reactboot';
 import Footer from './Bootstrap/Footer';
 import Login from './Bootstrap/Login';
+import MainContext from './Context/MainContext';
 
 
 function App() {
@@ -42,7 +43,9 @@ function App() {
         {/* <DummyCart /> */}
         {/* <Reactboot /> */}
         {/* <Footer /> */}
-        <Login />
+        {/* <Login /> */}
+        <MainContext />
+
         
       </div>
     
