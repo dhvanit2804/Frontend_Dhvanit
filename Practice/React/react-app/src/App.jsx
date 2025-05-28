@@ -19,12 +19,18 @@ import Reactboot from './Bootstrap/Reactboot';
 import Footer from './Bootstrap/Footer';
 import Login from './Bootstrap/Login';
 import MainContext from './Context/MainContext';
+import Header from './Layout/Coman/Header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Layout/Pages/Home';
+import About from './Layout/Pages/About';
+import About1 from './Layout/Pages/About1';
+import About2 from './Layout/Pages/About2';
 
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <div>
         {/* <Hello /> */}
         {/* <Mainprops /> */}
@@ -44,12 +50,19 @@ function App() {
         {/* <Reactboot /> */}
         {/* <Footer /> */}
         {/* <Login /> */}
-        <MainContext />
-
-        
+        {/* <MainContext /> */}
+        {/* <Header /> */}
       </div>
+
+    <Routes>
+      <Route path="/home" element={<Home />}/>
+      <Route path='/about' element={<About />} />
+      <Route path='/about/about1' element={<About1 />} />
+      <Route path='/about/about2' element={<About2 />}/>
+    </Routes>
+
+    </BrowserRouter>
     
-    </>
   )
 }
 
