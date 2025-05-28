@@ -6,7 +6,7 @@ function Header() {
     <div>
         <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
+    <a className="navbar-brand" href="#">Website</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon" />
     </button>
@@ -16,14 +16,10 @@ function Header() {
           <NavLink className="nav-link active" aria-current="page" to="/home">Home</NavLink>
         </li>
        
-        <li className="nav-item dropdown">
-          <NavLink className="nav-link dropdown-toggle" to="/about"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/about" aria-expanded="false">
             About
           </NavLink>
-          <ul className="dropdown-menu">
-            <li><NavLink className="dropdown-item" to="/about/about1">About1</NavLink></li>
-            <li><NavLink className="dropdown-item" to="/about/about2">About2</NavLink></li>
-          </ul>
         </li>
         <li className="nav-item">
           <a className="nav-link" aria-disabled="true">Disabled</a>
