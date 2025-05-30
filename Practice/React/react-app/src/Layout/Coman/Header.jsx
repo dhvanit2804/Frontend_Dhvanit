@@ -13,7 +13,7 @@ function Header() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <NavLink className="nav-link active" aria-current="page" to="/home">Home</NavLink>
+          <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
         </li>
        
         <li className="nav-item">
@@ -22,7 +22,12 @@ function Header() {
           </NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" aria-disabled="true">Disabled</a>
+          <NavLink className="nav-link" to="/contact"  aria-expanded="false">
+            Contact
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link active" aria-expanded="false">Disabled</a>
         </li>
       </ul>
       <form className="d-flex" role="search">

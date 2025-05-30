@@ -1,26 +1,25 @@
 import React from "react";
 import Header from "../Coman/Header";
-import { Link, Outlet } from "react-router-dom";
 import Footer from "../../Bootstrap/Footer";
+import { Link, Outlet } from "react-router-dom";
 
-function About() {
+function Contact() {
   return (
     <div>
       <Header />
-      <h1>This is About Page</h1>
+      <h1>This is Contact Page</h1>
       <ul className="nav bg-dark">
         <li className="nav-item">
-          <Link className="nav-link" to="about1">
-            About1
+          <Link className="nav-link" to="contact1">
+            Contact 1
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="about2">
-            About2
-          </Link>
+          <a className="nav-link" href="#">
+            Contact 2
+          </a>
         </li>
       </ul>
-
       <Outlet />
       <br />
       <Footer />
@@ -28,4 +27,4 @@ function About() {
   );
 }
 
-export default About;
+export default Contact;
