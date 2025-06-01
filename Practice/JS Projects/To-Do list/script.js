@@ -15,4 +15,21 @@ function addTask() {
   li.addEventListener("click", () => {
     li.classList.toggle("complete");
   });
+
+  const deletebtn = document.createElement("button");
+  deletebtn.textContent = "❌";
+  deletebtn.style.marginLeft = "10px";
+  deletebtn.style.background = "transparent";
+  deletebtn.style.border = "none";
+  deletebtn.style.cursor = "pointer";
+
+  deletebtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    taskList.removeChild(li);
+  });
+
+  li.appendChild(deletebtn);
+  taskList.appendChild(li);
+
+  taskInput.value = "";
 }
