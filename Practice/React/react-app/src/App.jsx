@@ -27,7 +27,8 @@ import About1 from "./Layout/Pages/About1";
 import About2 from "./Layout/Pages/About2";
 import Notfound from "./Layout/Pages/Notfound";
 import Contact from "./Layout/Pages/Contact";
-import Contact1 from "./Layout/Pages/Contact1";
+import Contact1 from "./Layout/Pages/Contact1"; 
+import './index.css';
 
 function App() {
   return (
@@ -53,9 +54,10 @@ function App() {
         {/* <Login /> */}
         {/* <MainContext /> */}
         {/* <Header /> */}
+        <h1 className="text-2xl ml-3">This is Heading Tag</h1>
       </div>
 
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />}>
           <Route path="about1" element={<About1 />} />
@@ -66,7 +68,7 @@ function App() {
         </Route>
 
         <Route path="*" element={<Notfound />} />
-      </Routes>
+      </Routes> */}
     </BrowserRouter>
   );
 }
