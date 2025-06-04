@@ -54,7 +54,7 @@ function App() {
         {/* <Login /> */}
         {/* <MainContext /> */}
         {/* <Header /> */}
-        <h1 className="text-2xl ml-3">This is Heading Tag</h1>
+        <h1 className="text-4xl font-bold bg-red-500 text-green-600 ml-3">This is Heading Tag</h1>
       </div>
 
       {/* <Routes>
