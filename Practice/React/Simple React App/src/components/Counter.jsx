@@ -30,13 +30,6 @@ const Counter = () => {
                   + Increase
                 </button>
               </div>
-
-              <div className="mt-4 p-3 bg-light rounded">
-                <small className="text-muted">
-                  This counter demonstrates React state management using the
-                  useState hook
-                </small>
-              </div>
             </div>
           </div>
         </div>

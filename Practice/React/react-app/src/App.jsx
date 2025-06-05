@@ -39,7 +39,7 @@ function App() {
         {/* <Mainstate /> */}
         {/* <FuncState /> */}
 
-        {/* <Formobj /> */}
+        <Formobj />
         {/* <Form /> */}
         {/* <Usedata /> */}
         {/* <Usetable /> */}

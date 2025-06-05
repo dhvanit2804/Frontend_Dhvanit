@@ -25,7 +25,9 @@ const Home = () => {
                   <p className="card-text">
                     Practice React state management with an interactive counter
                   </p>
-                  <Link to="/counter" className="btn btn-primary">Try Counter</Link>
+                  <Link to="/counter" className="btn btn-primary">
+                    Try Counter
+                  </Link>
                 </div>
               </div>
             </div>
@@ -39,7 +41,9 @@ const Home = () => {
                   <p className="card-text">
                     Learn form handling and component interaction
                   </p>
-                  <Link to="/contact" className="btn btn-success">View Contact</Link>
+                  <Link to="/contact" className="btn btn-success">
+                    View Contact
+                  </Link>
                 </div>
               </div>
             </div>
