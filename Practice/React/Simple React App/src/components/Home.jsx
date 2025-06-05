@@ -39,7 +39,7 @@ const Home = () => {
                   <p className="card-text">
                     Learn form handling and component interaction
                   </p>
-                  <Link className="btn btn-success">View Contact</Link>
+                  <Link to="/contact" className="btn btn-success">View Contact</Link>
                 </div>
               </div>
             </div>
