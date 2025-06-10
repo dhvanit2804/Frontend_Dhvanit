@@ -1,22 +1,15 @@
-import { useState } from "react";
-import Home from "./components/Home";
-import About from "./components/About";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import { useState } from 'react'
+import './index.css'
 
 function App() {
-  return (
-    <BrowserRouter>
-    <div className="container-fluid">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />}/>
-      </Routes>
+  const [count, setCount] = useState(0)
 
-    </div>
-    </BrowserRouter>
-  );
+  return (
+   <div>
+    <h1 className='text-4xl bg-red-600'>Hello</h1>
+    <button className='m-3 bg-amber-500'>Click Me</button>
+   </div>
+  )
 }
 
-export default App;
+export default App
