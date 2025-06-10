@@ -1,12 +1,21 @@
 import { useState } from "react";
+import Home from "./components/Home";
+import About from "./components/About";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
+    <BrowserRouter>
     <div className="container-fluid">
-      <h1>Hello This is My REACT APPLICATION</h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />}/>
+      </Routes>
+
     </div>
+    </BrowserRouter>
   );
 }
 
