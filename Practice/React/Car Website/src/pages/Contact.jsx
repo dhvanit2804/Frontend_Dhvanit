@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const Contact = () => {
   return (
     <>
+    <Navbar />
       <section>
         <div className="container-fluid mt-1 bg-dark p-5">
           <h1 className="text-center text-light display-1 fw-bold mb-3">

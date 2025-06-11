@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const About = () => {
   return (
     <div>
+      <Navbar />
       <section>
         <div className="container-fluid mt-1 bg-dark p-5 mb-1">
           <h1 className="text-light text-center display-1 fw-bold">
