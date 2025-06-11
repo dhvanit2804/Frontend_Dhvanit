@@ -202,17 +202,27 @@ const Home = () => {
           <div className="row flex justify-content-around">
             <div className="col">
               <div className="card" style={{ width: "18rem" }}>
-                <img src="https://images.pexels.com/photos/1429775/pexels-photo-1429775.jpeg?auto=compress&cs=tinysrgb&w=600" className="card-img-top" alt="..." />
+                <img
+                  src="https://images.pexels.com/photos/1429775/pexels-photo-1429775.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  className="card-img-top"
+                  alt="..."
+                />
                 <div className="card-body">
                   <p className="card-text">
-                    The Mercedes-Benz G-Class is a luxury SUV that started as a military vehicle in the 1970s but evolved into a high-end status symbol.
+                    The Mercedes-Benz G-Class is a luxury SUV that started as a
+                    military vehicle in the 1970s but evolved into a high-end
+                    status symbol.
                   </p>
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="card" style={{ width: "18rem" }}>
-                <img src="https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg?auto=compress&cs=tinysrgb&w=600" className="card-img-top" alt="..." />
+                <img
+                  src="https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  className="card-img-top"
+                  alt="..."
+                />
                 <div className="card-body">
                   <p className="card-text">
                     Some quick example text to build on the card title and make
@@ -223,7 +233,11 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="card" style={{ width: "18rem" }}>
-                <img src="https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg?auto=compress&cs=tinysrgb&w=600" className="card-img-top" alt="..." />
+                <img
+                  src="https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  className="card-img-top"
+                  alt="..."
+                />
                 <div className="card-body">
                   <p className="card-text">
                     Some quick example text to build on the card title and make
@@ -234,7 +248,11 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="card" style={{ width: "18rem" }}>
-                <img src="https://images.pexels.com/photos/2127012/pexels-photo-2127012.jpeg?auto=compress&cs=tinysrgb&w=600" className="card-img-top" alt="..." />
+                <img
+                  src="https://images.pexels.com/photos/2127012/pexels-photo-2127012.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  className="card-img-top"
+                  alt="..."
+                />
                 <div className="card-body">
                   <p className="card-text">
                     Some quick example text to build on the card title and make
@@ -243,9 +261,13 @@ const Home = () => {
                 </div>
               </div>
             </div>
-             <div className="col">
+            <div className="col">
               <div className="card" style={{ width: "18rem" }}>
-                <img src="https://images.pexels.com/photos/1719647/pexels-photo-1719647.jpeg?auto=compress&cs=tinysrgb&w=600" className="card-img-top" alt="..." />
+                <img
+                  src="https://images.pexels.com/photos/1719647/pexels-photo-1719647.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  className="card-img-top"
+                  alt="..."
+                />
                 <div className="card-body">
                   <p className="card-text">
                     Some quick example text to build on the card title and make
