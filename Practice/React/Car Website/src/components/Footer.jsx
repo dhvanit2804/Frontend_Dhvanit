@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div>
-      <footer className="bg-dark text-light pt-4 pb-2 mt-5">
+      <footer className="bg-dark text-light pt-4 pb-2 mt-1">
   <div className="container">
     <div className="row">
       {/* Brand Info */}
@@ -50,7 +50,7 @@ function Footer() {
 
     {/* Bottom Text */}
     <div className="text-center border-top pt-3">
-      <small>© {new Date().getFullYear()} Noodles Nation. All rights reserved.</small>
+      <small>© {new Date().getFullYear()} Car Market Place. All rights reserved.</small>
     </div>
   </div>
 </footer>

@@ -225,8 +225,9 @@ const Home = () => {
                 />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card’s content.
+                    Lamborghini is an Italian luxury supercar manufacturer
+                    founded in 1963, some of the world's most exotic and
+                    powerful sports cars.
                   </p>
                 </div>
               </div>
@@ -240,8 +241,9 @@ const Home = () => {
                 />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card’s content.
+                    Rolls-Royce is the pinnacle of British luxury founded in
+                    1904 and renowned for creating the world's most opulent
+                    automodiles
                   </p>
                 </div>
               </div>
@@ -255,8 +257,8 @@ const Home = () => {
                 />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card’s content.
+                    The BMW M3 is a high-performance version of the BMW 3
+                    Series, known for its sporty handling and powerful engines.
                   </p>
                 </div>
               </div>
@@ -270,8 +272,8 @@ const Home = () => {
                 />
                 <div className="card-body">
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card’s content.
+                    Audi is a German luxury car manufacturer known for its
+                    Quattro all-wheel-drive system and sleek, modern designs.
                   </p>
                 </div>
               </div>
@@ -280,6 +282,51 @@ const Home = () => {
         </div>
       </section>
       {/* card end */}
+      {/* Rating start */}
+      <section>
+        <div className="container-fluid mt-1 mb-1 bg-dark p-5">
+          <h1 className="text-center text-light display-4 fw-bold">
+            Customer Reviews
+          </h1>
+          <div className="row mt-4">
+            <div className="col-md-4">
+              <div className="card text-center">
+                <div className="card-body">
+                  <h5 className="card-title">John Doe</h5>
+                  <p className="card-text">
+                    "Car Market made buying my first car a breeze! Highly
+                    recommend."
+                  </p>
+                  <span className="text-warning">★★★★★</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card text-center">
+                <div className="card-body">
+                  <h5 className="card-title">Jane Smith</h5>
+                  <p className="card-text">
+                    "Selling my car was quick and easy. Great platform!"
+                  </p>
+                  <span className="text-warning">★★★★☆</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card text-center">
+                <div className="card-body">
+                  <h5 className="card-title">Mike Johnson</h5>
+                  <p className="card-text">
+                    "Fantastic selection of cars and excellent customer
+                    service."
+                  </p>
+                  <span className="text-warning">★★★★★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -6,7 +7,7 @@ const Navbar = () => {
       <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Car Market
+           <span><img src="https://images.icon-icons.com/995/PNG/512/CSR_Racing_icon-icons.com_75325.png" style={{height: "50px"}} alt="" /></span> Car Market
           </a>
           <button
             className="navbar-toggler"
@@ -22,14 +23,14 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/about"> 
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
