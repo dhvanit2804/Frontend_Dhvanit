@@ -10,25 +10,23 @@ const FormComponent = () => {
   const [errors, setErrors] = useState({});
   const [submittedData, setSubmittedData] = useState(null);
 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" });
+  };
+
   const validate = () => {
     const newErrors = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Email is invalid";
-    }
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    else if (!emailPattern.test(formData.email))
+      newErrors.email = "Invalid email";
     if (!formData.password.trim()) newErrors.password = "Password is required";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const handleSubmit = (e) => {
@@ -40,67 +38,44 @@ const FormComponent = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">
-      <h2 className="text-2xl font-semibold mb-4 text-center">User Form</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Name Input */}
-        <div>
-          <label className="block font-medium">Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          {errors.name && (
-            <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-          )}
-        </div>
+    <div className="max-w-md mx-auto mt-8 p-6 bg-white shadow-md rounded-md">
+      <h4 className="mb-6 text-xl font-bold text-blue-600 text-center">
+        User Form
+      </h4>
+      <form onSubmit={handleSubmit}>
+        {["name", "email", "password"].map((field) => (
+          <div className="mb-4" key={field}>
+            <label className="block mb-1 font-medium capitalize">
+              {field}:
+            </label>
+            <input
+              type={field === "password" ? "password" : "text"}
+              name={field}
+              value={formData[field]}
+              onChange={handleChange}
+              className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 ${
+                errors[field]
+                  ? "border-red-500 focus:ring-red-300"
+                  : "border-gray-300 focus:ring-blue-400"
+              }`}
+            />
+            {errors[field] && (
+              <p className="text-red-500 text-sm mt-1">{errors[field]}</p>
+            )}
+          </div>
+        ))}
 
-        {/* Email Input */}
-        <div>
-          <label className="block font-medium">Email:</label>
-          <input
-            type="text"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          {errors.email && (
-            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-          )}
-        </div>
-
-        {/* Password Input */}
-        <div>
-          <label className="block font-medium">Password:</label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          {errors.password && (
-            <p className="text-red-500 text-sm mt-1">{errors.password}</p>
-          )}
-        </div>
-
-        {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-200"
+          className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
         >
           Submit
         </button>
       </form>
 
-      {/* Display Submitted Data */}
       {submittedData && (
-        <div className="mt-6 p-4 bg-green-100 border border-green-300 rounded">
-          <h3 className="text-lg font-semibold mb-2">Submitted Data:</h3>
+        <div className="mt-6 p-4 bg-green-100 border border-green-300 rounded-md">
+          <h6 className="font-semibold mb-2">Submitted Data:</h6>
           <p>
             <strong>Name:</strong> {submittedData.name}
           </p>
