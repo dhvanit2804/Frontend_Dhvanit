@@ -1,0 +1,53 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Dhvanit",
+      "email": "dhvanitparate123@gmail.com",
+      "password": "123456",
+      "status": "unblock"
+    },
+    {
+      "id": 2,
+      "name": "Meet",
+      "email": "meetsolanki123@gmail.com",
+      "password": "123456",
+      "status": "unblock"
+    },
+    {
+      "id": 3,
+      "name": "Rahul",
+      "email": "Rahul123@gmail.com",
+      "password": "123456",
+      "status": "block"
+    }
+  ],
+  "blog": [
+    {
+      "id": 1,
+      "title": "Rental Cars how to check driving fines?",
+      "desc": "Hello this cards data ",
+      "comment": "4",
+      "name": "martin",
+      "date": "20-12-2023",
+      "img": "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 2,
+      "title": "Document required for car rental",
+      "desc": "Hello this cards data ",
+      "comment": "7",
+      "name": "Helpin",
+      "date": "27-12-2023",
+      "img": "https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&w=600"
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "12345678"
+    }
+  ]
+}
