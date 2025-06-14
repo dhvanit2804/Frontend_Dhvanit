@@ -49,5 +49,48 @@
       "email": "admin@gmail.com",
       "password": "12345678"
     }
+  ],
+  "Teams": [
+    {
+      "id": 1,
+      "name": "MARTIN DOE",
+      "role": "Worker",
+      "img": "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 2,
+      "name": "Chars Doe",
+      "role": "Worker",
+      "img": "https://images.pexels.com/photos/3785104/pexels-photo-3785104.jpeg?auto=compress&cs=tinysrgb&w=600"
+      
+    }
+  ],
+  "Cars": [
+    {
+      "id": 1,
+      "name": "Mecedes Benz R3",
+      "img": "https://images.pexels.com/photos/14476713/pexels-photo-14476713.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "review": 4.5,
+      "price": "$99:00/day",
+      "seat": "4 seats",
+      "transmission": "AT/MT",
+      "fuel": "Petrol",
+      "year": 2015,
+      "setting": "Auto",
+      "mileage": "27k"
+    },
+    {
+      "id": 2,
+      "name": "BMW X5",
+      "img": "https://images.pexels.com/photos/757185/pexels-photo-757185.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "review": 4.5,
+      "price": "$99:00/day",
+      "seat": "4 seats",
+      "transmission": "AT/MT",
+      "fuel": "Petrol",
+      "year": 2015,
+      "setting": "Auto",
+      "mileage": "20k"
+    }
   ]
 }
