@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../Coman/Header";
 import Navheader from "../Coman/Navheader";
 import Footer from "../Coman/Footer";
 import { Helmet } from "react-helmet";
+import axios from "axios";
 
 const Car = () => {
   return (

@@ -2,10 +2,22 @@ import React from "react";
 import Header from "../Coman/Header";
 import Navheader from "../Coman/Navheader";
 import Footer from "../Coman/Footer";
+import { Helmet } from "react-helmet";
 
 const Testimonial = () => {
   return (
     <div>
+      <Helmet>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <script src="js/main.js"></script>
+      </Helmet>
       <Header />
       <Navheader title="Our Testimonial" name="Testimonial" />
       {/* Testimonial Start */}

@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Coman/Header";
 import Navheader from "../Coman/Navheader";
 import Footer from "../Coman/Footer";
+import axios from "axios";
 
 const Blog = () => {
+  const [blog, setBlog] = useState([]);
+
+  useEffect(() => {
+    fetchdata();
+  }, []);
+
+  const fetchdata = async () => {
+    const res = await axios.get("http://localhost:3000/Blog");
+    console.log(res.data);
+    setBlog(res.data);
+  };
   return (
     <div>
       <Header />
@@ -28,111 +40,48 @@ const Blog = () => {
               </p>
             </div>
             <div className="row g-4">
-              <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div className="blog-item">
-                  <div className="blog-img">
-                    <img
-                      src="img/blog-1.jpg"
-                      className="img-fluid rounded-top w-100"
-                      alt="Image"
-                    />
-                  </div>
-                  <div className="blog-content rounded-bottom p-4">
-                    <div className="blog-date">30 Dec 2025</div>
-                    <div className="blog-comment my-3">
-                      <div className="small">
-                        <span className="fa fa-user text-primary" />
-                        <span className="ms-2">Martin.C</span>
-                      </div>
-                      <div className="small">
-                        <span className="fa fa-comment-alt text-primary" />
-                        <span className="ms-2">6 Comments</span>
-                      </div>
-                    </div>
-                    <a href="#" className="h4 d-block mb-3">
-                      Rental Cars how to check driving fines?
-                    </a>
-                    <p className="mb-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eius libero soluta impedit eligendi? Quibusdam,
-                      laudantium.
-                    </p>
-                    <a href="#" className>
-                      Read More <i className="fa fa-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div className="blog-item">
-                  <div className="blog-img">
-                    <img
-                      src="img/blog-2.jpg"
-                      className="img-fluid rounded-top w-100"
-                      alt="Image"
-                    />
-                  </div>
-                  <div className="blog-content rounded-bottom p-4">
-                    <div className="blog-date">25 Dec 2025</div>
-                    <div className="blog-comment my-3">
-                      <div className="small">
-                        <span className="fa fa-user text-primary" />
-                        <span className="ms-2">Martin.C</span>
-                      </div>
-                      <div className="small">
-                        <span className="fa fa-comment-alt text-primary" />
-                        <span className="ms-2">6 Comments</span>
+              {blog &&
+                blog.map((data, index) => {
+                  console.log(data);
+                  return (
+                    <div
+                      className="col-lg-4 wow fadeInUp"
+                      data-wow-delay="0.1s"
+                      key={index}
+                    >
+                      <div className="blog-item">
+                        <div className="blog-img">
+                          <img
+                            src={data.img}
+                            className="img-fluid rounded-top w-100"
+                            alt="Image"
+                            style={{ height: "300px" }}
+                          />
+                        </div>
+                        <div className="blog-content rounded-bottom p-4">
+                          <div className="blog-date">{data.date}</div>
+                          <div className="blog-comment my-3">
+                            <div className="small">
+                              <span className="fa fa-user text-primary" />
+                              <span className="ms-2">{data.name}</span>
+                            </div>
+                            <div className="small">
+                              <span className="fa fa-comment-alt text-primary" />
+                              <span className="ms-2">{data.comment}</span>
+                            </div>
+                          </div>
+                          <a href="#" className="h4 d-block mb-3">
+                            {data.title}
+                          </a>
+                          <p className="mb-3">{data.description}</p>
+                          <a href="#" className>
+                            Read More <i className="fa fa-arrow-right" />
+                          </a>
+                        </div>
                       </div>
                     </div>
-                    <a href="#" className="h4 d-block mb-3">
-                      Rental cost of sport and other cars
-                    </a>
-                    <p className="mb-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eius libero soluta impedit eligendi? Quibusdam,
-                      laudantium.
-                    </p>
-                    <a href="#" className>
-                      Read More <i className="fa fa-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div className="blog-item">
-                  <div className="blog-img">
-                    <img
-                      src="img/blog-3.jpg"
-                      className="img-fluid rounded-top w-100"
-                      alt="Image"
-                    />
-                  </div>
-                  <div className="blog-content rounded-bottom p-4">
-                    <div className="blog-date">27 Dec 2025</div>
-                    <div className="blog-comment my-3">
-                      <div className="small">
-                        <span className="fa fa-user text-primary" />
-                        <span className="ms-2">Martin.C</span>
-                      </div>
-                      <div className="small">
-                        <span className="fa fa-comment-alt text-primary" />
-                        <span className="ms-2">6 Comments</span>
-                      </div>
-                    </div>
-                    <a href="#" className="h4 d-block mb-3">
-                      Document required for car rental
-                    </a>
-                    <p className="mb-3">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Eius libero soluta impedit eligendi? Quibusdam,
-                      laudantium.
-                    </p>
-                    <a href="#" className>
-                      Read More <i className="fa fa-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+                  );
+                })}
             </div>
           </div>
         </div>
