@@ -1,96 +1,184 @@
 {
-  "user": [
-    {
-      "id": 1,
-      "name": "Dhvanit",
-      "email": "dhvanitparate123@gmail.com",
-      "password": "123456",
-      "status": "unblock"
-    },
-    {
-      "id": 2,
-      "name": "Meet",
-      "email": "meetsolanki123@gmail.com",
-      "password": "123456",
-      "status": "unblock"
-    },
-    {
-      "id": 3,
-      "name": "Rahul",
-      "email": "Rahul123@gmail.com",
-      "password": "123456",
-      "status": "block"
-    }
-  ],
-  "blog": [
-    {
-      "id": 1,
-      "title": "Rental Cars how to check driving fines?",
-      "desc": "Hello this cards data ",
-      "comment": "4",
-      "name": "martin",
-      "date": "20-12-2023",
-      "img": "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "id": 2,
-      "title": "Document required for car rental",
-      "desc": "Hello this cards data ",
-      "comment": "7",
-      "name": "Helpin",
-      "date": "27-12-2023",
-      "img": "https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&w=600"
-    }
-  ],
-  "admin": [
-    {
-      "id": 1,
-      "name": "admin",
-      "email": "admin@gmail.com",
-      "password": "12345678"
-    }
-  ],
-  "Teams": [
-    {
-      "id": 1,
-      "name": "MARTIN DOE",
-      "role": "Worker",
-      "img": "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "id": 2,
-      "name": "Chars Doe",
-      "role": "Worker",
-      "img": "https://images.pexels.com/photos/3785104/pexels-photo-3785104.jpeg?auto=compress&cs=tinysrgb&w=600"
-      
-    }
-  ],
-  "Cars": [
-    {
-      "id": 1,
-      "name": "Mecedes Benz R3",
-      "img": "https://images.pexels.com/photos/14476713/pexels-photo-14476713.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "review": 4.5,
-      "price": "$99:00/day",
-      "seat": "4 seats",
-      "transmission": "AT/MT",
-      "fuel": "Petrol",
-      "year": 2015,
-      "setting": "Auto",
-      "mileage": "27k"
-    },
-    {
-      "id": 2,
-      "name": "BMW X5",
-      "img": "https://images.pexels.com/photos/757185/pexels-photo-757185.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "review": 4.5,
-      "price": "$99:00/day",
-      "seat": "4 seats",
-      "transmission": "AT/MT",
-      "fuel": "Petrol",
-      "year": 2015,
-      "setting": "Auto",
-      "mileage": "20k"
-    }
-  ]
+    "user":[
+        {
+            "id":1,
+            "name":"Karan",
+            "email":"kharvarkaran21@gmail.com",
+            "password":"karan123",
+            "status":"unblock"
+        },
+        {
+            "id":2,
+            "name":"Dhvanit",
+            "email":"Dhvanit@gmail.com",
+            "password":"Dhvanit123",
+            "status":"unblock"
+        },
+        {
+            "id":3,
+            "name":"Ansh",
+            "email":"Ansh@gmail.com",
+            "password":"Ansh123",
+            "status":"block"
+        }
+    ],
+
+    "Admin":[
+        {
+            "id":1,
+            "name":"Akash",
+            "email":"Akash@gmail.com",
+            "password":"Akash123"
+        }
+        
+    ],
+
+    "Blog":[
+        {
+            "id":1,
+            "title":"Teal Vintage Car",
+            "description":"A teal vintage car parked on a cobblestone street, surrounded by lush greenery and old brick buildings.",
+            "comment":"10",
+            "name":"Karan",
+            "date":"17-7-2004",
+            "img":"https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600"
+        },
+        {
+            "id":1,
+            "title":"Green Super Car",
+            "description":"A Sleek Green super car speeding down a winding mountain road, with a breathtaking view of the vally below.",
+            "comment":"7",
+            "name":"Dhvanit",
+            "date":"20-12-2023",
+            "img":"https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    ],
+
+    "services":[
+        {
+            "id":1,
+            "title":"Phone-reservation",
+            "description":"Phone Reservation is a service that allows customer to reserve their appointment",
+            "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4QXu9VS3PBIC0AdlQwiQ5tZ3bGZ5qp5JQRRogiprrzq_DjvK_vgCzVDeqblwhE-JoDLE&usqp=CAU"
+        },
+        {
+            "id":1,
+            "title":"Special Rates",
+            "description":"Special rates are offered to customers who book their appointments in advance",
+            "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKgDFjjuhT7lA-HPdyy-5PNRV17Iy3wRhHg&s"
+        }
+    ],
+
+    "Vehicle":[
+        {
+            "id":1,
+            "img": "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "name": "Cobalt Blue car",
+            "review": "4.5",
+            "price": "$187/day",
+            "Seat": "4",
+            "transmission": "AT/MT",
+            "fuel": "Petrol",
+            "year": "2025",
+            "setting": "Auto",
+            "mileage": "25km"
+        },
+
+                {
+            "id":2,
+            "img": "https://images.pexels.com/photos/39855/lamborghini-brno-racing-car-automobiles-39855.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "name": "Bumble Bee",
+            "review": "4.4",
+            "price": "$150/day",
+            "Seat": "2",
+            "transmission": "AT/MT",
+            "fuel": "Petrol",
+            "year": "2025",
+            "setting": "Auto",
+            "mileage": "20km"
+        }
+    ],
+
+    "customer":[
+        {
+            "id":1,
+            "img": "https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "name": "John",
+            "role": "Designer"
+        },
+
+        {
+            "id":2,
+            "img": "https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "name": "Mike",
+            "role": "Developer"
+        
+        },
+
+        {
+            "id":3,
+            "img": "https://images.pexels.com/photos/1121796/pexels-photo-1121796.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "name": "Azad",
+            "role": "Manager"
+        }
+    ],
+
+    "client":[
+        {
+            "id":1,
+            "img": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "name": "Maggie",
+            "role": "Marketing Manager",
+            "review": "4.5",
+            "description": "Cental has been a game-changer for our business. Their services are top-notch and the team is always ready to help."
+        },
+
+        {
+            "id":2,
+            "img": "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "name": "Jenefer",
+            "role": "Contant Writer",
+            "review": "4.1",
+            "description": "cental service are exceptional. They have helped us streamline our operations."
+        }
+    ],
+
+    "contact":[
+        {
+            "id":1,
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROhs3R07AxUjmXXSLZgb3ilZhdPBhGuGynZA&s",
+            "title": "Address",
+            "subtitle": "123 Street New York.USA"
+        },
+
+        {
+            "id":2,
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdhshZTb5mqKDcQ5X75FUfCxv7oB18ln4pSQ&s",
+            "title": "Mail Us",
+            "subtitle": "info@example.com"
+        },
+
+        {
+            "id":3,
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6P-7YTh_xTELoyFkQmjFGCy2N3c-0j3Ad2DqFJPV_9YQNwAxbRMDVcTnWB7CQble973Y&usqp=CAU",
+            "title": "Telephone",
+            "subtitle": "(+012) 3456 7890"
+        }
+    ],
+
+    "rating":[
+        {
+            "id":1,
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVBThGFYYp_KjYkojA5KjRpNugjV8_jeRbXQ&s",
+            "numbers": "829+",
+            "title": "Happy Clients"
+        },
+
+        {
+            "id":2,
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg96CtGEcxMER6jt1twMdu-2KmWhZ_12QFaQ&s",
+            "numbers": "56+",
+            "title": "Number of Cars"
+        }
+    ]
 }
