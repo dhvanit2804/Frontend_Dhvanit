@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Coman/Header";
 import Navheader from "../Coman/Navheader";
 import Footer from "../Coman/Footer";
@@ -6,6 +6,19 @@ import { Helmet } from "react-helmet";
 import axios from "axios";
 
 const Car = () => {
+  const [cars, setCars] = useState([]);
+
+  useEffect(() => {
+    fetchdata();
+  })
+
+  const fetchdata = async () => {
+    const res = await axios.get("http://localhost:3000/Vehicle");
+    console.log(res.data);
+    setCars(res.data);
+  }
+
+
   return (
     <div>
       <Helmet >

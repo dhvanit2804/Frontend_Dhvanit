@@ -11,6 +11,9 @@ import Car from './Website/Pages/Car'
 import Team from './Website/Pages/Team'
 import Testimonial from './Website/Pages/Testimonial'
 import Notfound from './Website/Pages/Notfound'
+import Aheader from './Admin/AComan/Aheader'
+import DashBoard from './Admin/APages/DashBoard'
+import Blogmange from './Admin/APages/Blogmange'
 
 function App() {
 
@@ -28,6 +31,14 @@ function App() {
       <Route path='/team' element={<Team />} />
       <Route path='/testimonial' element={<Testimonial />} />
       <Route path='*' element={<Notfound />} />
+
+
+      {/* Admin */}
+      {/* <Route path='/admin' element={<Aheader />} /> */}
+      <Route path='/dash' element={<DashBoard />} />
+      <Route path='/blogmanage' element={<Blogmange />} />
+
+
     </Routes>
     
     </BrowserRouter>
