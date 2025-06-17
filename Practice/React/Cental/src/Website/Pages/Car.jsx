@@ -10,7 +10,7 @@ const Car = () => {
 
   useEffect(() => {
     fetchdata();
-  })
+  },[])
 
   const fetchdata = async () => {
     const res = await axios.get("http://localhost:3000/Vehicle");
