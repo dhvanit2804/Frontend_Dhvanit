@@ -14,6 +14,7 @@ import Notfound from './Website/Pages/Notfound'
 import Aheader from './Admin/AComan/Aheader'
 import DashBoard from './Admin/APages/DashBoard'
 import Blogmange from './Admin/APages/Blogmange'
+import Blogadd from './Admin/APages/Blogadd'
 
 function App() {
 
@@ -34,9 +35,9 @@ function App() {
 
 
       {/* Admin */}
-      {/* <Route path='/admin' element={<Aheader />} /> */}
       <Route path='/dash' element={<DashBoard />} />
       <Route path='/blogmanage' element={<Blogmange />} />
+      <Route path='/blogadd' element={<Blogadd />} />
 
 
     </Routes>
