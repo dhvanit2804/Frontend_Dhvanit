@@ -8,7 +8,7 @@ const Blogadd = () => {
   const [form, setform] = useState({
     id: "",
     title: "",
-    desc: "",
+    description: "",
     comment: "",
     name: "",
     date: "",
@@ -35,7 +35,7 @@ const Blogadd = () => {
     setform({
       id: "",
       title: "",
-      desc: "",
+      description: "",
       comment: "",
       name: "",
       date: "",
@@ -128,8 +128,8 @@ const Blogadd = () => {
                     placeholder="Leave a message here"
                     id="message"
                     style={{ height: 160 }}
-                    value={form.desc}
-                    name="desc"
+                    value={form.description}
+                    name="description"
                     onChange={getChange}
                   />
                   <label htmlFor="message">Message</label>
