@@ -15,6 +15,7 @@ import Aheader from './Admin/AComan/Aheader'
 import DashBoard from './Admin/APages/DashBoard'
 import Blogmange from './Admin/APages/Blogmange'
 import Blogadd from './Admin/APages/Blogadd'
+import Carmanage from './Admin/APages/Carmanage'
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
       <Route path='/dash' element={<DashBoard />} />
       <Route path='/blogmanage' element={<Blogmange />} />
       <Route path='/blogadd' element={<Blogadd />} />
+      <Route path='/carmanage' element={<Carmanage />} />
 
 
     </Routes>

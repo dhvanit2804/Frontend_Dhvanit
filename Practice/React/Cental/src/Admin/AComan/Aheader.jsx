@@ -113,6 +113,23 @@ function Aheader() {
                       className="nav-link dropdown-toggle"
                       data-bs-toggle="dropdown"
                     >
+                      Cars
+                    </a>
+                    <div className="dropdown-menu m-0">
+                      <NavLink to="/carmanage" className="dropdown-item">
+                        Car Manage
+                      </NavLink>
+                      <NavLink to="/blogadd" className="dropdown-item">
+                        Car Add
+                      </NavLink>
+                    </div>
+                  </div>
+                  <div className="nav-item dropdown">
+                    <a
+                      href="#"
+                      className="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                    >
                       Pages
                     </a>
                     <div className="dropdown-menu m-0">
@@ -130,9 +147,7 @@ function Aheader() {
                       </NavLink>
                     </div>
                   </div>
-                  <NavLink to="/contact" className="nav-item nav-link">
-                    Contact
-                  </NavLink>
+                  
                 </div>
                 <a href="#" className="btn btn-primary rounded-pill py-2 px-4">
                   Get Started
