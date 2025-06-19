@@ -38,6 +38,29 @@ const Blogmange = () => {
     fetchdata();
   };
 
+  const [blogupdate, setblogupdate] = useState(null);
+  const [updateblog, setupdateblog] = useState({
+    id: "",
+    title: "",
+    description: "",
+    comment: "",
+    name: "",
+    date: "",
+    img: "",
+  });
+
+  const openmodel = (id) => {
+    setblogupdate(id);
+    setupdateblog(id);
+  };
+
+  const datachange = (e) => {
+    setupdateblog({
+      ...updateblog,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <div>
       <Aheader />
@@ -74,7 +97,14 @@ const Blogmange = () => {
                       >
                         View
                       </button>
-                      <button className="btn btn-success mx-2">Edit</button>
+                      <button
+                        className="btn btn-success mx-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                        onClick={() => openmodel(data)}
+                      >
+                        Edit
+                      </button>
                       <button
                         className="btn btn-danger"
                         onClick={() => removedata(data.id)}
@@ -153,6 +183,143 @@ const Blogmange = () => {
             </div>
           </div>
         </div>
+        {blogupdate && (
+          <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    BLOG UPDATE
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div className="bg-secondary p-5 rounded">
+                    <h4 className="text-primary mb-4">Blog Update Data</h4>
+                    <form>
+                      <div className="row g-4">
+                        <div className="col-lg-12 col-xl-6">
+                          <div className="form-floating">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="name"
+                              name="name"
+                              onChange={datachange}
+                              value={updateblog && updateblog.name}
+                              placeholder="Your Name"
+                            />
+                            <label htmlFor="name">Your Name</label>
+                          </div>
+                        </div>
+                        <div className="col-lg-12 col-xl-6">
+                          <div className="form-floating">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="email"
+                              placeholder="Your Email"
+                              name="title"
+                              onChange={datachange}
+                              value={updateblog && updateblog.title}
+                            />
+                            <label htmlFor="text">Your Title</label>
+                          </div>
+                        </div>
+                        <div className="col-lg-12 col-xl-6">
+                          <div className="form-floating">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="phone"
+                              placeholder="Phone"
+                              name="comment"
+                              onChange={datachange}
+                              value={updateblog && updateblog.comment}
+                            />
+                            <label htmlFor="phone">Your Comment</label>
+                          </div>
+                        </div>
+                        <div className="col-lg-12 col-xl-6">
+                          <div className="form-floating">
+                            <input
+                              type="date"
+                              className="form-control"
+                              id="project"
+                              name="date"
+                              onChange={datachange}
+                              placeholder="Date"
+                              value={updateblog && updateblog.date}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-12">
+                          <div className="form-floating">
+                            <input
+                              type="url"
+                              className="form-control"
+                              id="subject"
+                              placeholder="Subject"
+                              name="img"
+                              onChange={datachange}
+                              value={updateblog && updateblog.img}
+                            />
+                            <label htmlFor="subject">Image</label>
+                          </div>
+                        </div>
+                        <div className="col-12">
+                          <div className="form-floating">
+                            <textarea
+                              className="form-control"
+                              placeholder="Leave a message here"
+                              id="message"
+                              name="description"
+                              onChange={datachange}
+                              value={updateblog && updateblog.description}
+                              style={{ height: 160 }}
+                            />
+                            <label htmlFor="message">Message</label>
+                          </div>
+                        </div>
+                        <div className="col-12">
+                          <div className="row">
+                            <div className="col-md-6">
+                              <button className="btn btn-light w-100 py-3">
+                                update blogs
+                              </button>
+                            </div>
+                            <div className="col-md-6">
+                              <button
+                                className="btn btn-light w-100 py-3"
+                                data-bs-dismiss="modal"
+                                onClick={() => setblogupdate(null)}
+                              >
+                                cancle blogs
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
