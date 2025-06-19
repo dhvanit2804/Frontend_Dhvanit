@@ -32,6 +32,12 @@ const Blogmange = () => {
     setBlogData(res.data);
   };
 
+  const removedata = async (id) => {
+    const res = await axios.delete(`http://localhost:3000/Blog/${id}`);
+    console.log(res.data);
+    fetchdata();
+  };
+
   return (
     <div>
       <Aheader />
@@ -69,7 +75,12 @@ const Blogmange = () => {
                         View
                       </button>
                       <button className="btn btn-success mx-2">Edit</button>
-                      <button className="btn btn-danger">Delete</button>
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => removedata(data.id)}
+                      >
+                        Delete
+                      </button>
                     </td>
                   </tr>
                 );

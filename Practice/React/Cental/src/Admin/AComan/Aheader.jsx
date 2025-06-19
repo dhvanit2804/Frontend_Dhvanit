@@ -87,7 +87,7 @@ function Aheader() {
                   <NavLink to="/about" className="nav-item nav-link">
                     About
                   </NavLink>
-                  <NavLink to="/service" className="nav-item nav-link">
+                  <NavLink to="/services" className="nav-item nav-link">
                     Service
                   </NavLink>
                   <div className="nav-item dropdown">
