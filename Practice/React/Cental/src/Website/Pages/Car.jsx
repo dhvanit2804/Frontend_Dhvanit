@@ -57,7 +57,7 @@ const Car = () => {
                 cars.map((data, index) => {
                   console.log(data);
                   return (
-                    <div className="col-md-4 mb-4">
+                    <div className="col-md-4 mb-4" key={index}>
                       <div className="card shadow-lg border-0 rounded-4 h-100">
                         <img
                           src={data.img}
