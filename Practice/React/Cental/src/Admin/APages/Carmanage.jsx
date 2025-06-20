@@ -27,16 +27,51 @@ const Carmanage = () => {
     year: "",
   });
 
+  // View Data
   const getdata = async (id) => {
     const res = await axios.get(`http://localhost:3000/Vehicle/${id}`);
     console.log(res.data);
     setCardata(res.data);
   };
-
+  // Remove DATA
   const removedata = async (id) => {
     const res = await axios.delete(`http://localhost:3000/Vehicle/${id}`);
     console.log(res.data);
     fetchdata();
+  };
+  // UPDATE DATA
+  const [carupdate, setcarupdate] = useState(null);
+  const [updatecar, setupdatecar] = useState({
+    id: "",
+    name: "",
+    price: "",
+    review: "",
+    img: "",
+    fuel: "",
+    mileage: "",
+    year: "",
+  });
+
+  const openmodal = (id) => {
+    setcarupdate(id);
+    setupdatecar(id);
+  };
+
+  const datachange = (e) => {
+    setupdatecar({
+      ...updatecar,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const updatedata = async (e) => {
+    e.preventDefault();
+
+    const res = await axios.put(
+      `http://localhost:3000/Vehicle/${updatecar.id}`,
+      updatecar
+    );
+    console.log(res.data);
   };
 
   return (
@@ -79,7 +114,14 @@ const Carmanage = () => {
                       >
                         View
                       </button>
-                      <button className="btn btn-success mx-2">Edit</button>
+                      <button
+                        className="btn btn-success mx-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                        onClick={() => openmodal(data)}
+                      >
+                        Edit
+                      </button>
                       <button
                         className="btn btn-danger"
                         onClick={() => removedata(data.id)}
@@ -163,6 +205,158 @@ const Carmanage = () => {
             </div>
           </div>
         </div>
+        {carupdate && (
+          <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    Update Car Data
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div className="bg-secondary p-5 rounded">
+                    <h4 className="text-primary mb-4">UPDATE CAR DATA</h4>
+                    <form>
+                      <div className="row g-4">
+                        <div className="col-lg-12 col-xl-6">
+                          <div className="form-floating">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="name"
+                              name="name"
+                              onChange={datachange}
+                              value={updatecar && updatecar.name}
+                              placeholder="Your Name"
+                            />
+                            <label htmlFor="name">Car Name</label>
+                          </div>
+                        </div>
+                        <div className="col-lg-12 col-xl-6">
+                          <div className="form-floating">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="email"
+                              name="year"
+                              onChange={datachange}
+                              value={updatecar && updatecar.year}
+                              placeholder="Your Email"
+                            />
+                            <label htmlFor="email">Modal</label>
+                          </div>
+                        </div>
+                        <div className="col-lg-12 col-xl-6">
+                          <div className="form-floating">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="phone"
+                              name="price"
+                              onChange={datachange}
+                              value={updatecar && updatecar.price}
+                              placeholder="Phone"
+                            />
+                            <label htmlFor="phone">Car Price</label>
+                          </div>
+                        </div>
+                        <div className="col-lg-12 col-xl-6">
+                          <div className="form-floating">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="project"
+                              name="review"
+                              onChange={datachange}
+                              value={updatecar && updatecar.review}
+                              placeholder="Project"
+                            />
+                            <label htmlFor="project">Car Review</label>
+                          </div>
+                        </div>
+                        <div className="col-12">
+                          <div className="form-floating">
+                            <input
+                              type="url"
+                              className="form-control"
+                              id="subject"
+                              name="img"
+                              onChange={datachange}
+                              value={updatecar && updatecar.img}
+                              placeholder="Subject"
+                            />
+                            <label htmlFor="subject">Image</label>
+                          </div>
+                        </div>
+                        <div className="col-lg-12 col-xl-6">
+                          <div className="form-floating">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="subject"
+                              name="fuel"
+                              onChange={datachange}
+                              value={updatecar && updatecar.fuel}
+                              placeholder="Subject"
+                            />
+                            <label htmlFor="subject">Fuel</label>
+                          </div>
+                        </div>
+                        <div className="col-lg-12 col-xl-6">
+                          <div className="form-floating">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="subject"
+                              name="mileage"
+                              onChange={datachange}
+                              value={updatecar && updatecar.mileage}
+                              placeholder="Subject"
+                            />
+                            <label htmlFor="subject">Mileage</label>
+                          </div>
+                        </div>
+                        <div className="col-12">
+                          <button
+                            className="btn btn-light w-100 py-3"
+                            data-bs-dismiss="modal"
+                            onClick={updatedata}
+                          >
+                            Update Car Data
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

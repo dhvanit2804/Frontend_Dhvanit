@@ -310,6 +310,7 @@ const Blogmange = () => {
                             <div className="col-md-6">
                               <button
                                 className="btn btn-light w-100 py-3"
+                                data-bs-dismiss="modal"
                                 onClick={updatedata}
                               >
                                 update blogs

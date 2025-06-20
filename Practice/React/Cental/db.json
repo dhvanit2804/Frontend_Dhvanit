@@ -35,7 +35,7 @@
       "id": "1",
       "title": "Green Super Car",
       "description": "A Sleek Green super car speeding down a winding mountain road, with a breathtaking view of the vally below.",
-      "comment": "7",
+      "comment": "10",
       "name": "Dhvanit",
       "date": "20-12-2023",
       "img": "https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -93,9 +93,9 @@
       "Seat": "4",
       "transmission": "AT/MT",
       "fuel": "Petrol",
-      "year": "2025",
+      "year": "2023",
       "setting": "Auto",
-      "mileage": "25km"
+      "mileage": "22km"
     },
     {
       "id": "2",
@@ -112,13 +112,23 @@
     },
     {
       "id": "1750402491005",
-      "name": "rolls-royce",
+      "name": "Rolls-royce",
       "price": "$300/day",
-      "review": "6.6",
+      "review": "4.6",
       "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiomWRuLLBqoLZaGTp-e13XT7jXLuGVZACMBeD6RytSQwzJbrbEnLONmfgpEXt9AyLDxLCNiV3dzRYEDLVrKZs23c7p2MM-ng-b-CshlHrHMkfW2-b0lI1Seh1WHyy768XCBF7Fm34WXLfCRd7tHM4-T0yI1SbItRKl45dUijKpyAsAbXZlb5QJHrEMQQ/s2560/rolls-royce-black-badge-ghost%20(2).jpg",
       "fuel": "Petrol",
-      "mileage": "10km",
+      "mileage": "15km",
       "year": "2024"
+    },
+    {
+      "id": "1750418911004",
+      "name": "ferrari",
+      "price": "$250/day",
+      "review": "4.3",
+      "img": "https://manofmany.com/wp-content/uploads/2023/07/Ferrari-SF90-XX-Stradale-front-three-quarter.jpg",
+      "fuel": "Petrol",
+      "mileage": "15km",
+      "year": "2025"
     }
   ],
   "customer": [
