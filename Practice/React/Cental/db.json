@@ -109,6 +109,26 @@
       "year": "2025",
       "setting": "Auto",
       "mileage": "20km"
+    },
+    {
+      "id": "1750402491005",
+      "name": "rolls-royce",
+      "price": "$300/day",
+      "review": "6.6",
+      "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiomWRuLLBqoLZaGTp-e13XT7jXLuGVZACMBeD6RytSQwzJbrbEnLONmfgpEXt9AyLDxLCNiV3dzRYEDLVrKZs23c7p2MM-ng-b-CshlHrHMkfW2-b0lI1Seh1WHyy768XCBF7Fm34WXLfCRd7tHM4-T0yI1SbItRKl45dUijKpyAsAbXZlb5QJHrEMQQ/s2560/rolls-royce-black-badge-ghost%20(2).jpg",
+      "fuel": "Petrol",
+      "mileage": "10km",
+      "year": "2024"
+    },
+    {
+      "id": "1750402738667",
+      "name": "BMW",
+      "price": "$250/day",
+      "review": "4.7",
+      "img": "https://www.bowkermotorgroup.co.uk/wp-content/uploads/2024/01/P90525201_highRes_the-first-ever-bmw-i-scaled.jpg",
+      "fuel": "Petrol",
+      "mileage": "25km",
+      "year": "2025"
     }
   ],
   "customer": [

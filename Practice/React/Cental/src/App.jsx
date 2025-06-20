@@ -16,6 +16,7 @@ import DashBoard from './Admin/APages/DashBoard'
 import Blogmange from './Admin/APages/Blogmange'
 import Blogadd from './Admin/APages/Blogadd'
 import Carmanage from './Admin/APages/Carmanage'
+import Caradd from './Admin/APages/Caradd'
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
       <Route path='/blogmanage' element={<Blogmange />} />
       <Route path='/blogadd' element={<Blogadd />} />
       <Route path='/carmanage' element={<Carmanage />} />
+      <Route path='/caradd' element={<Caradd />} />
 
 
     </Routes>

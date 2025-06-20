@@ -25,7 +25,7 @@ const Carmanage = () => {
           <thead>
             <tr className="text-center">
               <th scope="col">id</th>
-              <th scope="col">Title</th>
+              <th scope="col">Name</th>
               <th scope="col">Price</th>
               <th scope="col">Fuel</th>
               <th scope="col">Mileage</th>

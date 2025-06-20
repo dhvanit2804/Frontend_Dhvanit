@@ -54,38 +54,51 @@ const Car = () => {
             </div>
             <div className="row">
               {cars &&
-              cars.map((data, index) => {
-                console.log(data);
-                return (
-                  
-                    <div className="col-md-4">
-                      <div className="card" style={{ width: "22rem" }}>
+                cars.map((data, index) => {
+                  console.log(data);
+                  return (
+                    <div className="col-md-4 mb-4">
+                      <div className="card shadow-lg border-0 rounded-4 h-100">
                         <img
                           src={data.img}
-                          style={{ height: "300px" }}
-                          className="card-img-top"
-                          alt="..."
+                          className="card-img-top rounded-top-4"
+                          style={{ height: "250px", objectFit: "cover" }}
+                          alt={data.name}
                         />
-                        <div className="card-body">
-                          <h5 className="card-title">{data.name}</h5>
-                          <p className="card-text fw-bold text-dark">
-                            price: {data.price} <br />
-                            fuel: {data.fuel} <br />
-                            mileage: {data.mileage} <br />
-                            review: {data.review} <br />
-                            modal: {data.year}
-                          </p>
-                          <a href="#" className="btn btn-success">
+                        <div className="card-body p-4">
+                          <h5 className="card-title text-primary fw-bold mb-3">
+                            {data.name}
+                          </h5>
+                          <ul className="list-unstyled text-dark mb-4">
+                            <li>
+                              <strong>Price:</strong> ₹{data.price}
+                            </li>
+                            <li>
+                              <strong>Fuel:</strong> {data.fuel}
+                            </li>
+                            <li>
+                              <strong>Mileage:</strong> {data.mileage} km/l
+                            </li>
+                            <li>
+                              <strong>Review:</strong> ⭐ {data.review}/5
+                            </li>
+                            <li>
+                              <strong>Model Year:</strong> {data.year}
+                            </li>
+                          </ul>
+                          <a
+                            href="#"
+                            className="btn btn-success w-100 fw-semibold rounded-pill"
+                          >
+                            <i className="bi bi-calendar-check-fill me-2"></i>
                             Book Now
                           </a>
                         </div>
                       </div>
                     </div>
-                  
-                );
-              })}
+                  );
+                })}
             </div>
-            
           </div>
         </div>
         {/* Car categories End */}
