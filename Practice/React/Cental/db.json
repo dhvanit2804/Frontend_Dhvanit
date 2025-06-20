@@ -33,15 +33,6 @@
   "Blog": [
     {
       "id": "1",
-      "title": "Teal Vintage Car",
-      "description": "A teal vintage car parked on a cobblestone street, surrounded by lush greenery and old brick buildings.",
-      "comment": "10",
-      "name": "Karan",
-      "date": "17-7-2004",
-      "img": "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      "id": "1",
       "title": "Green Super Car",
       "description": "A Sleek Green super car speeding down a winding mountain road, with a breathtaking view of the vally below.",
       "comment": "7",
@@ -53,9 +44,9 @@
       "id": "1750238356767",
       "title": "Ferrai",
       "description": "This is my ferrai cars ",
-      "comment": "8",
-      "name": "Meet",
-      "date": "2025-06-04",
+      "comment": "4",
+      "name": "Meet05",
+      "date": "2025-06-11",
       "img": "https://tse4.mm.bing.net/th?id=OIP.rHj30GrCaRlZnk3-mOlkIgHaEK&pid=Api&P=0&h=180"
     },
     {

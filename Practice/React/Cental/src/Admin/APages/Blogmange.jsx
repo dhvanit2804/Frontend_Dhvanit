@@ -61,6 +61,17 @@ const Blogmange = () => {
     });
   };
 
+  const updatedata = async (e) => {
+    e.preventDefault();
+
+    const res = await axios.put(
+      `http://localhost:3000/Blog/${updateblog.id}`,
+      updateblog
+    );
+    console.log(res.data);
+    fetchdata();
+  };
+
   return (
     <div>
       <Aheader />
@@ -297,7 +308,10 @@ const Blogmange = () => {
                         <div className="col-12">
                           <div className="row">
                             <div className="col-md-6">
-                              <button className="btn btn-light w-100 py-3">
+                              <button
+                                className="btn btn-light w-100 py-3"
+                                onClick={updatedata}
+                              >
                                 update blogs
                               </button>
                             </div>

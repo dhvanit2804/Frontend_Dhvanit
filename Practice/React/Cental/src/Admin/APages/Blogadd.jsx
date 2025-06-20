@@ -49,7 +49,7 @@ const Blogadd = () => {
       <Navdata title="Blog Add" name="Add Blog" />
       <div className="container py-5">
         <div className="bg-secondary p-5 rounded">
-          <h4 className="text-primary mb-4">Send Your Message</h4>
+          <h4 className="text-primary mb-4">Blog Add</h4>
           <form onSubmit={handleblog}>
             <div className="row g-4">
               <div className="col-lg-12 col-xl-6">
