@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MDBContainer,
   MDBInput,
@@ -8,8 +8,17 @@ import {
 } from "mdb-react-ui-kit";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Alogin = () => {
+  const redirect = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("Admin id")) {
+      redirect("/dash");
+    }
+  }, []);
+
   const [form, setform] = useState({
     email: "",
     password: "",
@@ -51,8 +60,13 @@ const Alogin = () => {
       if (admin.password !== password) {
         console.log("Password does not match..");
         toast.error("Password not match....");
+        return false;
       }
 
+      localStorage.setItem("Admin id", admin.id);
+      localStorage.setItem("Admin Name", admin.name);
+      redirect("/dash");
+      toast.success("Login successfully...");
       console.log("Login Successfull..");
     } catch (error) {
       console.log("API Data Not Found...", error);

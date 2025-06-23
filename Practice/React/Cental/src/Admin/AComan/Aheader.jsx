@@ -1,7 +1,23 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { NavLink, redirect, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Aheader() {
+  const redirect = useNavigate();
+
+  useEffect(() => {
+    if (!localStorage.getItem("Admin id")) {
+      redirect("/alogin");
+    }
+  });
+
+  const logout = () => {
+    localStorage.removeItem("Admin id");
+    localStorage.removeItem("Admin Name");
+    toast.success("Admin Logout...");
+    console.log("Admin logout");
+  };
+
   return (
     <div>
       <div>
@@ -147,11 +163,29 @@ function Aheader() {
                       </NavLink>
                     </div>
                   </div>
-                  
+                  {(() => {
+                    if (localStorage.getItem("Admin id")) {
+                      return (
+                        <>
+                          <NavLink className="nav-item nav-link">
+                            hello {localStorage.getItem("Admin Name")}
+                          </NavLink>
+                        </>
+                      );
+                    }
+                  })()}
                 </div>
-                <a href="#" className="btn btn-primary rounded-pill py-2 px-4">
-                  Get Started
-                </a>
+                {(() => {
+                  if (localStorage.getItem("Admin id")) {
+                    return (
+                      <>
+                        <NavLink onClick={logout} className="nav-item nav-link">
+                          Logout
+                        </NavLink>
+                      </>
+                    );
+                  }
+                })()}
               </div>
             </nav>
           </div>
