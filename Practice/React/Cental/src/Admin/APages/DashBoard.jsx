@@ -8,8 +8,8 @@ const DashBoard = () => {
     <>
     <Aheader />
     <Navdata title="Dashboard" name="Dashboard" />
-    <div>
-      <h1>Hello This is Admin Dashboar</h1>
+    <div className='container'>
+      <h1 className='text-center mt-2'>Hello Welcome to Admin Dashboard...</h1>
     </div>
     </>
   )

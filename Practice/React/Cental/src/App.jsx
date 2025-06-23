@@ -17,12 +17,15 @@ import Blogmange from './Admin/APages/Blogmange'
 import Blogadd from './Admin/APages/Blogadd'
 import Carmanage from './Admin/APages/Carmanage'
 import Caradd from './Admin/APages/Caradd'
+import { ToastContainer } from 'react-toastify'
+import Alogin from './Admin/APages/Alogin'
 
 function App() {
 
   return (
     <>
     <BrowserRouter>
+     <ToastContainer />
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
@@ -42,6 +45,7 @@ function App() {
       <Route path='/blogadd' element={<Blogadd />} />
       <Route path='/carmanage' element={<Carmanage />} />
       <Route path='/caradd' element={<Caradd />} />
+      <Route path='/alogin' element={<Alogin />} />
 
 
     </Routes>
