@@ -7,6 +7,7 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const Alogin = () => {
   const [form, setform] = useState({
@@ -33,6 +34,26 @@ const Alogin = () => {
         toast.error("Pls field required...!");
         return false;
       }
+
+      // Email id Match
+      const res = await axios.get(`http://localhost:3000/Admin?email=${email}`);
+      console.log(res.data);
+      if (res.data.lenght === 0) {
+        console.log("Email id Does not match...!");
+        toast.error("Email id Does not match...");
+        return false;
+      }
+
+      let admin = res.data[0];
+
+      // PassWord match
+
+      if (admin.password !== password) {
+        console.log("Password does not match..");
+        toast.error("Password not match....");
+      }
+
+      console.log("Login Successfull..");
     } catch (error) {
       console.log("API Data Not Found...", error);
     }
