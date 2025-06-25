@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MDBContainer,
   MDBCol,
@@ -9,8 +9,18 @@ import {
   MDBCheckbox,
 } from "mdb-react-ui-kit";
 import { toast } from "react-toastify";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const redirect = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("Uid")) {
+      redirect("/");
+    }
+  });
+
   const [form, setform] = useState({
     email: "",
     password: "",
@@ -24,7 +34,7 @@ const Login = () => {
     console.log(form);
   };
 
-  const getSubmit = (e) => {
+  const getSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -33,8 +43,43 @@ const Login = () => {
       if (!email.trim() || !password.trim()) {
         console.log("Please fill email and password...!");
         toast.error("Please fill email and password...!");
+        return false;
       }
-    } catch (error) {}
+
+      const res = await axios.get(`http://localhost:3000/user?email=${email}`);
+      console.log(res.data);
+
+      // User Email Match
+      if (res.data.length === 0) {
+        console.log("Email Does not match...!");
+        toast.error("Email Does not match...!");
+        return false;
+      }
+
+      let user = res.data[0];
+
+      // User Password match..
+      if (user.password !== password) {
+        console.log("Password Does not match...!");
+        toast.error("Password Does not match...!");
+        return false;
+      }
+
+      if (user.status == "block") {
+        console.log("Account has been blocked..!");
+        toast.error("Account has been blocked..!");
+        return false;
+      }
+
+      localStorage.setItem("Uid", user.id);
+      localStorage.setItem("Uname", user.name);
+      redirect("/");
+      console.log("Successfully Login..!");
+      toast.success("Successfully Login..!");
+    } catch (error) {
+      console.log("API Not found...!");
+      toast.error("API Not found...!");
+    }
   };
 
   return (
@@ -90,9 +135,9 @@ const Login = () => {
                 </MDBBtn>
                 <p className="small fw-bold mt-2 pt-1 mb-2">
                   Don't have an account?{" "}
-                  <a href="#!" className="link-danger">
+                  <Link to="/register" className="link-danger">
                     Register
-                  </a>
+                  </Link>
                 </p>
               </div>
             </MDBCol>
