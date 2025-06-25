@@ -19,6 +19,7 @@ import Carmanage from './Admin/APages/Carmanage'
 import Caradd from './Admin/APages/Caradd'
 import { ToastContainer } from 'react-toastify'
 import Alogin from './Admin/APages/Alogin'
+import Login from './Website/Pages/Login'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
       <Route path='/team' element={<Team />} />
       <Route path='/testimonial' element={<Testimonial />} />
       <Route path='*' element={<Notfound />} />
+      <Route path='/login' element={<Login />} />
 
 
       {/* Admin */}
