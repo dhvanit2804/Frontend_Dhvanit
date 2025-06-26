@@ -132,7 +132,7 @@ const Header = () => {
                 {(() => {
                   if (localStorage.getItem("Uid")) {
                     return (
-                      <NavLink to="" className="nav-item nav-link">
+                      <NavLink to="/edit" className="nav-item nav-link">
                         Hello {localStorage.getItem("Uname")}
                       </NavLink>
                     );

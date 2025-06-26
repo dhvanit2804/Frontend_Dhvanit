@@ -21,6 +21,7 @@ import { ToastContainer } from 'react-toastify'
 import Alogin from './Admin/APages/Alogin'
 import Login from './Website/Pages/Login'
 import Registration from './Website/Pages/Registration'
+import Useredit from './Website/Pages/Useredit'
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
       <Route path='*' element={<Notfound />} />
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Registration />} />
+      <Route path='/edit' element={<Useredit />} />
 
 
       {/* Admin */}
