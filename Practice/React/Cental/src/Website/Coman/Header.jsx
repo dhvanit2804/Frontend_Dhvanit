@@ -1,7 +1,23 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Header = () => {
+  const redirect = useNavigate();
+
+  useEffect(() => {
+    if (!localStorage.getItem("Uid")) {
+      redirect("/login");
+    }
+  });
+
+  const logout = () => {
+    localStorage.removeItem("Uid");
+    localStorage.removeItem("Uname");
+    redirect("/login");
+    toast.success("user logout successfully..!");
+  };
+
   return (
     <div>
       <div className="container-fluid topbar bg-secondary d-none d-xl-block w-100">
@@ -54,74 +70,94 @@ const Header = () => {
           </div>
         </div>
       </div>
-       {/* Navbar & Hero Start */}
-        <div className="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
-          <div className="container">
-            <nav className="navbar navbar-expand-lg navbar-light">
-              <a href className="navbar-brand p-0">
-                <h1 className="display-6 text-primary">
-                  <i className="fas fa-car-alt me-3" />
-                  Cental
-                </h1>
-                {/* <img src="img/logo.png" alt="Logo"> */}
-              </a>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse"
-              >
-                <span className="fa fa-bars" />
-              </button>
-              <div className="collapse navbar-collapse" id="navbarCollapse">
-                <div className="navbar-nav mx-auto py-0">
-                  <NavLink to="/" className="nav-item nav-link">
-                    Home
-                  </NavLink>
-                  <NavLink to="/about" className="nav-item nav-link">
-                    About
-                  </NavLink>
-                  <NavLink to="/services" className="nav-item nav-link">
-                    Service
-                  </NavLink>
-                  <NavLink to="/blog" className="nav-item nav-link">
-                    Blog
-                  </NavLink>
-                  <div className="nav-item dropdown">
-                    <a
-                      href="#"
-                      className="nav-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                    >
-                      Pages
-                    </a>
-                    <div className="dropdown-menu m-0">
-                      <NavLink to='/features' className="dropdown-item">
-                        Our Feature
-                      </NavLink>
-                      <NavLink to="/car" className="dropdown-item">
-                        Our Cars
-                      </NavLink>
-                      <NavLink to="/team" className="dropdown-item">
-                        Our Team
-                      </NavLink>
-                      <NavLink to='/testimonial' className="dropdown-item">
-                        Testimonial
-                      </NavLink>
-                    </div>
+      {/* Navbar & Hero Start */}
+      <div className="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0">
+        <div className="container">
+          <nav className="navbar navbar-expand-lg navbar-light">
+            <a href className="navbar-brand p-0">
+              <h1 className="display-6 text-primary">
+                <i className="fas fa-car-alt me-3" />
+                Cental
+              </h1>
+              {/* <img src="img/logo.png" alt="Logo"> */}
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+            >
+              <span className="fa fa-bars" />
+            </button>
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+              <div className="navbar-nav mx-auto py-0">
+                <NavLink to="/" className="nav-item nav-link">
+                  Home
+                </NavLink>
+                <NavLink to="/about" className="nav-item nav-link">
+                  About
+                </NavLink>
+                <NavLink to="/services" className="nav-item nav-link">
+                  Service
+                </NavLink>
+                <NavLink to="/blog" className="nav-item nav-link">
+                  Blog
+                </NavLink>
+                <div className="nav-item dropdown">
+                  <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                  >
+                    Pages
+                  </a>
+                  <div className="dropdown-menu m-0">
+                    <NavLink to="/features" className="dropdown-item">
+                      Our Feature
+                    </NavLink>
+                    <NavLink to="/car" className="dropdown-item">
+                      Our Cars
+                    </NavLink>
+                    <NavLink to="/team" className="dropdown-item">
+                      Our Team
+                    </NavLink>
+                    <NavLink to="/testimonial" className="dropdown-item">
+                      Testimonial
+                    </NavLink>
                   </div>
-                  <NavLink to="/contact" className="nav-item nav-link">
-                    Contact
-                  </NavLink>
                 </div>
-                <a href="#" className="btn btn-primary rounded-pill py-2 px-4">
-                  Get Started
-                </a>
+                <NavLink to="/contact" className="nav-item nav-link">
+                  Contact
+                </NavLink>
+                {(() => {
+                  if (localStorage.getItem("Uid")) {
+                    return (
+                      <NavLink to="" className="nav-item nav-link">
+                        Hello {localStorage.getItem("Uname")}
+                      </NavLink>
+                    );
+                  }
+                })()}
+                {
+                  (()=>{
+                    if (localStorage.getItem("Uid")){
+                      return(
+                        <NavLink to="" onClick={logout} className="nav-item nav-link">
+                        Logout
+                      </NavLink>
+                      )
+                    }
+                  })()
+                }
               </div>
-            </nav>
-          </div>
+              <a href="#" className="btn btn-primary rounded-pill py-2 px-4">
+                Get Started
+              </a>
+            </div>
+          </nav>
         </div>
-        {/* Navbar & Hero End */}
+      </div>
+      {/* Navbar & Hero End */}
     </div>
   );
 };
