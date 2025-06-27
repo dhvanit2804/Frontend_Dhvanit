@@ -22,6 +22,7 @@ import Alogin from './Admin/APages/Alogin'
 import Login from './Website/Pages/Login'
 import Registration from './Website/Pages/Registration'
 import Useredit from './Website/Pages/Useredit'
+import Userlogin from './Admin/APages/Userlogin'
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
       <Route path='/carmanage' element={<Carmanage />} />
       <Route path='/caradd' element={<Caradd />} />
       <Route path='/alogin' element={<Alogin />} />
+      <Route path='/usermanage' element={<Userlogin />} />
 
 
     </Routes>

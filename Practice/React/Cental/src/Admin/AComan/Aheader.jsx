@@ -163,6 +163,9 @@ function Aheader() {
                       </NavLink>
                     </div>
                   </div>
+                  <NavLink to="/usermanage" className="nav-item nav-link">
+                    Manage User
+                  </NavLink>
                   {(() => {
                     if (localStorage.getItem("Admin id")) {
                       return (

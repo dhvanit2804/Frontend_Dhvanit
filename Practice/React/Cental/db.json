@@ -5,7 +5,7 @@
       "name": "Karan",
       "email": "kharvarkaran21@gmail.com",
       "password": "karan123",
-      "status": "unblock"
+      "status": "block"
     },
     {
       "id": "2",
@@ -39,8 +39,8 @@
   "Admin": [
     {
       "id": "1",
-      "name": "Akash",
-      "email": "Akash@gmail.com",
+      "name": "Dhvanit",
+      "email": "Dhvanit@gmail.com",
       "password": "Akash123"
     }
   ],
