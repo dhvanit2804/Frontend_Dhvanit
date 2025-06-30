@@ -9,6 +9,7 @@ import Contact from './Website/Pages/Contact'
 import Team from './Website/Pages/Team'
 import Testimonial from './Website/Pages/Testimonial'
 import Appoinment from './Website/Pages/Appoinment'
+import Blog from './Website/Pages/Blog'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/team' element={<Team />} />
         <Route path='/testimonial' element={<Testimonial />} />
         <Route path='/appoinment' element={<Appoinment />} />
+        <Route path='/blog' element={<Blog />} />
       </Routes>
       </BrowserRouter>
     </>

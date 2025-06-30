@@ -1,0 +1,26 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "DHVANIT",
+      "email": "dhvanitparate123@gmail.com",
+      "password": "dhvanit123",
+      "status": "unblock"
+    },
+    {
+      "id": "2",
+      "name": "KARAN",
+      "email": "karan123@gmail.com",
+      "password": "karan123",
+      "status": "unblock"
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin123@gmail.com",
+      "password": "admin123"
+    }
+  ]
+}

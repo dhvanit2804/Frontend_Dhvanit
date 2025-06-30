@@ -116,6 +116,9 @@ const Header = () => {
                   <NavLink to="/contact" className="nav-item nav-link">
                     Contact
                   </NavLink>
+                  <NavLink to="/blog" className="nav-item nav-link">
+                    Blogs
+                  </NavLink>
                 </div>
                 <div className="ms-auto d-none d-lg-flex">
                   <a className="btn btn-sm-square btn-primary ms-2" href>
