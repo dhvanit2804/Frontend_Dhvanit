@@ -20,7 +20,7 @@ import Footer from "./Bootstrap/Footer";
 import Login from "./Bootstrap/Login";
 import MainContext from "./Context/MainContext";
 import Header from "./Layout/Coman/Header";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+// import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Home from "./Layout/Pages/Home";
 import About from "./Layout/Pages/About";
 import About1 from "./Layout/Pages/About1";
@@ -29,6 +29,7 @@ import Notfound from "./Layout/Pages/Notfound";
 import Contact from "./Layout/Pages/Contact";
 import Contact1 from "./Layout/Pages/Contact1"; 
 import './index.css';
+import UseReducer from "./Hooks/UseReducer";
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
         {/* <Mainstate /> */}
         {/* <FuncState /> */}
 
-        <Formobj />
+        {/* <Formobj /> */}
         {/* <Form /> */}
         {/* <Usedata /> */}
         {/* <Usetable /> */}
@@ -54,7 +55,8 @@ function App() {
         {/* <Login /> */}
         {/* <MainContext /> */}
         {/* <Header /> */}
-        <h1 className="text-4xl font-bold bg-red-500 text-green-600 ml-3">This is Heading Tag</h1>
+        <UseReducer />
+        {/* <h1 className="text-4xl font-bold bg-red-500 text-green-600 ml-3">This is Heading Tag</h1> */}
       </div>
 
       {/* <Routes>
