@@ -20,7 +20,7 @@ const Blogmanage = () => {
       <Aheader />
       <Navdata title="Blog Manage" name="Manage blog" />
       <div className="container py-4">
-        <table className="table table-dark table-hover">
+        <table className="table table-striped table-primary table-hover">
           <thead>
             <tr className="text-center">
               <th scope="col">#id</th>
