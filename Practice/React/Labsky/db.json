@@ -22,5 +22,39 @@
       "email": "admin123@gmail.com",
       "password": "admin123"
     }
+  ],
+  "team": [
+    {
+      "id": "1",
+      "name": "Alex Robin",
+      "img": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg",
+      "role": "Lab Assistant"
+    },
+    {
+      "id": "2",
+      "name": "Andrew Bon",
+      "img": "https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg",
+      "role": "Lab Assistant"
+    }
+  ],
+  "blog": [
+    {
+      "id": "1",
+      "title": "Medical",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi esse culpa praesentium, alias ducimus doloremque consequatur nesciunt at. Omnis enim voluptatum ducimus amet eos veniam odit neque debitis sed autem.",
+      "img": "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg",
+      "date": "12-06-2005",
+      "author": "Dhvanit"
+    }
+  ],
+  "appoinment": [
+      {
+        "id": "1",
+        "name": "DHVANIT",
+        "email":"dhvanitparate123@gmail.com",
+        "number": "9265920139",
+        "service": "Headache Tesing",
+        "message": "I have so moch Headache in last 2 days get me some tretment"
+      }
   ]
 }
