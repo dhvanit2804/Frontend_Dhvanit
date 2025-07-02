@@ -12,6 +12,7 @@ import Appoinment from './Website/Pages/Appoinment'
 import Blog from './Website/Pages/Blog'
 import Dashboard from './Admin/Apages/Dashboard'
 import Blogmanage from './Admin/Apages/Blogmanage'
+import Blogadd from './Admin/Apages/Blogadd'
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         {/* Admin */}
       <Route path='/dash' element={<Dashboard />} />
       <Route path='/blogmanage' element={<Blogmanage />} />
+      <Route path='/blogadd' element={<Blogadd />} />
       </Routes>
       </BrowserRouter>
     </>

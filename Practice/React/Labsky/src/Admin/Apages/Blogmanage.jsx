@@ -15,6 +15,21 @@ const Blogmanage = () => {
     setblog(res.data);
   };
 
+  const [blogdata, setblogdata] = useState({
+    id: "",
+    title: "",
+    desc: "",
+    img: "",
+    date: "",
+    author: "",
+  });
+
+  const getdata = async (id) => {
+    const res = await axios.get(`http://localhost:3000/blog/${id}`);
+    console.log(res.data);
+    setblogdata(res.data);
+  };
+
   return (
     <div>
       <Aheader />
@@ -41,7 +56,7 @@ const Blogmanage = () => {
                     <td>{data.title}</td>
                     <td>{data.date}</td>
                     <td>
-                      <button className="btn btn-success">View</button>
+                      <button className="btn btn-success" onClick={()=> getdata(data.id)} data-bs-toggle="modal" data-bs-target="#exampleModal">View</button>
                       <button className="btn btn-info mx-2">Edit</button>
                       <button className="btn btn-danger">Delete</button>
                     </td>
@@ -50,6 +65,66 @@ const Blogmanage = () => {
               })}
           </tbody>
         </table>
+      </div>
+      <div
+        className="modal fade"
+        id="exampleModal"
+        tabIndex={-1}
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="exampleModalLabel">
+                Blog Data
+              </h1>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              />
+            </div>
+            <div className="modal-body">
+                  <div className="card h-100 shadow-sm">
+                    <img
+                      src={blogdata.img}
+                      className="card-img-top"
+                      alt=""
+                      style={{ height: "220px", objectFit: "cover" }}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title text-primary">{blogdata.title}</h5>
+                      <p
+                        className="card-text text-muted"
+                        style={{ fontSize: "0.9rem" }}
+                      >
+                        {blogdata.desc}
+                      </p>
+                    </div>
+                    <div className="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+                      <small className="text-muted">
+                        <i className="bi bi-calendar-event"></i> {blogdata.date}
+                      </small>
+                      <small className="text-muted">
+                        <i className="bi bi-person"></i> {blogdata.author}
+                      </small>
+                    </div>
+                  </div>
+                </div>
+            
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
