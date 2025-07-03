@@ -60,6 +60,13 @@ const Blogmanage = () => {
 
   const updatedata = async (e) => {
     e.preventDefault();
+
+    const res = await axios.put(
+      `http://localhost:3000/blog/${updateblog.id}`,
+      updateblog
+    );
+    console.log(res.data);
+    fetchdata();
   };
 
   return (
@@ -275,6 +282,8 @@ const Blogmanage = () => {
                     <div className="col-12 text-center mt-4">
                       <button
                         type="submit"
+                        onClick={updatedata}
+                        data-bs-dismiss="modal"
                         className="btn btn-primary px-5 py-2 fs-5 fw-bold rounded-pill shadow-sm"
                         style={{ transition: "0.3s", letterSpacing: "1px" }}
                       >
