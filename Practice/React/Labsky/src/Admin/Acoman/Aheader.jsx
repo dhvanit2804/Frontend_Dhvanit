@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, redirect, useNavigate } from "react-router-dom";
 
 const Aheader = () => {
+  const redirect = useNavigate()
+
+  useEffect(()=>{
+    if(!localStorage.getItem("Aid")){
+      redirect("/alogin")
+    }
+  })
+
   return (
     <div>
       <div>
