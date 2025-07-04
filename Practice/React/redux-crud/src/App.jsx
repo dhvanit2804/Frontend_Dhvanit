@@ -1,11 +1,17 @@
 import React from 'react'
 import "./index.css"
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Read from './component/Read'
 
 const App = () => {
   return (
+    <BrowserRouter>
     <div>
-      <h1 className='text-2xl text-red-500'>Hello This is Redux Crud</h1>
+      <Routes>
+        <Route path='/' element={<Read />} />
+      </Routes>
     </div>
+    </BrowserRouter>
   )
 }
 
