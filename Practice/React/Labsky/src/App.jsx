@@ -18,6 +18,7 @@ import { ToastContainer } from 'react-toastify'
 import Login from './Website/Pages/Login'
 import Registration from './Website/Pages/Registration'
 import Useredit from './Website/Pages/Useredit'
+import Userlogin from './Admin/Apages/Userlogin'
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
       <Route path='/blogmanage' element={<Blogmanage />} />
       <Route path='/blogadd' element={<Blogadd />} />
       <Route path='/alogin' element={<Alogin />} />
+      <Route path='/manageuser' element={<Userlogin />} />
       </Routes>
       </BrowserRouter>
     </>

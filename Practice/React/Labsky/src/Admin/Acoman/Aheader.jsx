@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { NavLink, redirect, useNavigate } from "react-router-dom";
+import { Link, NavLink, redirect, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Aheader = () => {
@@ -138,7 +138,7 @@ const Aheader = () => {
                       </NavLink>
                     </div>
                   </div>
-                  <a className="nav-item nav-link">Manage User</a>
+                  <Link to="/manageuser" className="nav-item nav-link">Manage User</Link>
                   {(() => {
                     if (localStorage.getItem("Aid")) {
                       return (
