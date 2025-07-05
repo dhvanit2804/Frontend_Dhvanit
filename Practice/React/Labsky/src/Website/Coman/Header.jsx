@@ -138,7 +138,7 @@ const Header = () => {
                   {(() => {
                     if (localStorage.getItem("Uid")) {
                       return (
-                        <NavLink className="nav-item nav-link">
+                        <NavLink to="/edit" className="nav-item nav-link">
                           Hello {localStorage.getItem("Uname")}
                         </NavLink>
                       );
@@ -163,7 +163,7 @@ const Header = () => {
                 {(() => {
                   if (localStorage.getItem("Uid")) {
                     return (
-                      <button onClick={logout} className="btn btn-danger mx-2">
+                      <button onClick={logout} className="btn btn-danger mx-3">
                         Logout
                       </button>
                     );

@@ -150,20 +150,6 @@ const Aheader = () => {
                       );
                     }
                   })()}
-                  {(() => {
-                    if (localStorage.getItem("Aid")) {
-                      return (
-                        <>
-                          <NavLink
-                            onClick={logout}
-                            className="nav-item nav-link"
-                          >
-                            Logout
-                          </NavLink>
-                        </>
-                      );
-                    }
-                  })()}
                 </div>
 
                 <div className="ms-auto d-none d-lg-flex">
@@ -180,6 +166,20 @@ const Aheader = () => {
                     <i className="fab fa-youtube" />
                   </a>
                 </div>
+                {(() => {
+                  if (localStorage.getItem("Aid")) {
+                    return (
+                      <>
+                        <button
+                          onClick={logout}
+                          className="btn btn-danger mx-3"
+                        >
+                          Logout
+                        </button>
+                      </>
+                    );
+                  }
+                })()}
               </div>
             </nav>
           </div>
