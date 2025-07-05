@@ -63,6 +63,12 @@ const Login = () => {
         toast.error("Account has been blocked...!");
         return false;
       }
+
+      localStorage.setItem("Uid", user.id);
+      localStorage.setItem("Uname", user.name);
+      redirect("/");
+      console.log("Successfully Login...!");
+      toast.success("Successfully Login...!");
     } catch (error) {
       console.log("API Not found...!");
       toast.error("API Not found...!");
