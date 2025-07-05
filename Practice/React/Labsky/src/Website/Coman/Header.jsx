@@ -1,7 +1,23 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Header = () => {
+  const redirect = useNavigate();
+
+  useEffect(() => {
+    if (!localStorage.getItem("Uid")) {
+      redirect("/login");
+    }
+  });
+
+  const logout = () => {
+    localStorage.removeItem("Uid");
+    localStorage.removeItem("Uname");
+    redirect("/login");
+    toast.success("user logout successfully...!");
+  };
+
   return (
     <div>
       <div>
@@ -81,7 +97,7 @@ const Header = () => {
               </button>
               <div className="collapse navbar-collapse" id="navbarCollapse">
                 <div className="navbar-nav">
-                  <NavLink to="/"  className="nav-item nav-link">
+                  <NavLink to="/" className="nav-item nav-link">
                     Home
                   </NavLink>
                   <NavLink to="/about" className="nav-item nav-link">
@@ -108,7 +124,7 @@ const Header = () => {
                       <NavLink to="/testimonial" className="dropdown-item">
                         Testimonial
                       </NavLink>
-                      <NavLink to='/appoinment' className="dropdown-item">
+                      <NavLink to="/appoinment" className="dropdown-item">
                         Appoinment
                       </NavLink>
                     </div>
@@ -119,7 +135,17 @@ const Header = () => {
                   <NavLink to="/blog" className="nav-item nav-link">
                     Blogs
                   </NavLink>
+                  {(() => {
+                    if (localStorage.getItem("Uid")) {
+                      return (
+                        <NavLink className="nav-item nav-link">
+                          Hello {localStorage.getItem("Uname")}
+                        </NavLink>
+                      );
+                    }
+                  })()}
                 </div>
+
                 <div className="ms-auto d-none d-lg-flex">
                   <a className="btn btn-sm-square btn-primary ms-2" href>
                     <i className="fab fa-facebook-f" />
@@ -134,6 +160,15 @@ const Header = () => {
                     <i className="fab fa-youtube" />
                   </a>
                 </div>
+                {(() => {
+                  if (localStorage.getItem("Uid")) {
+                    return (
+                      <button onClick={logout} className="btn btn-danger mx-2">
+                        Logout
+                      </button>
+                    );
+                  }
+                })()}
               </div>
             </nav>
           </div>

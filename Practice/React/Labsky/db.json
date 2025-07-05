@@ -13,6 +13,13 @@
       "email": "karan123@gmail.com",
       "password": "karan123",
       "status": "unblock"
+    },
+    {
+      "id": "1751721637964",
+      "name": "Sahil",
+      "email": "sahilpatel@gmail.com",
+      "password": "sahil123",
+      "status": "unblock"
     }
   ],
   "admin": [

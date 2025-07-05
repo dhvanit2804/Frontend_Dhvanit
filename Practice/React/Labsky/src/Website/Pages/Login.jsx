@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   MDBContainer,
   MDBCol,
@@ -10,10 +10,16 @@ import {
 } from "mdb-react-ui-kit";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const redirect = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("Uid")) {
+      redirect("/");
+    }
+  });
 
   const [form, setform] = useState({
     email: "",
@@ -146,9 +152,9 @@ const Login = () => {
                 </MDBBtn>
                 <p className="small fw-bold mt-2 pt-1 mb-2">
                   Don't have an account?{" "}
-                  <a href="#!" className="link-danger">
+                  <Link to="/signup" className="link-danger">
                     Register
-                  </a>
+                  </Link>
                 </p>
               </div>
             </MDBCol>
