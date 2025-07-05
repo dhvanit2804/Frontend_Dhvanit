@@ -1,15 +1,23 @@
 import React, { useEffect } from "react";
 
 import { NavLink, redirect, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Aheader = () => {
-  const redirect = useNavigate()
+  const redirect = useNavigate();
 
-  useEffect(()=>{
-    if(!localStorage.getItem("Aid")){
-      redirect("/alogin")
+  useEffect(() => {
+    if (!localStorage.getItem("Aid")) {
+      redirect("/alogin");
     }
-  })
+  });
+
+  const logout = () => {
+    localStorage.removeItem("Aid");
+    localStorage.removeItem("Aname");
+    toast.success("Logout successfully...!");
+    console.log("Logout successfully...!");
+  };
 
   return (
     <div>
@@ -93,12 +101,6 @@ const Aheader = () => {
                   <NavLink to="/" className="nav-item nav-link">
                     Home
                   </NavLink>
-                  <NavLink to="/about" className="nav-item nav-link">
-                    About
-                  </NavLink>
-                  <NavLink to="/services" className="nav-item nav-link">
-                    Services
-                  </NavLink>
                   <div className="nav-item dropdown">
                     <a
                       href="#"
@@ -136,6 +138,32 @@ const Aheader = () => {
                       </NavLink>
                     </div>
                   </div>
+                  <a className="nav-item nav-link">Manage User</a>
+                  {(() => {
+                    if (localStorage.getItem("Aid")) {
+                      return (
+                        <>
+                          <NavLink className="nav-item nav-link">
+                            Hello {localStorage.getItem("Aname")}
+                          </NavLink>
+                        </>
+                      );
+                    }
+                  })()}
+                  {(() => {
+                    if (localStorage.getItem("Aid")) {
+                      return (
+                        <>
+                          <NavLink
+                            onClick={logout}
+                            className="nav-item nav-link"
+                          >
+                            Logout
+                          </NavLink>
+                        </>
+                      );
+                    }
+                  })()}
                 </div>
 
                 <div className="ms-auto d-none d-lg-flex">
