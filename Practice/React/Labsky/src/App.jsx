@@ -15,6 +15,7 @@ import Blogmanage from './Admin/Apages/Blogmanage'
 import Blogadd from './Admin/Apages/Blogadd'
 import Alogin from './Admin/Apages/Alogin'
 import { ToastContainer } from 'react-toastify'
+import Login from './Website/Pages/Login'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Route path='/testimonial' element={<Testimonial />} />
         <Route path='/appoinment' element={<Appoinment />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/login' element={<Login />} />
 
 
         {/* Admin */}
