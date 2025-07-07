@@ -13,39 +13,29 @@ const Read = () => {
     dispatch(showuser());
   }, []);
   return (
-    <div className="relative overflow-x-auto p-7">
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-900 uppercase dark:text-gray-400">
-          <tr>
-            <th scope="col" className="px-6 py-3">
-              id
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Name
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Email
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Action
-            </th>
+    <div className="container">
+      <table className="table table-dark table-hover mt-2">
+        <thead>
+          <tr className="text-center">
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
           </tr>
         </thead>
         <tbody>
           {users &&
             users.map((data, index) => {
               return (
-                <tr className="bg-white dark:bg-gray-800">
-                  <th
-                    scope="row"
-                    key={index}
-                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                  >
-                    {data.id}
-                  </th>
-                  <td className="px-6 py-4">{data.name}</td>
-                  <td className="px-6 py-4">{data.email}</td>
-                  <td className="px-6 py-4">{data.password}</td>
+                <tr className="text-center" key={index}>
+                  <th scope="row">{data.id}</th>
+                  <td>{data.name}</td>
+                  <td>{data.email}</td>
+                  <td>
+                    <button className="btn btn-success">View</button>
+                    <button className="btn btn-info mx-2">Edit</button>
+                    <button className="btn btn-danger">Delete</button>
+                  </td>
                 </tr>
               );
             })}
