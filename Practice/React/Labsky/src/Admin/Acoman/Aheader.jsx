@@ -110,7 +110,7 @@ const Aheader = () => {
                       Team
                     </a>
                     <div className="dropdown-menu bg-light m-0">
-                      <NavLink to="/features" className="dropdown-item">
+                      <NavLink to="/teammanage" className="dropdown-item">
                         Team Manage
                       </NavLink>
                       <NavLink to="/team" className="dropdown-item">

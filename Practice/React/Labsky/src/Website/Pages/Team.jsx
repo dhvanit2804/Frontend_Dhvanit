@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Coman/Header";
 import Navheader from "../Coman/Navheader";
 import Footer from "../Coman/Footer";
+import axios from "axios";
 
 const Team = () => {
+  const [team, setteam] = useState([]);
+
+  useEffect(() => {
+    fetchdata();
+  }, []);
+
+  const fetchdata = async () => {
+    const res = await axios.get("http://localhost:3000/team");
+    console.log(res.data);
+    setteam(res.data);
+  };
+
   return (
     <div>
       <Header />
@@ -49,118 +62,41 @@ const Team = () => {
             </div>
           </div>
           <div className="row g-4">
-            <div
-              className="col-lg-3 col-md-6 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div className="team-item">
-                <div className="position-relative overflow-hidden">
-                  <img className="img-fluid w-100" src="img/team-2.jpg" alt />
-                  <div className="team-social">
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-linkedin-in" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-youtube" />
-                    </a>
+            {team &&
+              team.map((data, index) => {
+                console.log(data);
+                return (
+                  <div
+                    className="col-lg-3 col-md-6 wow fadeInUp"
+                    data-wow-delay="0.7s"
+                    key={index}
+                  >
+                    <div className="team-item">
+                      <div className="position-relative overflow-hidden">
+                        <img className="img-fluid w-100" src={data.img} alt />
+                        <div className="team-social">
+                          <a className="btn btn-square btn-light mx-1" href>
+                            <i className="fab fa-facebook-f" />
+                          </a>
+                          <a className="btn btn-square btn-light mx-1" href>
+                            <i className="fab fa-twitter" />
+                          </a>
+                          <a className="btn btn-square btn-light mx-1" href>
+                            <i className="fab fa-linkedin-in" />
+                          </a>
+                          <a className="btn btn-square btn-light mx-1" href>
+                            <i className="fab fa-youtube" />
+                          </a>
+                        </div>
+                      </div>
+                      <div className="text-center p-4">
+                        <h5 className="mb-1">{data.name}</h5>
+                        <span>{data.role}</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="text-center p-4">
-                  <h5 className="mb-1">Alex Robin</h5>
-                  <span>Lab Assistant</span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-3 col-md-6 wow fadeInUp"
-              data-wow-delay="0.3s"
-            >
-              <div className="team-item">
-                <div className="position-relative overflow-hidden">
-                  <img className="img-fluid w-100" src="img/team-3.jpg" alt />
-                  <div className="team-social">
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-linkedin-in" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
-                </div>
-                <div className="text-center p-4">
-                  <h5 className="mb-1">Andrew Bon</h5>
-                  <span>Lab Assistant</span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-3 col-md-6 wow fadeInUp"
-              data-wow-delay="0.5s"
-            >
-              <div className="team-item">
-                <div className="position-relative overflow-hidden">
-                  <img className="img-fluid w-100" src="img/team-4.jpg" alt />
-                  <div className="team-social">
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-linkedin-in" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
-                </div>
-                <div className="text-center p-4">
-                  <h5 className="mb-1">Martin Tompson</h5>
-                  <span>Lab Assistant</span>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-3 col-md-6 wow fadeInUp"
-              data-wow-delay="0.7s"
-            >
-              <div className="team-item">
-                <div className="position-relative overflow-hidden">
-                  <img className="img-fluid w-100" src="img/team-5.jpg" alt />
-                  <div className="team-social">
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-linkedin-in" />
-                    </a>
-                    <a className="btn btn-square btn-light mx-1" href>
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
-                </div>
-                <div className="text-center p-4">
-                  <h5 className="mb-1">Clarabelle Samber</h5>
-                  <span>Lab Assistant</span>
-                </div>
-              </div>
-            </div>
+                );
+              })}
           </div>
         </div>
       </div>
