@@ -118,7 +118,7 @@ const Aheader = () => {
                       </NavLink>
                     </div>
                   </div>
-                  <NavLink to="/contact" className="nav-item nav-link">
+                  <NavLink to="/manage" className="nav-item nav-link">
                     Appoinment Manage
                   </NavLink>
                   <div className="nav-item dropdown">

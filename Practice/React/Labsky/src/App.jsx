@@ -21,6 +21,7 @@ import Useredit from "./Website/Pages/Useredit";
 import Userlogin from "./Admin/Apages/Userlogin";
 import Teammanage from "./Admin/Apages/Teammanage";
 import Teamadd from "./Admin/Apages/Teamadd";
+import Appoinmentmanage from "./Admin/Apages/Appoinmentmanage";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/blogadd" element={<Blogadd />} />
           <Route path="/teammanage" element={<Teammanage />} />
           <Route path="/teamadd" element={<Teamadd />} />
+          <Route path="/manage" element={<Appoinmentmanage />} />
           <Route path="/alogin" element={<Alogin />} />
           <Route path="/manageuser" element={<Userlogin />} />
         </Routes>

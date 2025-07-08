@@ -1,9 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Coman/Header";
 import Navheader from "../Coman/Navheader";
 import Footer from "../Coman/Footer";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Appoinment = () => {
+  const redirect = useNavigate();
+  const [booking, setbooking] = useState({
+    id: "",
+    name: "",
+    email: "",
+    number: "",
+    service: "",
+    message: "",
+  });
+
+  const getChange = (e) => {
+    setbooking({
+      ...booking,
+      id: new Date().getTime().toString(),
+      [e.target.name]: e.target.value,
+    });
+    console.log(booking);
+  };
+
+  const handlebooking = async (e) => {
+    e.preventDefault();
+
+    const res = await axios.post(`http://localhost:3000/appoinment`, booking);
+    console.log(res.data);
+    toast.success("Appoinment book successfully..!");
+    redirect("/");
+    setbooking({
+      id: "",
+      name: "",
+      email: "",
+      number: "",
+      service: "",
+      message: "",
+    });
+  };
+
   return (
     <div>
       <Header />
@@ -55,69 +94,89 @@ const Appoinment = () => {
             </div>
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
               <h2 className="mb-4">Online Appoinment</h2>
-              <div className="row g-3">
-                <div className="col-sm-6">
-                  <div className="form-floating">
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="name"
-                      placeholder="Your Name"
-                    />
-                    <label htmlFor="name">Your Name</label>
+              <form action="" onSubmit={handlebooking}>
+                <div className="row g-3">
+                  <div className="col-sm-6">
+                    <div className="form-floating">
+                      <input
+                        type="text"
+                        value={booking.name}
+                        name="name"
+                        onChange={getChange}
+                        className="form-control"
+                        id="name"
+                        placeholder="Your Name"
+                      />
+                      <label htmlFor="name">Your Name</label>
+                    </div>
+                  </div>
+                  <div className="col-sm-6">
+                    <div className="form-floating">
+                      <input
+                        type="email"
+                        value={booking.email}
+                        name="email"
+                        onChange={getChange}
+                        className="form-control"
+                        id="mail"
+                        placeholder="Your Email"
+                      />
+                      <label htmlFor="mail">Your Email</label>
+                    </div>
+                  </div>
+                  <div className="col-sm-6">
+                    <div className="form-floating">
+                      <input
+                        type="text"
+                        value={booking.number}
+                        name="number"
+                        onChange={getChange}
+                        className="form-control"
+                        id="mobile"
+                        placeholder="Your Mobile"
+                      />
+                      <label htmlFor="mobile">Your Mobile</label>
+                    </div>
+                  </div>
+                  <div className="col-sm-6">
+                    <div className="form-floating">
+                       <input
+                        type="text"
+                        value={booking.service}
+                        name="service"
+                        onChange={getChange}
+                        className="form-control"
+                        id="name"
+                        placeholder="Your Name"
+                      />
+                      <label htmlFor="service">Choose A Service</label>
+                    </div>
+                  </div>
+                  <div className="col-12">
+                    <div className="form-floating">
+                      <textarea
+                        className="form-control"
+                        placeholder="Leave a message here"
+                        id="message"
+                        value={booking.message}
+                        name="message"
+                        onChange={getChange}
+                        style={{ height: 130 }}
+                        defaultValue={""}
+                      />
+                      <label htmlFor="message">Message</label>
+                    </div>
+                  </div>
+                  <div className="col-12 text-center">
+                    <button
+                      className="btn btn-primary w-100 py-3"
+                      type="submit"
+                    >
+                      Submit Now
+                    </button>
                   </div>
                 </div>
-                <div className="col-sm-6">
-                  <div className="form-floating">
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="mail"
-                      placeholder="Your Email"
-                    />
-                    <label htmlFor="mail">Your Email</label>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="form-floating">
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="mobile"
-                      placeholder="Your Mobile"
-                    />
-                    <label htmlFor="mobile">Your Mobile</label>
-                  </div>
-                </div>
-                <div className="col-sm-6">
-                  <div className="form-floating">
-                    <select className="form-select" id="service">
-                      <option selected>Pathology Testing</option>
-                      <option value>Microbiology Tests</option>
-                      <option value>Biochemistry Tests</option>
-                      <option value>Histopatology Tests</option>
-                    </select>
-                    <label htmlFor="service">Choose A Service</label>
-                  </div>
-                </div>
-                <div className="col-12">
-                  <div className="form-floating">
-                    <textarea
-                      className="form-control"
-                      placeholder="Leave a message here"
-                      id="message"
-                      style={{ height: 130 }}
-                      defaultValue={""}
-                    />
-                    <label htmlFor="message">Message</label>
-                  </div>
-                </div>
-                <div className="col-12 text-center">
-                  <button className="btn btn-primary w-100 py-3" type="submit">
-                    Submit Now
-                  </button>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
