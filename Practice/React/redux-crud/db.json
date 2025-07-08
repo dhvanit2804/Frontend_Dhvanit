@@ -13,9 +13,15 @@
       "password": "1234"
     },
     {
-      "id": "3",
-      "name": "harsh",
-      "email": "harsh@gmail.com",
+      "id": "1751965037999",
+      "name": "admin",
+      "email": "admin123@gmail.com",
+      "password": "admin123"
+    },
+    {
+      "id": "1751981755047",
+      "name": "Dhvanit280422",
+      "email": "dhvanit23@gmail.com",
       "password": "123456"
     }
   ],
