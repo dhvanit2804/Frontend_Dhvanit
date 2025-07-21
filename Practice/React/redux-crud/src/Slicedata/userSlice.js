@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+// VIEW DATA
 export const showuser = createAsyncThunk(
   "showuser",
   async (argument, { rejectWithValue }) => {
