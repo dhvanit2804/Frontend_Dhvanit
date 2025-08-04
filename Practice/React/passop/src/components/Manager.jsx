@@ -3,6 +3,7 @@ import { useRef } from "react";
 
 const Manager = () => {
   const ref = useRef();
+  const passwordRef = useRef();
   const [form, setform] = useState({
     site: "",
     username: "",
@@ -18,11 +19,13 @@ const Manager = () => {
   }, []);
 
   const showPassword = () => {
-    alert("Show the Password");
+    passwordRef.current.type = "text";
     if (ref.current.src.includes("icons/eyecross.png")) {
       ref.current.src = "icons/eye.png";
+      passwordRef.current.type = "text";
     } else {
       ref.current.src = "icons/eyecross.png";
+      passwordRef.current.type = "password";
     }
   };
 
@@ -74,11 +77,12 @@ const Manager = () => {
             <div className="relative">
               <input
                 onChange={handleChange}
+                ref={passwordRef}
                 placeholder="Enter Password"
                 value={form.password}
                 name="password"
                 className="rounded-full bg-white border border-green-500 w-full p-4 py-1"
-                type="text"
+                type="password"
               />
               <span
                 className="absolute right-[3px] top-[4px] cursor-pointer"
@@ -121,8 +125,17 @@ const Manager = () => {
                 {passwordArray.map((item, index) => {
                   return (
                     <tr key={index}>
-                      <td className="py-2 border border-white text-center w-32">
-                        {item.site}
+                      <td className="flex items-center justify-center py-2 border border-white text-center">
+                        <a href={item.site} target="_blank">
+                          {item.site}
+                        </a>
+                        <div className="size-7 cursor-pointer">
+                        <lord-icon
+                          style={{ "width": "25px", "height": "25px", "paddingTop": "3px", "paddingLeft": "3px" }}
+                          src="https://cdn.lordicon.com/iykgtsbt.json"
+                          trigger="hover"
+                        ></lord-icon>
+                        </div>
                       </td>
                       <td className="py-2 border border-white text-center w-32">
                         {item.username}
