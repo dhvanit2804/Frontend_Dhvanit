@@ -10,9 +10,8 @@ if (todosString) {
 
 const populateTodos = () => {
   let string = "";
-  let i = 0;
   for (const todo of todos) {
-    string += `<li id="todo-${i}" class="todo-item ${
+    string += `<li id="todo-${todo.id}" class="todo-item ${
       todo.isCompleted ? "completed" : ""
     }">
             <input type="checkbox" class="todo-checkbox" ${
@@ -21,7 +20,6 @@ const populateTodos = () => {
             <span class="todo-text">${todo.title}</span>
             <button class="delete-btn">×</button>
         </li>`;
-    i++;
   }
   todoListUl.innerHTML = string;
 
@@ -59,7 +57,6 @@ const populateTodos = () => {
 
   deteleBtns.forEach((element) => {
     element.addEventListener("click", (e) => {
-      console.log(e.target.parentNode.id);
       todos = todos.filter((todo) => {
         return "todo-" + todo.id !== e.target.parentNode.id;
       });
@@ -71,16 +68,17 @@ const populateTodos = () => {
 
 addTodoBtn.addEventListener("click", () => {
   todoText = inputTag.value;
+  if (todoText.trim().length < 4) {
+    alert("You Cannot add that small todo..!");
+    return;
+  }
   inputTag.value = "";
   let todo = {
-    id: todos.length,
+    id: "todo-" + Date.now(),
     title: todoText,
     isCompleted: false,
   };
   todos.push(todo);
-  todos = todos.map((todo, i) => {
-    return { ...todo, id: i };
-  });
   localStorage.setItem("todos", JSON.stringify(todos));
   populateTodos();
 });
