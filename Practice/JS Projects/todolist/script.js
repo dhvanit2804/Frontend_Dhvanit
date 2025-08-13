@@ -1,6 +1,7 @@
 const addTodoBtn = document.getElementById("addTodoBtn");
 const inputTag = document.getElementById("todoInput");
 const todoListUl = document.getElementById("todoList");
+const remaining = document.getElementById("remaining-count");
 let todoText;
 let todos = [];
 let todosString = localStorage.getItem("todos");
@@ -11,7 +12,7 @@ if (todosString) {
 const populateTodos = () => {
   let string = "";
   for (const todo of todos) {
-    string += `<li id="todo-${todo.id}" class="todo-item ${
+    string += `<li id="${todo.id}" class="todo-item ${
       todo.isCompleted ? "completed" : ""
     }">
             <input type="checkbox" class="todo-checkbox" ${
@@ -31,17 +32,18 @@ const populateTodos = () => {
       if (e.target.checked) {
         element.parentNode.classList.add("completed");
         todos = todos.map((todo) => {
-          if ("todo-" + todo.id == element.parentNode.id) {
+          if (todo.id == element.parentNode.id) {
             return { ...todo, isCompleted: true };
           } else {
             return todo;
           }
         });
+        remaining.innerHTML = todos.filter((item) => {return item.isCompleted != true}).length;
         localStorage.setItem("todos", JSON.stringify(todos));
       } else {
         element.parentNode.classList.remove("completed");
         todos = todos.map((todo) => {
-          if ("todo-" + todo.id == element.parentNode.id) {
+          if (todo.id == element.parentNode.id) {
             return { ...todo, isCompleted: false };
           } else {
             return todo;
@@ -57,10 +59,13 @@ const populateTodos = () => {
 
   deteleBtns.forEach((element) => {
     element.addEventListener("click", (e) => {
-      todos = todos.filter((todo) => {
-        return "todo-" + todo.id !== e.target.parentNode.id;
-      });
-      localStorage.setItem("todos", JSON.stringify(todos));
+      const confirmation = confirm("Do you Want to delete this todo?");
+      if (confirmation) {
+        todos = todos.filter((todo) => {
+          return todo.id !== e.target.parentNode.id;
+        });
+        localStorage.setItem("todos", JSON.stringify(todos));
+      }
       populateTodos();
     });
   });
