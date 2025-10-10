@@ -1,0 +1,23 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "chatbot app",
+  "keywords": [
+    "chatbot",
+    "application"
+  ],
+  "license": "ISC",
+  "author": "Dhvanit Parate",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1",
+    "nodemon": "^3.1.10"
+  }
+}
