@@ -6,20 +6,6 @@
       "email": "dhvanitparate123@gmail.com",
       "password": "@Dhvanit123",
       "status": "unblock"
-    },
-    {
-      "id": "2",
-      "name": "KARAN",
-      "email": "karan123@gmail.com",
-      "password": "karan123",
-      "status": "unblock"
-    },
-    {
-      "id": "1751721637964",
-      "name": "Sahil",
-      "email": "sahilpatel@gmail.com",
-      "password": "sahil123",
-      "status": "unblock"
     }
   ],
   "admin": [
@@ -46,14 +32,6 @@
   ],
   "blog": [
     {
-      "id": "1",
-      "title": "Medicals",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi esse culpa praesentium, alias ducimus doloremque consequatur nesciunt at. Omnis enim voluptatum ducimus amet eos veniam odit neque debitis sed autem.",
-      "img": "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg",
-      "date": "2025-05-05",
-      "author": "Dhvanit"
-    },
-    {
       "id": "1751533690113",
       "title": "Medicine",
       "desc": "This is personalized medicine center like medicine kit , surgery toolkit for Government hospitals and as well as private hospital also... ",
@@ -70,14 +48,6 @@
       "number": "9265920133",
       "service": "Headache Tesing",
       "message": "I have so moch Headache in last 2 days get me some tretment"
-    },
-    {
-      "id": "1751954398916",
-      "name": "Dhvanit Parate",
-      "email": "dhvanitparate123@gmail.com",
-      "number": "09265920139",
-      "service": "Backpain",
-      "message": "sometgiihdhdididididi"
     }
   ]
 }
